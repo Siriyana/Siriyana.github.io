@@ -1,0 +1,35 @@
+
+html {background-color: pink;}
+body {margin:auto; max-width: 700px;}
+img { width: 600px; max-width: 100%; }
+div { width: 800px; max-width: 100%; }
+div {background-color: black;
+    color: white;}
+#Fancy_texts {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+.erilainen_kuva {float: left; max-width: 180px;
+
+}
+.kissaesittely { 
+    background-color: palevioletred;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+.kaikki-kisut { display: flex; flex-wrap: wrap;}
+.kisulaatikko { max-width: 300px; }
+.laatikko {
+    text-align: center;
+    background-color: palevioletred;
+    color: black;
+}
+p.dashed {
+    border: 1px;
+    border-style: dashed;
+}
+p.solid {
+    border: 2px indigo;
+    border-style: double;
+}
