@@ -9,7 +9,7 @@ aside {
 	background: rgb(255,210,210); /* Kiva vaaleanpunainen sivupalkkiin..*/
 }
 
-.page-container {
+#page-container {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
