@@ -3,10 +3,13 @@
 
 header { 
 	background: rgb(210,210,255); /* Toi rgb-arvo ilmaisee vaaleansinistä.*/
-	
 }
 
 aside { 
 	background: rgb(255,210,210); /* Kiva vaaleanpunainen sivupalkkiin..*/
+}
 
+.page-container {
+	display: flex;
+	flex-direction: column:
 }
