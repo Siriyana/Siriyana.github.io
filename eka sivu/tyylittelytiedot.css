@@ -3,10 +3,12 @@
 
 header { 
 	background: rgb(210,210,255); /* Toi rgb-arvo ilmaisee vaaleansinistä.*/
+	width: 100%;
 }
 
 aside { 
 	background: rgb(255,210,210); /* Kiva vaaleanpunainen sivupalkkiin..*/
+	width: 25%;
 }
 
 #page-container {
