@@ -11,6 +11,23 @@ div {
 	background: #47865b; /*Väri voidaan ilmoittaa myös tällaisena heksakoodina.*/
 	height: 1500px; /* Elemetistä tehdään korkea, jolloin sivua skrollataan alas. */
 	width: 90%;
-	
+	position: relative;
 }
 
+div.relatiivinen {
+	position: relative;
+	left: 50px;
+	top: 50px;
+}
+
+div.fiksattu {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+}
+
+div.absolute {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
