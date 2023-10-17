@@ -232,3 +232,11 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
 }
+
+figure {
+    position: relative;
+}
+
+h3 {
+    position: absolute;
+}
