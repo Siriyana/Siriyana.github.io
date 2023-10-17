@@ -228,6 +228,14 @@ header h1 {
     flex-wrap: wrap;
 }
 
+main {
+    width: 75%;
+}
+
+aside {
+    width: 25%;
+}
+
 .secondary-color {
     display: flex;
     flex-wrap: wrap;
