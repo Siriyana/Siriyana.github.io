@@ -228,3 +228,7 @@ header h1 {
     flex-wrap: wrap;
 }
 
+.secondary-color {
+    display: flex;
+    flex-wrap: wrap;
+}
