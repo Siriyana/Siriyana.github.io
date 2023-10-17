@@ -226,6 +226,7 @@ header h1 {
 .primary-color {
     display: flex;
     flex-wrap: wrap;
+    direction: row;
 }
 
 main {
