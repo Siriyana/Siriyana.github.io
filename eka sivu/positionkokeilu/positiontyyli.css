@@ -14,19 +14,19 @@ div {
 	position: relative;
 }
 
-div.relatiivinen {
+.relatiivinen {
 	position: relative;
 	left: 50px;
 	top: 50px;
 }
 
-div.fiksattu {
+.fiksattu {
 	position: fixed;
 	bottom: 5px;
 	right: 5px;
 }
 
-div.absolute {
+.absolute {
 	position: absolute;
 	top: 5px;
 	left: 5px;
