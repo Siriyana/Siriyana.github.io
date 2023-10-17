@@ -73,7 +73,7 @@ textarea {
 }
 
 header {
-    background-image: url("../img/lines.jpg");
+    background-image: url("lines.jpg");
 }
 
 header h1 {
@@ -219,3 +219,12 @@ header h1 {
         page-break-after: avoid;
     }
 }
+
+
+/* OMAA KOODIA */
+
+.primary-color {
+    display: flex;
+    flex-wrap: wrap;
+}
+
