@@ -6,6 +6,10 @@ nav {
     background-color: aqua;
 }
 
+figure {
+    border: teal 10px;
+}
+
 aside {
     background-color: aquamarine;
 }
