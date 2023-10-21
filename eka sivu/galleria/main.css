@@ -227,29 +227,59 @@ header {
     width: 100%;
 }
 
-.primary-color {
-    display: flex;
-    flex-wrap: wrap;
-    direction: row;
-}
-
-main {
-    width: 75%;
-}
-
-aside {
-    width: 25%;
-}
-
 .secondary-color {
     display: flex;
     flex-wrap: wrap;
+    direction:row
+}
+
+
+li {
+    list-style-type: none;
+}
+
+aside {
+    width: 100%;
+}
+
+.primary-color {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.primary-color > figure {
+    margin: 10px;
+    text-align: center;
+    width: 100px;
 }
 
 figure {
     position: relative;
 }
 
+figcaption {
+    position:absolute;
+    top: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: #000;
+    background: rgba(8, 7, 7, 0.627);
+}
+
 h3 {
-    position: absolute;
+    position:absolute;
+    color: white;
+    left: 7px;
+    top: -15px;
+}
+
+@media only screen and (min-width: 700px) {
+    main {
+        width: 75%;
+    }
+    
+    aside {
+        width: 25%;
+    }
+    
 }
