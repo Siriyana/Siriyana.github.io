@@ -223,6 +223,10 @@ header h1 {
 
 /* OMAA KOODIA */
 
+header {
+    width: 100%;
+}
+
 .primary-color {
     display: flex;
     flex-wrap: wrap;
