@@ -242,16 +242,17 @@ aside {
     width: 100%;
 }
 
-.primary-color {
-    display: flex;
-    flex-flow: row wrap;
+.default > p {
+    position: relative;
+    left: 15px;
 }
 
-.primary-color > figure {
-    margin: 10px;
-    text-align: center;
-    width: 100px;
+.primary-color {
+    display: flex;
+    flex-wrap: wrap;
+    direction: row;
 }
+
 
 figure {
     position: relative;
