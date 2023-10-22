@@ -250,7 +250,14 @@ aside {
 .primary-color {
     display: flex;
     flex-wrap: wrap;
-    direction: row;
+    flex-direction: row;
+    width: 100%;
+}
+
+.primary-color > ul {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 
@@ -276,8 +283,12 @@ h3 {
 
 @media only screen and (min-width: 700px) {
     main {
-        width: 75%;
+        width: 100%;
     }
+
+.primary-color {
+    width: 75%;
+}
     
     aside {
         width: 25%;
