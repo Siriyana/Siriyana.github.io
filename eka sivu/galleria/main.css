@@ -255,14 +255,17 @@ aside {
 }
 
 .primary-color > ul {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-evenly;
 }
 
 
 figure {
     position: relative;
+    margin: 20px;
+    left: -20px;
 }
 
 figcaption {
@@ -287,11 +290,11 @@ h3 {
     }
 
 .primary-color {
-    width: 75%;
+    width: 80%;
 }
     
     aside {
-        width: 25%;
+        width: 20%;
     }
     
 }
