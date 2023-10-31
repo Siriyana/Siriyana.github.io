@@ -219,3 +219,25 @@ header h1 {
         page-break-after: avoid;
     }
 }
+
+
+/*********** OMAA KOODIA *****/
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
