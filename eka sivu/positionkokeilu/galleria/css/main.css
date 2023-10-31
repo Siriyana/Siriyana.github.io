@@ -243,6 +243,7 @@ aside {
 
 figure {
     position: relative;
+    margin: 10px;
 }
 
 figcaption {
@@ -258,10 +259,26 @@ ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    padding-left: 0;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h3 {
     margin: 5px 10px;
 }
 
+@media only screen and (min-width: 768px) {
+    main {
+        width: 100%;
+    }
+
+.primary-color {
+    width: 80%;
+}
+    
+aside {
+        width: 20%;
+    }
+    
+}
