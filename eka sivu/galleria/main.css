@@ -247,12 +247,6 @@ aside {
     left: 15px;
 }
 
-.primary-color {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-}
 
 .primary-color > ul {
     position: relative;
