@@ -250,3 +250,9 @@ ul {
 h3 {
     margin: 5px 10px;
 }
+
+.secondary-color {
+    display: flex;
+    flex-wrap: wrap;
+    direction:row
+}

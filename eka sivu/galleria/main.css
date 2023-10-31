@@ -233,11 +233,6 @@ header {
     direction:row
 }
 
-
-li {
-    list-style-type: none;
-}
-
 aside {
     width: 100%;
 }
@@ -247,11 +242,11 @@ aside {
     left: 15px;
 }
 
-
-.primary-color > ul {
+ul {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    list-style-type: none;
     justify-content: space-evenly;
 }
 
@@ -285,7 +280,7 @@ h3 {
     width: 80%;
 }
     
-    aside {
+aside {
         width: 20%;
     }
     
