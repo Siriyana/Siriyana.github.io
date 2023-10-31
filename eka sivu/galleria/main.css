@@ -248,13 +248,13 @@ ul {
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-evenly;
+    padding-left: 0;
 }
 
 
 figure {
     position: relative;
     margin: 20px;
-    left: -20px;
 }
 
 figcaption {
