@@ -248,7 +248,8 @@ ul {
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-evenly;
-    padding-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
