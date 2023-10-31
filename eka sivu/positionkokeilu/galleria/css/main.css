@@ -228,6 +228,19 @@ body {
     flex-wrap: wrap;
 }
 
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+aside {
+    width: 100%;
+}
+
+
 figure {
     position: relative;
 }
@@ -251,8 +264,3 @@ h3 {
     margin: 5px 10px;
 }
 
-.secondary-color {
-    display: flex;
-    flex-wrap: wrap;
-    direction:row
-}
