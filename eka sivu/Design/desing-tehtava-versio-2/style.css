@@ -15,7 +15,10 @@
 html { 
 	/*koko sivun tausta on valkoinen.
 	Muuta haluamaksesi*/
-	background: white; 
+	background: #ECBFD8;
+	color: #faf8d4;
+
+	font-family: 'Josefin Sans', sans-serif;
 
 	/*Jos määrität html-tagissa fontteja, 
 	taustavärejä tai tekstin värejä,
@@ -37,7 +40,7 @@ body {
 	/*Tällä koodilla voit tehdä niin, että yli 900px
 	leveässä näytössä body-tagi jää vain 900px leveäksi,
 	ja reunoille jää tyhjää. Voit muuttaa tätä miten haluat.*/
-	max-width: 900px;
+	max-width: 100%;
 	margin: auto; /*tämä keskittää body-tagin sivusuunnassa*/
 
 }
@@ -56,7 +59,13 @@ header h1 {
 
 	/*Voit halutessasi myös esim. keskittää otsikon (text-align: center;)*/
 
-	font-size: 20px;
+	font-size: 60px;
+	font-family: 'Dancing Script', cursive;
+	color:#93145A;
+	text-align: center;
+	padding: 15px;
+	border: groove #93145A 10px;
+	border-radius: 10px;
 }
 
 /*--------- MAIN MENU ---------------------*/
@@ -64,7 +73,12 @@ header h1 {
 /*Menu*/
 #main-menu { 
 	list-style-type: none; 
-	
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: groove #93145A 5px;
+	border-radius: 10px;
 	/*Voit tehdä tästä flexboxin, 
 	niin valikon napit menevät vierekkäin*/
 
@@ -79,14 +93,18 @@ header h1 {
 #main-menu li {
 	/*Laita tässä ja marginaalit paddingit paremmin, 
 	niin näyttää tyylikkäämmältä */
-
+	padding: 10px;
+	margin: 20px;
+	border-radius: 10px;
+	border: 20px;
+	text-align: center;
+	background-color: #93145A;
 	/*Voi muokata täällä myös background-, color-arvoja.*/
-
 }
 
 /*Link in menu item*/
 #main-menu a { 
-
+	color: #faf8d4;
 	text-decoration: none; /*poistaa linkin alleviivauksen*/
 
 	/*Voi muokata täällä myös background-, color- 
@@ -99,13 +117,16 @@ header h1 {
 	
 	/*Tässä määritellään, miltä valikon linkki näyttää, 
 	kun kursori on sen päällä. Muuta paremmaksi */
-	color: red; 
-	background: yellow; 
+	color: #93145A; 
+	background: #faf8d4; 
+	font-size: large;
 }
 
 /*------- ARTICLE BUTTONS -------------------*/
 /*Button in end of each article*/
 .button { 
+	display: block;
+	box-shadow: 0px 2px 10px rgba(0,0,0,50%)
 	/*saatat haluta tehdä napista aika samanlaisen
 	kuin valikkolinkit, mutta toisenlainenkin 
 	voi olla ihan tyylikäs*/
@@ -134,8 +155,9 @@ header h1 {
 .button:hover { 
 	/*Tässä määritellään, nappi näyttää, 
 	kun kursori on sen päällä. Muuta paremmaksi */
-	color: red; 
-	background: yellow; 
+	color: #93145A; 
+	background: #faf8d4;
+	font-size: large;
 	
 	/*Voit halutessasi laittaa vaikka koko 
 	artikkelin muuttumaan jotenkin hiukan, 
@@ -169,6 +191,11 @@ article {
 	niin näyttää tyylikkäämmältä! Teksti, kuva ym. ei saa olla 
 	reunaan asti, vaan reunassa pitää olla marginaali (teknisesti
 	margin tai padding).*/
+	margin: 20px;
+	border-radius: 20px;
+	padding: 6px 20px 16px 20px;
+	background: #93145A; 
+	border: groove #93145A 10px;
 
 }
 
@@ -176,6 +203,8 @@ article {
 
 /*article title*/
 article h2 { 
+	font-family: 'Dancing Script', cursive;
+	font-size: 25px;
 
 	/*Yksittäisen artikkelin otsikko*/
 
@@ -217,6 +246,11 @@ article p {
 footer {
 	/*Kannattaa laittaa footeriin vähintään padding 
 	ja ehkä eri taustaväri, jotta se erottuu hiukan.*/
+	background-color: #93145A;
+	margin: 20px;
+	padding: 10px;
+	width: 100%;
+	border: groove #93145A 10px;
 	
 }
 
