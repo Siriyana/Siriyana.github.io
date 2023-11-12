@@ -40,14 +40,28 @@ body {
 	/*Tällä koodilla voit tehdä niin, että yli 900px
 	leveässä näytössä body-tagi jää vain 900px leveäksi,
 	ja reunoille jää tyhjää. Voit muuttaa tätä miten haluat.*/
-	max-width: 100%;
+	max-width: 90%;
 	margin: auto; /*tämä keskittää body-tagin sivusuunnassa*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-self: center;
+	
+	border: 10px groove;
+	border-color:#93145A
+	
 
+	
 }
 
 /*--------- HEADER ---------------------*/
 
 /*Header text on top of the menu*/
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 header h1 { 
 	/*Pääotsikko*/
 
@@ -58,17 +72,24 @@ header h1 {
 	niin näyttää tyylikkäämmältä */
 
 	/*Voit halutessasi myös esim. keskittää otsikon (text-align: center;)*/
-
+	width: 90%;
 	font-size: 60px;
 	font-family: 'Dancing Script', cursive;
-	color:#93145A;
+	color:#faf8d4;
+	background-color: #93145A;
 	text-align: center;
 	padding: 15px;
 	border: groove #93145A 10px;
 	border-radius: 10px;
+	margin: 10px 25px;
 }
 
 /*--------- MAIN MENU ---------------------*/
+
+header nav {
+	margin: 0px 10px;
+	width: 95%;
+}
 
 /*Menu*/
 #main-menu { 
@@ -76,7 +97,7 @@ header h1 {
 	display: flex; 
 	flex-wrap: wrap;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(62, 12, 46, 0.318);
 	border: groove #93145A 5px;
 	border-radius: 10px;
 	/*Voit tehdä tästä flexboxin, 
@@ -96,9 +117,10 @@ header h1 {
 	padding: 10px;
 	margin: 20px;
 	border-radius: 10px;
-	border: 20px;
+	border: 5px groove #93145A;
 	text-align: center;
 	background-color: #93145A;
+	font-size: small;
 	/*Voi muokata täällä myös background-, color-arvoja.*/
 }
 
@@ -117,8 +139,8 @@ header h1 {
 	
 	/*Tässä määritellään, miltä valikon linkki näyttää, 
 	kun kursori on sen päällä. Muuta paremmaksi */
-	color: #93145A; 
-	background: #faf8d4; 
+	color: #faf8d4; 
+	background: #93145A; 
 	font-size: large;
 }
 
@@ -126,7 +148,21 @@ header h1 {
 /*Button in end of each article*/
 .button { 
 	display: block;
-	box-shadow: 0px 2px 10px rgba(0,0,0,50%)
+	box-shadow: 0px 2px 10px rgba(0,0,0,50%);
+	width: 70px;
+	height: 70px;
+	font-size: larger;
+	background-color: rgba(0,0,0,50%);
+	border: 5px groove;
+	border-color: #faf8d4;
+	border-radius: 70px;
+	text-align: center;
+	position: relative;
+	bottom: 0px;
+	left: 35%;
+
+	
+
 	/*saatat haluta tehdä napista aika samanlaisen
 	kuin valikkolinkit, mutta toisenlainenkin 
 	voi olla ihan tyylikäs*/
@@ -157,7 +193,7 @@ header h1 {
 	kun kursori on sen päällä. Muuta paremmaksi */
 	color: #93145A; 
 	background: #faf8d4;
-	font-size: large;
+	font-size: larger;
 	
 	/*Voit halutessasi laittaa vaikka koko 
 	artikkelin muuttumaan jotenkin hiukan, 
@@ -196,6 +232,9 @@ article {
 	padding: 6px 20px 16px 20px;
 	background: #93145A; 
 	border: groove #93145A 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-self: center;
 
 }
 
@@ -204,7 +243,7 @@ article {
 /*article title*/
 article h2 { 
 	font-family: 'Dancing Script', cursive;
-	font-size: 25px;
+	font-size: x-large;
 
 	/*Yksittäisen artikkelin otsikko*/
 
@@ -219,7 +258,8 @@ article h2 {
 }
 
 /*article text*/
-article p { 
+article p {
+	font-size: small; 
 	/*Artikkelin pienempi teksti*/
 
 	/*Saatat haluta muokata täällä 
