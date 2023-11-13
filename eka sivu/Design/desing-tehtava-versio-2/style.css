@@ -103,7 +103,7 @@ header nav {
 	justify-content: center;
 	background-color: #faf8d4;
 	margin: 0px;
-	padding: 5px 0px;
+	padding: 0px;
 	/*Voit tehdä tästä flexboxin, 
 	niin valikon napit menevät vierekkäin*/
 
