@@ -61,7 +61,8 @@ header {
 	flex-wrap: wrap;
 	justify-content: center;
 	border: 5px #93145A groove;
-	border-radius: 5px;
+	border-radius: 10px;
+	margin: 20px;
 }
 
 header h1 { 
