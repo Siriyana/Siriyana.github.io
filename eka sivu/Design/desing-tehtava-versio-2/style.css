@@ -155,8 +155,8 @@ header nav {
 	width: 70px;
 	height: 70px;
 	font-size: medium;
-	background-color: rgba(0,0,0,50%);
-	border: 5px groove;
+	background-color: rgba(0,0,0,40%);
+	border: 3px double;
 	border-color: #faf8d4;
 	border-radius: 70px;
 	text-align: center;
