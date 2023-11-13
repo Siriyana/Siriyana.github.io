@@ -73,7 +73,7 @@ header h1 {
 
 	/*Voit halutessasi myös esim. keskittää otsikon (text-align: center;)*/
 	width: 90%;
-	font-size: 60px;
+	font-size: 70px;
 	font-family: 'Dancing Script', cursive;
 	color:#faf8d4;
 	background-color: #93145A;
@@ -151,15 +151,17 @@ header nav {
 	box-shadow: 0px 2px 10px rgba(0,0,0,50%);
 	width: 70px;
 	height: 70px;
-	font-size: larger;
+	font-size: large;
 	background-color: rgba(0,0,0,50%);
 	border: 5px groove;
 	border-color: #faf8d4;
 	border-radius: 70px;
 	text-align: center;
-	position: relative;
-	bottom: 0px;
+	position: absolute;
+	bottom: 20px;
 	left: 35%;
+	display: flex;
+	align-items: center;
 
 	
 
@@ -229,12 +231,10 @@ article {
 	margin tai padding).*/
 	margin: 20px;
 	border-radius: 20px;
-	padding: 6px 20px 16px 20px;
 	background: #93145A; 
 	border: groove #93145A 10px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-self: center;
+	position: relative;
+	padding: 0px 20px 100px 20px;
 
 }
 
@@ -243,7 +243,7 @@ article {
 /*article title*/
 article h2 { 
 	font-family: 'Dancing Script', cursive;
-	font-size: x-large;
+	font-size: 35px;
 
 	/*Yksittäisen artikkelin otsikko*/
 
@@ -259,7 +259,8 @@ article h2 {
 
 /*article text*/
 article p {
-	font-size: small; 
+	font-size: medium; 
+	line-height: 1.25;
 	/*Artikkelin pienempi teksti*/
 
 	/*Saatat haluta muokata täällä 
