@@ -15,7 +15,7 @@
 html { 
 	/*koko sivun tausta on valkoinen.
 	Muuta haluamaksesi*/
-	background: #ECBFD8;
+	background: #ffd6de;
 	color: #faf8d4;
 
 	font-family: 'Josefin Sans', sans-serif;
@@ -101,7 +101,7 @@ header nav {
 	display: flex; 
 	flex-wrap: wrap;
 	justify-content: center;
-	background-color: #faf8d4;
+	background-color: #f9f5c8;
 	margin: 0px;
 	padding: 0px;
 	/*Voit tehdä tästä flexboxin, 
@@ -119,12 +119,12 @@ header nav {
 	/*Laita tässä ja marginaalit paddingit paremmin, 
 	niin näyttää tyylikkäämmältä */
 	padding: 10px;
-	margin: 20px;
+	margin: 20px 15px;
 	border-radius: 10px;
 	border: 1px solid black;
 	text-align: center;
 	background-color: #93145A;
-	font-size: small;
+	font-size: 15px;
 	/*Voi muokata täällä myös background-, color-arvoja.*/
 }
 
@@ -145,7 +145,7 @@ header nav {
 	/*Tässä määritellään, miltä valikon linkki näyttää, 
 	kun kursori on sen päällä. Muuta paremmaksi */
 	color: #93145A; 
-	background: #faf8d4; 
+	background: #f9f5c8; 
 }
 
 /*------- ARTICLE BUTTONS -------------------*/
