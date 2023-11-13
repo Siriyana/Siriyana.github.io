@@ -60,7 +60,7 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	border: 5px #93145A groove;
+	border: 10px #93145A groove;
 	border-radius: 10px;
 	margin: 20px;
 }
