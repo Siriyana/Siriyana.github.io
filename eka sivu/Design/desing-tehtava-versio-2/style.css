@@ -103,6 +103,7 @@ header nav {
 	justify-content: center;
 	background-color: #faf8d4;
 	margin: 0px;
+	padding: 5px 0px;
 	/*Voit tehdä tästä flexboxin, 
 	niin valikon napit menevät vierekkäin*/
 
@@ -143,9 +144,8 @@ header nav {
 	
 	/*Tässä määritellään, miltä valikon linkki näyttää, 
 	kun kursori on sen päällä. Muuta paremmaksi */
-	color: #faf8d4; 
-	background: #93145A; 
-	font-size: large;
+	color: #93145A; 
+	background: #faf8d4; 
 }
 
 /*------- ARTICLE BUTTONS -------------------*/
