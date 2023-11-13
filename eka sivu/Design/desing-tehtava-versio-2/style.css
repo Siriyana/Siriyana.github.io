@@ -82,6 +82,7 @@ header h1 {
 	border: groove #93145A 10px;
 	border-radius: 10px;
 	margin: 10px 25px;
+	text-shadow: 2px 2px black;
 }
 
 /*--------- MAIN MENU ---------------------*/
@@ -128,6 +129,7 @@ header nav {
 #main-menu a { 
 	color: #faf8d4;
 	text-decoration: none; /*poistaa linkin alleviivauksen*/
+	text-shadow: 1px 1px black;
 
 	/*Voi muokata täällä myös background-, color- 
 	font-size- ja font-family-arvoja.*/
@@ -245,6 +247,7 @@ article {
 article h2 { 
 	font-family: 'Dancing Script', cursive;
 	font-size: 35px;
+	text-shadow: 2px 2px black;
 
 	/*Yksittäisen artikkelin otsikko*/
 
