@@ -31,7 +31,7 @@ section {
     padding: 15px;
 }
 
-nav.navbar.navbar-dark.bg-dark {
+div.navbar.navbar-dark.bg-dark {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
