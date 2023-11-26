@@ -1,4 +1,13 @@
 
+header {
+    height: 200px;
+    background: url(snowflakes_edited.jpg);
+    background-blend-mode: lighten;
+    background-size: contain;
+    
+}
+
+
 
 footer ul {
     list-style-type: none;
