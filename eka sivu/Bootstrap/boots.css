@@ -108,11 +108,6 @@ button.btn {
 }
 
 
-footer {
-    border: 5px black double;
-    background-color: beige;
-}
-
 .form-group {
     width: 70%;
     margin: 20px 15%;
@@ -123,4 +118,13 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+}
+
+footer {
+    border: 5px black double;
+    background-color: beige;
+}
+
+footer ul {
+    flex-direction: row;
 }
