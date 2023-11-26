@@ -19,24 +19,34 @@ header h1 {
     text-shadow: 5px 5px black;
 }
 
+h2 {
+    font-size: larger;
+    font-weight: 800;
+    padding: 50px 25px 15px 25px;
+}
+
+section h2 {
+    padding: 10px;
+}
+
 section {
     background-color: darkgrey;
     border: 5px black solid;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 15px;
+    padding: 19px;
 }
 
 div.navbar.navbar-dark.bg-dark {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border: 5px solid black;
     background-color: darkgray;
-    
+    padding: 15px;
 }
 
 
@@ -61,7 +71,7 @@ button.btn {
 
 .taustatiedot {
     padding: 40px 50px;
-    margin: 70px 0px;
+    margin: 30px 0px;
     background-color: rgb(238, 234, 196);
     border: 5px solid olive;
     border-radius: 10px;
@@ -69,6 +79,15 @@ button.btn {
 
 .row {
     margin: 20px 0px;
+}
+
+#section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Gill Sans MT';
+    font-size: xx-large;
+    font-weight:900;
 }
 
 .col-md-6 {
@@ -82,13 +101,12 @@ button.btn {
 }
 
 .col-md-3.kuva {
-    margin: 150px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-h2 {
-    font-size: larger;
-    font-weight: 800;
-}
 
 footer {
     border: 5px black double;
@@ -97,7 +115,7 @@ footer {
 
 .form-group {
     width: 70%;
-    margin: 20px 150px;
+    margin: 20px 15%;
 }
 
 ul {
