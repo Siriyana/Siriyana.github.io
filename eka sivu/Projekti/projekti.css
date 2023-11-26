@@ -1,4 +1,12 @@
 
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
 header {
     height: 100px;
     background: url(snowflakes_edited.jpg);
@@ -11,7 +19,8 @@ header {
 
 header h1 {
     color: white;
-    text-shadow: 3px 3px 7px rgb(39, 50, 82);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 6px rgb(39, 50, 82);
     font-size: 40px;
 }
 
