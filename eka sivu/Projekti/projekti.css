@@ -1,6 +1,7 @@
 
 html {
     font-family: 'Raleway', sans-serif;
+    background-color: #F2F4F3;
 }
 
 h1 {
@@ -9,18 +10,20 @@ h1 {
 
 header {
     height: 100px;
-    background: url(snowflakes_edited.jpg);
+    background: url(snowflakes.png);
     background-blend-mode: lighten;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: 15px solid rgba(55, 55, 94, 0.521);
+    border-radius: 30px;
 }
 
 header h1 {
     color: white;
     font-family: 'Playfair Display', serif;
-    text-shadow: 1px 1px 6px rgb(39, 50, 82);
+    text-shadow: 2px 1px 6px black;
     font-size: 40px;
 }
 
