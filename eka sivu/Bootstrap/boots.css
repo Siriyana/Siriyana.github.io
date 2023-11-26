@@ -1,6 +1,4 @@
 
-
-
 header {
     background:  rgba(0, 0, 0, 0.6)
     url(taustaelaimet.png);
@@ -56,11 +54,54 @@ button.btn {
     border-color: darkgray;
 }
 
+.paaartikkeli {
+    font-size: x-large;
+    padding: 20px;
+}
+
+.taustatiedot {
+    padding: 40px 50px;
+    margin: 70px 0px;
+    background-color: rgb(238, 234, 196);
+    border: 5px solid olive;
+    border-radius: 10px;
+}
+
+.row {
+    margin: 20px 0px;
+}
+
 .col-md-6 {
     border-radius: 35px;
-    background-color: snow;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 25px;
+    align-items: center;
+
+}
+
+.col-md-3.kuva {
+    margin: 150px 0px;
+}
+
+h2 {
+    font-size: larger;
+    font-weight: 800;
+}
+
+footer {
+    border: 5px black double;
+    background-color: beige;
+}
+
+.form-group {
+    width: 70%;
+    margin: 20px 150px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
