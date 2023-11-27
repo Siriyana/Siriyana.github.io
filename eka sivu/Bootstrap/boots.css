@@ -95,7 +95,6 @@ button.btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 25px;
     align-items: center;
 
 }
@@ -104,9 +103,13 @@ button.btn {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 10px 20px;
 }
 
+.col-md-3.kuva img {
+    max-width: 100%;
+    height: auto;
+    padding: 5%;
+}
 
 .form-group {
     width: 70%;
