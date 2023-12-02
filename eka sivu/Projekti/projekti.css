@@ -166,13 +166,14 @@ header h1 {
     right: 0px;
 }
 
-.talvikortti:hover .talvikorttikuva {
-    transform: scale(1.2) rotate(5deg);
+.talvikortti-container:hover .talvikorttikuva {
+    transform: scale(1.15) rotate(1deg);
 }
 
-.talvikortti:hover .talvikorttikuva2 {
-    transform: scale(1.2) rotate(-5deg);
+.talvikortti-container:hover .talvikorttikuva2 {
+    transform: scale(1.15) rotate(-1deg);
 }
+
 
 footer ul {
     list-style-type: none;
