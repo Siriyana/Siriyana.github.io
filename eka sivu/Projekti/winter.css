@@ -33,9 +33,13 @@ header {
     padding: 20px;
 }
 
-.card-header {
-    background-color: black; !important
-    border: 15px solid rgba(55, 55, 94, 0.521); !important
+.card .card-header {
+    background-color: black;
+    color: white;
+}
+
+.card .card-body {
+    background-color: black;
 }
 
 .card-body img {
