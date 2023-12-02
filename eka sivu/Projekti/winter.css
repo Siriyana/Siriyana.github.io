@@ -1,0 +1,43 @@
+ul {
+    list-style-type: none;
+}
+
+header {
+    background-color: black;
+}
+
+.col-md-4 img {
+    width: 100%;
+    height: auto;
+}
+
+#carouselExampleFade {
+    width: 50%;
+    height: auto;
+    margin: 0px 25%;
+}
+
+.row {
+    margin: 20px 0px;
+}
+
+#paaotsikko {
+    margin: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(61, 32, 128);
+}
+
+#kissaarmeija {
+    border: 3px solid black;
+    margin: 50px 25px;
+    padding: 20px;
+}
+
+.card-body img {
+    width: 100%;
+}
+
+.form-group {
+    width: 70%;
+    margin: 20px 15%;
+}

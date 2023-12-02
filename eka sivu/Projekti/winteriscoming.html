@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", initial-sclae="1.0">
         <link rel="stylesheet" href="winter.css">
-        <title>WinterIsHERE</title>
+        <title>TheyAreHERE</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,800&family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">        
@@ -12,28 +13,127 @@
     </head>
     <body>
 
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-dark p-4">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="projekti_index.html">Talven tuskaa</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Winter is coming</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Lunta_tupaan.html">Lunta tupaan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Tehtävien palautussivu</a></li>
+                </ul>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+
+
         <header>
-            <h1>Winter is coming</h1>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="THEY.jpg" class="d-block w-100" alt="they, cat eyes">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="ARE.png" class="d-block w-100" alt="are cat face">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="HERE.png" class="d-block w-100" alt="here lotsofcats">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="projekti_index.html">Talven tuskaa</a></li>
-                <li><a href="#">Winter is coming</a></li>
-                <li><a href="Lunta_tupaan.html">Lunta tupaan</a></li>
-                <li><a href="/index.html">Tehtävien palautussivu</a></li>
-            </ul>
-        </nav>
 
         <main>
+
+            <div class="row" id="paaotsikko">
+                <div class="col-md-12"><h1>LUMIKISSAT TULEVAT!</h1></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellendus ratione magnam recusandae minus. Repellendus, reiciendis optio. Earum praesentium ut, numquam non assumenda dolore. Suscipit nesciunt maiores consectetur dolores nam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est et, laboriosam deleniti earum assumenda ducimus vitae voluptatem nisi aperiam quisquam commodi quo officia nulla exercitationem blanditiis eveniet facilis temporibus illo.</p>
+                </div>
+                <div class="col-md-4"><img src="valkoinenkisu.png"></div>
+            </div>
+
+            <div class="row" id="kissaarmeija">
+                <div class="col-md-4"><img src="snowballs.png"></div>
+                <div class="col-md-4">
+                    <h2>Kissa-armeija</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad fuga dolor quia doloremque libero ab architecto qui, obcaecati possimus eligendi vero voluptate recusandae at minima, quidem, hic modi error.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum quos sequi ipsa. Iste, recusandae molestiae est saepe, omnis, assumenda aperiam odio nam aspernatur esse labore a expedita quo earum.</p>
+                </div>
+                <div class="col-md-4"><img src="theyarecoming.png"></div>
+            </div>
+
+            <div class="row text-center">
+                <h2>Kissakortteja</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                    <div class="col">
+                      <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                          <h4 class="my-0 fw-normal">Kissa lumisateessa</h4>
+                        </div>
+                        <div class="card-body">
+                          <img src="kissalumihiutale.png">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                          <h4 class="my-0 fw-normal">Kissa talviyössä</h4>
+                        </div>
+                        <div class="card-body">
+                          <img src="catlights.png">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                          <h4 class="my-0 fw-normal">Kissa usvassa</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="airkitte.png">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="">
+                    <div class="form-group">
+                        <label for=""><b><h2 id="section3">Liity Kissa-armeija -postituslistalle: </h2></b></label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email">
+                    </div>
+                  </form>
 
         </main>
         
         <footer>
             <ul>
-                <li><img src="Snowcatlogo_pieni.png"></li>
+                <li><img src="Snowcatlogo_pieni.png">VK</li>
                 <li></li>
                 <li>Sivuston tiedot, esim. käytetyt uudet css-tekniikat</li>
+                <li>Kuvat: Midjourney AI</li>
             </ul>
         </footer>
     </body>
