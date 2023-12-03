@@ -1,0 +1,63 @@
+html {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(242, 243, 244);
+}
+
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    height: 150px;
+    background: url(christmas-9095_256.gif);
+    background-blend-mode: lighten;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navigointi {
+    width: 100%;
+    background-color: black;
+    position: relative;
+   }
+
+#navigointi nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size:medium;
+}
+
+#navigointi ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigointi ul li {
+    margin: 5px;
+    padding: 15px 5px;
+    text-align: center;
+}
+
+#navigointi nav ul li:hover {
+    background-color: rgb(43, 61, 141);
+    border-radius: 10px;
+}
