@@ -5,6 +5,7 @@ html {
 
 body {
     margin: 0px;
+    background-color: whitesmoke;
 }
 
 h1 {
@@ -49,8 +50,14 @@ header {
 #kissaarmeija {
     margin: 50px 25px;
     padding: 20px;
+    background-color: whitesmoke;
     border: 5px solid white;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+}
+
+#kissaarmeija:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.428);
+    transform: translate(0px, -3px);
 }
 
 .card .card-header {
