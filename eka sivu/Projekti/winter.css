@@ -24,7 +24,11 @@ header {
 #paaotsikko {
     margin: 25px;
     text-align: center;
-    text-shadow: 2px 2px 5px rgb(61, 32, 128);
+    background-color: darkgrey;
+}
+
+#paateksti {
+    padding: 25px;
 }
 
 #kissaarmeija {
@@ -44,6 +48,23 @@ header {
 
 .card-body img {
     width: 100%;
+}
+
+.container {
+    margin: 50px;
+    padding: 35px;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+}
+
+#postituslista {
+    margin: 35px;
+    font-size: 20px;
+}
+
+.btn {
+    margin: 10px;
 }
 
 .form-group {
