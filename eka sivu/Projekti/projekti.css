@@ -104,7 +104,6 @@ header h1 {
 .talvikortti-container {
     position: relative;
     width: 90%;
-    height: 300px;
     border-radius: 10px;
     background-color: whitesmoke;
     border: 5px solid white;
@@ -127,51 +126,39 @@ header h1 {
 
 .isootsikko {
     font-size: 25px;
+    margin: 10px;
 }
 
 .alaotsikko {
     font-size: 18px;
     color: rgb(5, 5, 134);
+    margin: 10px;
 }
 
 .korttisisalto {
-    position: absolute;
-    top: 5%;
-    bottom: 5%;
-    left: 430px;
-    width: calc(100% - 470px);
+    width: 100%;
+    margin: 10px;
 }
 
 .korttisisalto2 {
-    position: absolute;
-    top: 5%;
-    bottom: 5%;
-    right: 430px;
-    width: calc(100% - 470px);
+    width: 100%;
+    margin: 10px;
 }
 
 .talvikorttikuva {
-    position: absolute;
-    height: 300px;
-    width: 350px;
-    top: 0px;
-    left: 0px;
+    width: 100%;
 }
 
 .talvikorttikuva2 {
-    position: absolute;
-    height: 300px;
-    width: 350px;
-    top: 0px;
-    right: 0px;
+    width: 100%;
 }
 
 .talvikortti-container:hover .talvikorttikuva {
-    transform: scale(1.15) rotate(1deg);
+    transform: scale(1.1);
 }
 
 .talvikortti-container:hover .talvikorttikuva2 {
-    transform: scale(1.15) rotate(-1deg);
+    transform: scale(1.1);
 }
 
 
@@ -183,4 +170,53 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    color: white;
+    background-color: black;
+}
+
+@media screen and (min-width: 800px) {
+    
+    .talvikortti-container {
+        height: 300px;
+    }
+    .korttisisalto {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 430px;
+        width: calc(100% - 470px);
+    }
+    
+    .korttisisalto2 {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        right: 430px;
+        width: calc(100% - 470px);
+    }
+    
+    .talvikorttikuva {
+        position: absolute;
+        height: 300px;
+        width: 350px;
+        top: 0px;
+        left: 0px;
+    }
+    
+    .talvikorttikuva2 {
+        position: absolute;
+        height: 300px;
+        width: 350px;
+        top: 0px;
+        right: 0px;
+    }
+
+    .talvikortti-container:hover .talvikorttikuva {
+        transform: scale(1.15) rotate(1deg);
+    }
+    
+    .talvikortti-container:hover .talvikorttikuva2 {
+        transform: scale(1.15) rotate(-1deg);
+    }
+    
 }

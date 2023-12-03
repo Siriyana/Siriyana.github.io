@@ -83,6 +83,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     border: 5px solid white;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
 }
@@ -92,12 +93,13 @@ main {
 }
 
 .ilmatieteenlaitos img {
-    width: 50%;
+    width: 70%;
     height: auto;
+    padding: 10px 15%;
 }
 
 .video {
-    width: 45%;
+    width: 90%;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -112,6 +114,25 @@ main {
     width: 100%;
 }
 
+.video video {
+    width: 80%;
+}
+
 .video p {
     width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+}
+
+@media screen and (min-width: 800px) {
+    .video {
+        width: 45%;
+    }
+
 }
