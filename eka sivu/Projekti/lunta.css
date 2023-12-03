@@ -61,3 +61,57 @@ li a {
     background-color: rgb(43, 61, 141);
     border-radius: 10px;
 }
+
+header h1 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 1px 6px black;
+    font-size: 60px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ilmatieteenlaitos {
+    width: 80%;
+    margin: 35px 10px;
+    padding: 20px;
+    border: 10px double black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 5px solid white;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+}
+
+.ilmatieteenlaitos p {
+    width: 100%;
+}
+
+.ilmatieteenlaitos img {
+    width: 50%;
+    height: auto;
+}
+
+.video {
+    width: 45%;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    border: 5px solid white;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+    border-radius: 100px;
+}
+
+.video h2 {
+    width: 100%;
+}
+
+.video p {
+    width: 100%;
+}
