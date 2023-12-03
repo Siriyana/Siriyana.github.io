@@ -110,7 +110,7 @@ header h1 {
     cursor: pointer;
     overflow: hidden;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
-    margin: 50px;
+    margin: 5%;
 }
 
 .talvikortti-container:hover {
