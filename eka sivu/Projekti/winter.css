@@ -76,9 +76,10 @@ header {
 .container {
     margin: 50px;
     padding: 35px;
-    background-color: black;
+    background-color: whitesmoke;
     border-radius: 30px;
-    color: white;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+
 }
 
 #postituslista {

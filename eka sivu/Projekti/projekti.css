@@ -75,7 +75,7 @@ header h1 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 35px;
+    margin: 25px;
 }
 
 .runo p{
@@ -92,7 +92,7 @@ header h1 {
     max-width: 35%;
 }
 .runo img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     padding: 15px;
 }
@@ -174,7 +174,15 @@ footer {
     background-color: black;
 }
 
+
+
 @media screen and (min-width: 800px) {
+
+    .page-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
     
     .talvikortti-container {
         height: 300px;
