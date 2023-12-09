@@ -75,22 +75,22 @@ header h1 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 25px;
+    margin: 20px 10%;
 }
 
 .runo p{
     padding: 15px 25px 0px;
     font-style: italic;
     line-height: 1.5;
+    margin: 35px;
 }
 
-.runo div{
-    max-width: 55%;
-}
 
 .runo figure {
-    max-width: 35%;
+    max-width: 45%;
+    margin: 35px;
 }
+
 .runo img {
     max-width: 75%;
     height: auto;
@@ -170,6 +170,24 @@ header h1 {
     transform: scale(1.1);
 }
 
+.animaatioharjoitus img {
+    width: 250px;
+    height: auto;
+}
+
+.animaatioharjoitus {
+    width: 350px;
+    height: 350px;
+    animation-name: omaharjoitus;
+    animation-duration: 6s;
+    background-color: aquamarine;
+  }
+  
+  @keyframes omaharjoitus {
+    0%   {opacity: 0%;}
+    50%  {opacity: 50%;}
+    100% {opacity: 100%;}
+  }
 
 footer ul {
     list-style-type: none;
