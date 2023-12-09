@@ -122,6 +122,7 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 10px;
 }
 
 .isootsikko {
@@ -184,7 +185,7 @@ footer {
 
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 880px) {
 
     .page-container {
         display: flex;
@@ -193,7 +194,7 @@ footer {
     }
     
     .talvikortti-container {
-        height: 300px;
+        min-height: 375px;
     }
     .korttisisalto {
         position: absolute;
@@ -201,6 +202,7 @@ footer {
         bottom: 5%;
         left: 430px;
         width: calc(100% - 470px);
+        height: auto;
     }
     
     .korttisisalto2 {
@@ -209,22 +211,23 @@ footer {
         bottom: 5%;
         right: 430px;
         width: calc(100% - 470px);
+        height: auto;
     }
     
     .talvikorttikuva {
         position: absolute;
-        height: 300px;
+        height: 350px;
         width: 350px;
-        top: 0px;
-        left: 0px;
+        top: 8px;
+        left: 8px;
     }
     
     .talvikorttikuva2 {
         position: absolute;
-        height: 300px;
+        height: 350px;
         width: 350px;
-        top: 0px;
-        right: 0px;
+        top: 8px;
+        right: 8px;
     }
 
     .talvikortti-container:hover .talvikorttikuva {
