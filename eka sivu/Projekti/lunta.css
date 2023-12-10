@@ -75,6 +75,10 @@ main {
     justify-content: center;
 }
 
+.tietoisku {
+    padding: 5%;
+}
+
 .ilmatieteenlaitos {
     width: 80%;
     margin: 35px 10px;
