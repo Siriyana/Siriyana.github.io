@@ -1,11 +1,10 @@
 html {
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(242, 243, 244);
 }
 
 body {
     margin: 0px;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 h1 {
@@ -60,13 +59,22 @@ header {
     transform: translate(0px, -3px);
 }
 
-.card .card-header {
-    background-color: black;
-    color: white;
+
+.card {
+    background-color: whitesmoke !important;
+    border: 5px solid white !important;
+    border-radius: 30px !important;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613) !important;
 }
 
-.card .card-body {
-    background-color: black;
+.card:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.428);
+    transform: translate(0px, -3px);
+}
+
+.card-header {
+    background-color: rgb(54, 54, 54) !important;
+    color: white !important;
 }
 
 .card-body img {
@@ -77,9 +85,14 @@ header {
     margin: 50px;
     padding: 35px;
     background-color: whitesmoke;
+    border: 5px solid white;
     border-radius: 30px;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+}
 
+.container:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.428);
+    transform: translate(0px, -3px);
 }
 
 #postituslista {
