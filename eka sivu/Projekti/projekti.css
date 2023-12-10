@@ -8,9 +8,10 @@ body {
     margin: 0px;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
+
 
 header {
     height: 150px;
@@ -85,6 +86,52 @@ header h1 {
     margin: 35px;
 }
 
+.eka {
+    animation-name: omaharjoitus;
+    animation-duration: 4s;
+}
+
+.toka {
+    opacity: 0%;
+    animation-name: omaharjoitus2;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.kolmas {
+    opacity: 0%;
+    animation-name: omaharjoitus3;
+    animation-duration: 4s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes omaharjoitus {
+    0%   {opacity: 0%;}
+    25%   {opacity: 25%;}
+    50%  {opacity: 50%;}
+    75%   {opacity: 75%;}
+    100% {opacity: 100%;}
+  }
+
+@keyframes omaharjoitus2 {
+    0%   {opacity: 0%;}
+    25%   {opacity: 25%;}
+    50%  {opacity: 50%;}
+    75%   {opacity: 75%;}
+    100% {opacity: 100%;}
+  }
+
+@keyframes omaharjoitus3 {
+    0%   {opacity: 0%;}
+    25%   {opacity: 25%;}
+    50%  {opacity: 50%;}
+    75%   {opacity: 75%;}
+    100% {opacity: 100%;}
+  }
+
+
 
 .runo figure {
     max-width: 45%;
@@ -96,6 +143,7 @@ header h1 {
     height: auto;
     padding: 15px;
 }
+
 
 .talvikortti-container, .talvikortti-container * {
     box-sizing: border-box;
@@ -175,30 +223,44 @@ header h1 {
     height: auto;
 }
 
-.animaatioharjoitus {
-    width: 350px;
-    height: 350px;
-    animation-name: omaharjoitus;
-    animation-duration: 6s;
-    background-color: aquamarine;
-  }
-  
-  @keyframes omaharjoitus {
-    0%   {opacity: 0%;}
-    50%  {opacity: 50%;}
-    100% {opacity: 100%;}
-  }
+footer {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 
 footer ul {
     list-style-type: none;
-}
-
-footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    color: white;
-    background-color: black;
+    justify-content: space-evenly;
+}
+
+footer ul li {
+    font-size: smaller;
+    padding: 10px;
+}
+
+footer ol li {
+    margin: 5px;
+    padding: 2px;
+}
+
+
+aside {
+    width: 90%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: 5px solid white;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+    margin: 5%;
+    padding: 3%;
 }
 
 
