@@ -37,13 +37,14 @@ header {
 
 #paaotsikko {
     text-align: center;
-    background-color:rgb(2, 22, 75);
+    background-color: rgb(2, 22, 75);
     color: white !important;
+    text-shadow: 2px 1px 6px black;
+    font-size: 60px !important;
     border: 5px solid white;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
     border-radius: 80%;
-    font-size: 25px;
-    padding: 25px;
+    padding: 30px;
     width: 80%;
     margin: 5% 10%;
 }
