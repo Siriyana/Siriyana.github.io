@@ -33,10 +33,16 @@ header {
 }
 
 #navbarToggleExternalContent a.nav-link {
-    color: #fff !important; 
+    color: white !important; 
     font-family: 'Raleway', sans-serif !important;
     background-color: black !important;
 }
+
+#navbarToggleExternalContent a.nav-link:hover {
+    background-color: rgb(43, 61, 141) !important;
+    border-radius: 10px !important;
+}
+
 
 .col-md-4 img {
     width: 100%;
