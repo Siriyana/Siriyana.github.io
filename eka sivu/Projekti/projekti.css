@@ -250,9 +250,6 @@ header h1 {
 footer {
     color: white;
     background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
 
@@ -262,6 +259,7 @@ footer ul {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 15px;
 }
 
 footer ul li {
@@ -274,7 +272,10 @@ footer ol li {
     padding: 2px;
 }
 
-
+footer h4 {
+    margin: 0px;
+    font-size: medium;
+}
 
 @media screen and (min-width: 880px) {
 

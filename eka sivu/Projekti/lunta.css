@@ -157,6 +157,36 @@ aside img {
     width: 100%;
 }
 
+footer {
+    color: white;
+    background-color: black;
+}
+
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+
+footer ul li {
+    font-size: smaller;
+    padding: 10px;
+}
+
+footer ol li {
+    margin: 5px;
+    padding: 2px;
+}
+
+footer h4 {
+    margin: 0px;
+    font-size: medium;
+}
+
 @media screen and (min-width: 800px) {
     .video {
         width: 45%;
