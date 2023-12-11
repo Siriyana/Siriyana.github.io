@@ -59,9 +59,10 @@ li a {
     text-align: center;
 }
 
-#navigointi nav ul li:hover {
+.navlink:hover {
     background-color: rgb(43, 61, 141);
     border-radius: 10px;
+    padding: 15px 5px;
 }
 
 header h1 {
