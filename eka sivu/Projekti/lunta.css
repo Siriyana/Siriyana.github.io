@@ -126,13 +126,6 @@ main {
     width: 100%;
 }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    color: white;
-    background-color: black;
-}
 
 aside {
     width: 100%;
@@ -167,8 +160,8 @@ footer ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     margin: 15px;
 }
 
@@ -211,5 +204,10 @@ footer h4 {
     aside img {
         width: 100%;
         padding: 25px 5px;
+    }
+
+    footer ul {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }

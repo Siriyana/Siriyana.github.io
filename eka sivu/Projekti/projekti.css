@@ -189,6 +189,7 @@ header h1 {
 .korttisisalto {
     width: 100%;
     margin: 10px;
+    position: relative;
 }
 
 .korttisisalto p {
@@ -198,10 +199,31 @@ header h1 {
 .korttisisalto2 {
     width: 100%;
     margin: 10px;
+    position: relative;
 }
 
 .korttisisalto2 p {
     margin: 10px;
+}
+
+.korttisisalto3 {
+    width: 100%;
+    margin: 10px;
+    position: relative;
+}
+
+.korttisisalto3 p {
+    margin: 10px 10px 100px;
+}
+
+.korttisisalto4 {
+    width: 100%;
+    margin: 10px;
+    position: relative;
+}
+
+.korttisisalto4 p {
+    margin: 10px 10px 100px;
 }
 
 .talvikorttikuva {
@@ -232,12 +254,11 @@ header h1 {
 	border-radius: 70px;
 	text-align: center;
 	position: absolute;
-	bottom: 30px;
-	left: 35%;
+	bottom: 0px;
+	left: 40%;
 	display: flex;
 	align-items: center;
     justify-content: center;
-	padding: 5px;
     text-decoration: none;
 }
 
@@ -257,8 +278,8 @@ footer ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     margin: 15px;
 }
 
@@ -277,7 +298,7 @@ footer h4 {
     font-size: medium;
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 800px) {
 
     .page-container {
         display: flex;
@@ -298,6 +319,24 @@ footer h4 {
     }
     
     .korttisisalto2 {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        right: 430px;
+        width: calc(100% - 470px);
+        height: auto;
+    }
+
+    .korttisisalto3 {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 430px;
+        width: calc(100% - 470px);
+        height: auto;
+    }
+    
+    .korttisisalto4 {
         position: absolute;
         top: 5%;
         bottom: 5%;
@@ -328,6 +367,11 @@ footer h4 {
     
     .talvikortti-container:hover .talvikorttikuva2 {
         transform: scale(1.15) rotate(-1deg);
+    }
+
+    footer ul {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
     
 }

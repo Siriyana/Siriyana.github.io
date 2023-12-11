@@ -25,10 +25,11 @@ header {
 }
 
 #carouselExampleFade {
-    width: 50%;
+    width: 40%;
     height: auto;
-    margin: 0px 25%;
+    margin: 0px 30%;
 }
+
 
 .row {
     margin: 20px 0px;
@@ -102,6 +103,27 @@ header {
 
 .btn {
     margin: 10px;
+}
+
+.btn-primary {
+    box-shadow: 0px 2px 10px rgba(0,0,0,50%) !important;
+	width: 70px;
+	height: 70px;
+	font-size: medium;
+	background-color: rgb(55, 55, 122) !important;
+	border: 3px solid !important;
+	border-color: white !important;
+    border-radius: 70px !important;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 0px !important;
+}
+
+.btn-primary:hover {
+    font-size: larger;
+    background-color: lightblue;
+    color: rgb(3, 3, 98);
 }
 
 .form-group {
