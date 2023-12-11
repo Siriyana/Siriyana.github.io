@@ -2,6 +2,10 @@ html {
     font-family: 'Raleway', sans-serif !important;
 }
 
+main {
+    width: 100%;
+}
+
 body {
     margin: 0px;
     background-color: whitesmoke !important;
@@ -17,6 +21,21 @@ ul {
 
 header {
     background-color: black;
+    width: 100%;
+}
+
+.navbar-dark.bg-dark {
+    background-color: black !important;
+}
+
+.bg-dark.p-4 {
+    background-color: black !important;
+}
+
+#navbarToggleExternalContent a.nav-link {
+    color: #fff !important; 
+    font-family: 'Raleway', sans-serif !important;
+    background-color: black !important;
 }
 
 .col-md-4 img {
@@ -160,6 +179,7 @@ h2 {
 footer {
     color: white;
     background-color: black;
+    width: 100%;
 }
 
 

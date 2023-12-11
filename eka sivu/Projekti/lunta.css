@@ -5,6 +5,7 @@ html {
 
 body {
     margin: 0px;
+    width: 100%;
 }
 
 h1 {
@@ -73,6 +74,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .tietoisku {
@@ -120,6 +122,7 @@ main {
 
 .video video {
     width: 80%;
+    border-radius: 15px;
 }
 
 .video p {
@@ -130,29 +133,32 @@ main {
 aside {
     width: 100%;
     border: 1px double black;
-    padding: 10px 20px;
-    margin: 35px 0px;
     color: white;
     background-color: rgb(2, 22, 75);
     border-radius: 15px;
+    box-shadow: 0 0 25px white;
 }
 
 aside p {
     padding: 5px;
 }
 
-aside {
-    border-radius: 10px;
-    box-shadow: 0 0 25px white;
+
+aside figure {
+    width: 90%;
+    padding: 2.5%;
+    margin: 2.5%;
 }
 
 aside img {
     width: 100%;
+    border-radius: 15px;
 }
 
 footer {
     color: white;
     background-color: black;
+    width: 100%;
 }
 
 
@@ -199,6 +205,7 @@ footer h4 {
     aside {
         width: 18%;
         line-height: 2;
+        margin: 35px 0px;
     }
 
     aside img {
