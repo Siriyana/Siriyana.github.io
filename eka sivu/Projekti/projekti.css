@@ -166,10 +166,40 @@ header h1 {
     margin: 1%;
     border-radius: 10px;
     overflow:hidden;
+    
+}
+
+.kortti2 figure {
+    width: 100%;
+    overflow: hidden;
+    margin: 1%;
+    border-radius: 10px;
+    overflow:hidden;
+    
 }
 
 .kortti img {
     width: 100%;
+}
+
+.kortti2 img {
+    width: 100%;
+}
+
+.kortti2 {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: 5px solid white;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+    margin: 5%;
 }
 
 .teksti {
@@ -187,13 +217,23 @@ header h1 {
     transform: scale(1.1) rotate(2deg);
 }
 
+.kortti2:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.428);
+    transform: translate(0px, -3px);
+}
 
-.kortti h2 {
+.kortti2:hover .kuva {
+    transform: scale(1.1) rotate(2deg);
+}
+
+
+
+h2 {
     font-size: 25px;
     margin: 5px 10px;
 }
 
-.kortti h3 {
+h3 {
     font-size: 18px;
     color: rgb(5, 5, 134);
     margin: 15px 10px;    
@@ -262,9 +302,10 @@ footer h4 {
         max-width: 40%;
     }
 
-    .kortti img {
-        max-width: 350px;
+    .kortti2 figure {
+        max-width: 40%;
     }
+
 
     .teksti {
         width: 50%;
