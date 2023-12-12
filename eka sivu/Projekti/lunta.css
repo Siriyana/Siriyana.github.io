@@ -16,7 +16,6 @@ header {
     max-height: 250px;
     background: rgba(0, 0, 0, 0.479);
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
