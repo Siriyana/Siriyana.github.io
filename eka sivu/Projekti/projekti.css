@@ -14,13 +14,14 @@ h1, h2, h3 {
 
 
 header {
-    height: 150px;
+    max-height: 200px;
     background: url(snowflakes.png);
     background-blend-mode: lighten;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     border: 15px solid rgba(55, 55, 94, 0.521);
 }
 
