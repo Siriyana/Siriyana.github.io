@@ -14,12 +14,19 @@ h1 {
 
 header {
     height: 150px;
-    background: url(christmas-9095_256.gif);
-    background-blend-mode: lighten;
-    background-size: cover;
+    background: rgba(0, 0, 0, 0.479);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.parallax {
+    background-image: url(christmas-9095_256.gif);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #navigointi {
@@ -81,19 +88,28 @@ main {
 
 .tietoisku {
     padding: 5%;
+    background-color: whitesmoke;
+    justify-content: center;
+    width: 80%;
+    margin: 35px 10px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+    border-radius: 100px;
 }
 
 .ilmatieteenlaitos {
     width: 80%;
     margin: 35px 10px;
-    padding: 20px;
+    padding: 10px;
     border: 10px double black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;
     border: 5px solid white;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
+    border-radius: 100px;
 }
 
 .ilmatieteenlaitos p {
@@ -104,6 +120,7 @@ main {
     width: 70%;
     height: auto;
     padding: 10px 15%;
+    border-radius: 10px;
 }
 
 .video {
@@ -116,6 +133,7 @@ main {
     border: 5px solid white;
     box-shadow: 3px 3px 20px -10px rgba(0, 0, 0, 0.613);
     border-radius: 100px;
+    background-color: white;
 }
 
 .video h2 {
@@ -200,7 +218,7 @@ footer h4 {
     }
 
     main {
-        width: 75%;
+        width: 70%;
         margin: 0px;
     }
 
