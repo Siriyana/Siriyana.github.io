@@ -203,10 +203,17 @@ header h1 {
     margin: 5%;
 }
 
+
 .teksti {
     width: 100%;
-    padding: 20px 20px 100px;
+    padding: 20px 20px 120px;
     position: relative;
+    line-height: 1.5;
+    margin: 10px;
+}
+
+.teksti p {
+    margin: 15px 10px;
 }
 
 .kortti:hover {
