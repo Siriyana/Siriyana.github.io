@@ -90,6 +90,12 @@ h2 {
     width: 80%;
 }
 
+h3 {
+    text-decoration: underline;
+    padding: 10px;
+    text-align: center;
+}
+
 
 #paateksti {
     padding: 25px;
