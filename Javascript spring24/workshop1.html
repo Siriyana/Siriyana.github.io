@@ -1,0 +1,151 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Workshop 1</title>
+		<!-- script tag is where Javascript goes to -->
+        <script>
+            for(var i = 0; i < 400; i++) {
+            console.log("This round is " + i);
+            }
+        </script>
+        <script>
+            alert("Hello world!");
+            alert("Another hello world!");
+            alert("Still one more hello world!");
+        </script>
+
+
+	</head>
+
+	<body>
+		<h1>WORKSHOP 1</h1>
+        <script>
+            var firstname = "Your first name";
+            var lastname = "Your last name";
+            alert(firstname+" "+lastname)
+            console.log(lastname+", "+firstname);
+        </script>
+		<p> Lorem ipsum dolorem...   </p>
+
+        <script>
+            var x = 16;
+            var order = "Beer";
+            
+            if (x>50) {
+                document.write("<h1>He's over 50!</h1> <br>");
+                console.log("<h1>He's over 50!</h1>");
+            } else if (x<=50 && x>30) {
+                document.write("<strong>Middle aged man</strong>, who orderd some " + order + "<br>");
+                console.log("<strong>Middle aged man</strong>, who orderd some " + order);
+            } else if (x<=30 && x>17) {
+                document.write("<i>Cheers to young people</i> <br>");    
+                console.log("<i>Cheers to young people</i>");                   
+            } else if (x<=17 && x>15) {
+                document.write("<b>Just wait couple years for your </b> " + order + "<br>");
+                console.log("<b>Just wait couple years for your </b>" + order);
+            } else {
+                document.write("It seems you're bit underaged. <br>");
+                console.log("It seems you're bit underaged.");
+            }
+            </script>
+
+        <script>
+            var arr = []
+            for (var i=0; i<15; i++) {
+                arr.push( Math.floor(Math.random() * 100) + 1);
+                console.log(arr);
+                document.write(arr + "<br>")
+            }
+            console.log(arr);
+        </script>
+
+        <script>
+            function areYouOldEnough(age) {
+                if (age < 18) {
+                    alert("Not old enough")
+                    console.log(false)
+                    console.log("Not old enough")
+                    return false;
+                } else
+                    alert("Old enough")
+                    console.log(true)
+                    console.log("Old enough")
+                    return true;
+            }
+
+            areYouOldEnough(5);
+            areYouOldEnough(25);
+        </script>
+
+        <script>
+            var person = {
+                firstName:"John",
+                lastName:"Doe",
+                age:50,
+                eyeColor:"blue",
+                address: "Kissatie 1",
+                telephone:"050-123456789",
+
+                printInfo: function() {
+                    console.log(this.firstName + " " + this.lastName)
+                    console.log(this.age)
+                    console.log(this.eyeColor)
+                    console.log(this.address)
+                    console.log(this.telephone)
+                }
+            };
+        person.printInfo()
+
+        lista_ihmisista = [
+            {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue", address: "Kissatie 1", telephone: "050-123456789"},
+            {firstName: "Jane", lastName: "Doe", age: 45, eyeColor: "green", address: "Kissatie 1", telephone: "050-234567891"},
+            {firstName: "Jill", lastName: "Smith", age: 30, eyeColor: "green", address: "Koirakatu 2", telephone: "050-345678912"},
+            {firstName: "Jack", lastName: "Smith", age: 29, eyeColor: "brown", address: "Kanitie", telephone: "050-456789123"}
+        ];
+
+        for (let i = 0; i < lista_ihmisista.length; i++) {
+            document.write(lista_ihmisista[i].firstName + " " + lista_ihmisista[i].lastName + "<br>")
+        };
+
+        </script>
+
+        <script>
+            function inDogYears(age) {
+                inDogYear = age * 7
+                document.write("Koiran vuosissa olet " + inDogYear + "<br>")
+                return inDogYear
+            };
+
+            inDogYears(7);
+            inDogYears(30);
+            inDogYears(70);
+        </script>
+
+
+        <script>
+            var i = 5;
+            var j = 10;
+            var k = 25;
+            var l = "Joe";
+
+            if (i<j) {
+                console.log("i");
+            } else if (j>k) {
+                console.log("k")
+            } else {
+                console.log("j")
+            };
+
+            var arr = [3, 5, 7];
+
+            for (var i = 0; i<=3; ++i) {
+                console.log(arr[i])
+            };
+
+        </script>
+
+	</body>
+
+</html>
