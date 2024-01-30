@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JSlecture3.js"></script>
+    <link rel="stylesheet" href="l3.css">
+</head>
+<body onload="alert('page is loaded')">
+    <h1>Tuntiharjoituket 3</h1>
+    <button onclick="alert('button is clicked')">Click me</button>
+    <button onclick="myFirstFunction(10)">Function button</button>
+    <button onmouseover="alert('On me!')">Over me</button>
+    
+    <h2>HTML Events</h2>
+    <ol>
+        <li>on load</li>
+        <li>after print</li>
+        <li>alerts</li>
+        <li>on click</li>
+        <li>on mouse over/out/down etc</li>
+        <li>lisää w3school</li>
+    </ol>
+
+
+    <h2>Adding Listeners dynamically</h2>
+    <button id="myButton">myButton</button>
+    <p id="demo"></p>
+    <div class="square" onmouseover="showXY(event)" id="coordinates"></div>
+
+    <script>
+        var element = document.getElementById('myButton');
+        element.addEventListener('click', buttonFunction);
+    </script>
+
+
+</body>
+</html>
