@@ -5,18 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop3</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #example {
+            display: none;
+        }
+    </style>
+    <script>
+        var tableVisible = false;
+
+        function showTable() {
+            var x = document.getElementById("example");
+            tableVisible = !tableVisible;
+            if (tableVisible) {
+                x.style.display = "block";
+                document.getElementById("muutaNappula").innerHTML = "Hide table";
+            } else {
+                x.style.display = "none";
+                document.getElementById("muutaNappula").innerHTML = "Show table";
+            }
+        }
+
+        function getLocation() {
+            var paikkatiedotElement = document.getElementById("paikkatiedot");
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position){
+                    showPosition(position, paikkatiedotElement);
+                });
+            } else {
+                paikkatiedotElement.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position, element) {
+            element.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
 </head>
-<body>
+<body class="ws3">
+    <h1>Workshop 3: JavaScript Events</h1>
+    <hr />
+
     <h2>Exercise 1</h2>
+        <p>
+          <button onclick="alert('You clicked me! \n'+ Date())">Click me</button>
+          <button onclick="showTable()" id="muutaNappula">Show table</button>
+          <button onclick="getLocation()">Geolocation</button>
+        </p>
 
+        <p id="paikkatiedot"></p>
 
-    <h2>Exercise 2</h2>
+        <table id="example" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>$162,700</td>
+                </tr>              
+            </tbody>
+        </table>
+
+    <h2 onmouseover="">Exercise 2</h2>
 
 
     <h2>Exercise 3</h2>
-
+    <form>
+        <textarea id="textdata"></textarea><br>
+        <span id="charcount"></span>
+        <button>Send me</button>
+    </form>
 
     <h2>Exercise 4</h2>
-    
+    <div id="coordinates"></div>
 </body>
 </html>
