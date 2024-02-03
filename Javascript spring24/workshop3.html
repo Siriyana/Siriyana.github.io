@@ -91,9 +91,19 @@
                 </tr>              
             </tbody>
         </table>
-
-    <h2 onmouseover="">Exercise 2</h2>
-
+    <script>
+        function enter() {
+            this.innerHTML = "Over!";
+            console.log("Stepped over by a mouse!");
+        }
+        
+        function leave() {
+            this.innerHTML = "Exercise 2";
+            console.log("Bye bye mouse!");
+        }
+    </script>
+        
+    <h2 onmouseover="enter.call(this);" onmouseleave="leave.call(this);">Exercise 2</h2>
 
     <h2>Exercise 3</h2>
     <form>
