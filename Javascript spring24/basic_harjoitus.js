@@ -1,5 +1,7 @@
 console.log('Hello world') ;
 
+// GLOBAL MUUTTUJAT ja FUNKTIOIDEN SISÄISET MUUTTUJAT
+
 const life = 100;
 const name = "Developer";
 
@@ -14,6 +16,8 @@ console.log(nimi)
 var checkout = true;
 
 var box = null;
+
+// FUNKTIOITA
 
 function logger() {
     console.log(name);
@@ -40,3 +44,28 @@ function adder(num1, num2) {
 }
 
 adder(5, 10);
+
+//OLIO JAVASCIPRTISSÄ
+
+const user = {
+    name: "edwin",
+    age: 24,
+    married: false,
+    purchases: ["phone", "car", "laptop"],
+
+    sayName: function() {
+        console.log(this.name);
+    }
+};
+
+function apple() {
+    console.log("apple");
+}
+
+
+//WINDOW OBJECTS
+window.apple();
+console.log(this);
+
+//funktiossa on this.name vertaa function sayMyAge() {console.log("My age is ${this"})}, jota kutsuttaisiin 
+user.sayName();
