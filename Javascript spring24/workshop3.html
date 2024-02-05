@@ -106,13 +106,54 @@
     <h2 onmouseover="enter.call(this);" onmouseleave="leave.call(this);">Exercise 2</h2>
 
     <h2>Exercise 3</h2>
+    <script>
+        function showOhje(e) {
+        var element = document.getElementById("textdata");
+        element.style.backgroundColor = 'yellow';
+        element.style.height = "200px";
+ 
+        
+        var ohje = "Please fill in the form with proper data.";
+        document.getElementById("textdata").innerHTML=ohje;
+        }
+    </script>
+
+    <script>
+        var lukumaara = 0;
+        function laskeKeypresses(e) {
+            lukumaara++;
+            document.getElementById("keypresses").innerHTML = "Näppäinpainallukset: " + lukumaara;
+        }
+
+        function tarkista(e) {
+            if (document.getElementById("textdata").value == 0) {
+                alert("Teksti alue on tyhjä")
+            }
+        }
+    </script>
+
+
     <form>
-        <textarea id="textdata"></textarea><br>
+        <textarea id="textdata" onmouseover="showOhje(event)" onkeydown="laskeKeypresses(event)"></textarea><br>
         <span id="charcount"></span>
-        <button>Send me</button>
+        <h3 id="keypresses"></h3>
+        <button onclick="tarkista(event)">Send me</button>
     </form>
 
-    <h2>Exercise 4</h2>
-    <div id="coordinates"></div>
+    <h2 id="coords">Exercise 4 Tähän tulee koordinaatit: </h2>
+
+    <script>
+        function showXY(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+
+        var coords = "X coords: " + x + ", <br> Y coords: " + y;
+        document.getElementById("coords").innerHTML=coords;
+        }
+    </script>
+
+    <div id="coordinates" onmousemove="showXY(event)"></div>
+
+
 </body>
 </html>

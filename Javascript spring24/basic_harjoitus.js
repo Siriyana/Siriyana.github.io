@@ -16,8 +16,27 @@ var checkout = true;
 var box = null;
 
 function logger() {
+    console.log(name);
     console.log("Party time");
     console.log("Party time");    
+    console.log("Party time");    
+    console.log("Party time");    
+    console.log("Party time");    
+    console.log("Party time");    
+    console.log("If you want to copy you press SHIFT+ALT+nuolialaspäin");    
 }
 
 logger();
+
+function upperCase(text) {
+    const uppercased = text.toUpperCase();
+    console.log(uppercased);
+}
+
+upperCase(name)
+
+function adder(num1, num2) {
+    console.log(num1 + num2);
+}
+
+adder(5, 10);

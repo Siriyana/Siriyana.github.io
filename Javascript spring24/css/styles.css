@@ -137,3 +137,9 @@ table.display {
     height: auto;
     border: 0;
 }
+
+#coordinates {
+    background-color: aqua;
+    height: 250px;  
+    width: 300px;
+}
