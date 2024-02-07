@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="l3.css">
+</head>
+<body>
+    <h1 id="heading">Punainen otsikko, id</h1>
+    <p>Id voi käyttää vain yhdessä elementissä ja class monessa</p>
+    <h2 class="yellow-text">Keltainen, class</h2>
+    <h3 class="yellow-text">Keltainen, class</h3>
+    <p>jotain</p>
+    <h2>Headings</h2>
+
+    <div class="square"></div>
+
+    <script>
+        var heading = document.getElementById("heading");
+        heading.innerHTML = "New Heading";
+
+        var h2s = document.getElementsByTagName("h2");
+        for(var i=0; i<h2s.length; i++){
+            h2s[i].innerHTML = "New Heading 2";
+            h2s[i].style.color = "blue";
+        }
+
+        document.body.style.backgroundColor = "lightgray";
+
+        var item = document.getElementsByClassName("square");
+        var y=item[0];
+
+        y.style.position = "relative";
+        y.style.left = "100px";
+
+        setInterval(function(){
+            doMove()
+        }, 1000);
+
+        function doMove(){
+            var topval = parseInt(y.style.left);
+            y.style.left = (topval + 10) + "px";
+            console.log("Move to " + topval + "px");
+        }
+
+        let newItem = document.createElement("p");
+        newItem.innerHTML = "new content";
+        newItem.setAttribute("id", "newData");
+        document.body.appendChild(newItem);
+
+    </script>
+</body>
+</html>

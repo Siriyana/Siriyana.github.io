@@ -1,5 +1,18 @@
+html {
+    background-color: black;
+}
+
 .square {
     height: 150px;
     width: 150px;
     background-color: yellow;
+}
+
+#heading {
+    color: red;
+
+}
+
+.yellow-text {
+    color: yellow;
 }
