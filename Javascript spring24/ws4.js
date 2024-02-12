@@ -53,3 +53,37 @@ function surprise() {
         element.style.fontSize = "20px";
     });
 }
+
+    
+var kuvaJoukko = {
+    "BMW": "img/BMW.jpg",
+    "Audi": "img/Audi.jpg",
+    "Mercedes": "img/Mercedes.png",
+    "Volvo": "img/Volvo.jpg"
+    };
+
+function kuvanVaihto(kuvaJoukko) {
+    var kuva = document.getElementById("carimage");
+    kuva.src = kuvaJoukko;
+    }
+    
+function valinta() {
+    var value = document.getElementById("mySelect").value;
+    var kuvavalinta = kuvaJoukko[value];
+    kuvanVaihto(kuvavalinta);
+
+    alert("Valitsit " + value);
+
+}
+
+function reunaKuvaan() {
+    var kuva = document.getElementById("carimage");
+    kuva.style.borderStyle = "solid";
+    kuva.style.borderColor = "darkgreen";
+    kuva.style.borderWidth = "5px";
+}
+
+function ilmanReunaa() {
+    var kuva = document.getElementById("carimage");
+    kuva.style.border = "none";
+}
