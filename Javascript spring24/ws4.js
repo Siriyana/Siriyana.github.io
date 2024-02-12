@@ -140,3 +140,28 @@ function remove() {
     poistettavaKuva.parentNode.removeChild(poistettavaKuva);
 
 }
+
+
+function insertRows() {
+    var table = document.getElementById("data");
+    var rivi = table.insertRow(-1);
+    var solu1 = rivi.insertCell(0);
+    var solu2 = rivi.insertCell(1);
+    var solu3 = rivi.insertCell(2);
+
+    solu1.innerHTML = document.getElementById("textfield").value;
+    solu2.innerHTML = document.getElementById("textfield2").value;
+    solu3.innerHTML = document.getElementById("textfield3").value;
+}
+
+function replaceList() {
+    var lis = document.getElementsByTagName("li");
+    for(var i=0; i<lis.length; i++){
+        var strong = document.createElement("strong");
+        strong.innerHTML = lis[i].innerHTML;
+        lis[i].parentNode.replaceChild(strong, lis[i]);
+    }
+    
+}
+
+replaceList()
