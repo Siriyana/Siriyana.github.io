@@ -36,3 +36,20 @@ function lisaaTeksti() {
     body.style.backgroundColor = "yellow";
 
 }
+
+function hide() {
+    var x = document.getElementById("me");
+    x.style.display = "none";
+}
+
+function show() {
+    var x = document.getElementById("me");
+    x.style.display = "block";
+}
+
+function surprise() {
+    var surprises = document.querySelectorAll(".surprise");
+    surprises.forEach(function (element) {
+        element.style.fontSize = "20px";
+    });
+}
