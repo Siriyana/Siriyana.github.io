@@ -69,3 +69,52 @@ console.log(this);
 
 //funktiossa on this.name vertaa function sayMyAge() {console.log("My age is ${this"})}, jota kutsuttaisiin 
 user.sayName();
+
+
+const names = ["Ed", "John", "Maria", "Elisa", "Harry"];
+
+for(nimi of names){
+    console.log("Hello there ${nimi}");
+}
+
+for(nimi of names){
+    console.log(nimi);
+    if (nimi === "Maria"){
+        console.log("Maria is in my list!");
+        break;
+    }
+}
+
+let loading = 0;
+
+while(loading < 100){
+    console.log("Website is still loading");
+
+    loading++;
+}
+
+const text = document.querySelector(".title");
+const changeColor = document.querySelector(".changeColor");
+
+text.style.color = "red";
+text.style.backgroundColor = "darkgrey";
+/*text.classList.add("change");*/
+
+changeColor.addEventListener("click", function() {
+    text.classList.add("change");
+});
+
+const userList = document.querySelector(".name_list");
+const listInput = document.querySelector(".list_input");
+const addListBtn = document.querySelector(".addListBtn");
+
+addListBtn.addEventListener("click", function() {
+    // Create an li
+    const newLi = document.createElement("LI");
+    const liContent = document.createTextNode(listInput.value);
+    console.log(listInput.value);
+    // Add the input value inside that li
+    newLi.appendChild(liContent);
+    // Attaching the li to the user list
+    userList.appendChild(newLi);
+});
