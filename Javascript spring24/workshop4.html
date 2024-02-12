@@ -13,26 +13,123 @@
     <h2>Exercise 1</h2>
     <p>
         <button onclick="changeHeading();">Button 1: Muuta Workshop4 -otsikko</button>
-        <button onclick="secondButton">Button 2: Muuta Exercise 2 -otsikko</button>
-        <button onclick="">Button 3: logo allaolevaan Lorem ipsum + taustakuva koko sivulle</button>
+        <button onclick="secondButton()">Button 2: Muuta Exercise 2 -otsikko</button>
+        <button onclick="lisaaTeksti()">Button 3: lisää Lorem Ipsum -teksti neljänteen p-elementtiin ilman ylikirjausta + logo tekstiin + taustakuva koko sivulle</button>
       </p>
-      <strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em> dolor sit amet, consectetuer   adipiscing elit. Sed posuere interdum sem. Quisque ligula eros   ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam   vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget   velit. &quot;</em>
+      <p id="siirrettavaTeksti"><strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em> dolor sit amet, consectetuer   adipiscing elit. Sed posuere interdum sem. Quisque ligula eros   ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam   vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget   velit. &quot;</em></p>
 
-    <h2>Exercise 2</h2>
+    <h2 id="secondButton">Exercise 2</h2>
+    <p class="surprise">Add onchange -events to following checkboxes.</p>
+    <p>
+        <label>
+            <input onchange="hide()" name="CheckboxGroup1" type="checkbox" id="CheckboxGroup1_0" title="Actions" value="1">
+            Hide me 
+        </label>
+        <br>
+        <label>
+            <input onchange="show()" type="checkbox" name="CheckboxGroup1" value="2" id="CheckboxGroup1_1">
+            Show me
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
+            <span id="surpise">Surprise</span>
+        </label>
+    </p>
+    <div id="me" class="red-box"></div>
+    <p>&nbsp;</p>
+    <hr/>
 
 
     <h2>Exercise 3</h2>
 
+    <p>Select a new car from the list.</p>
+    <select name="mySelect" id="mySelect" onchange="">
+      <option value="BMW">BMW         
+      <option value="Audi">Audi
+      <option value="Mercedes">Mercedes
+      <option value="Volvo">Volvo
+    </select>
+    <br>
+    <br>
+    <img alt="" onmouseover="" onmouseout="" style="left: 0px; opacity: 1;" src="http://cdn.bmwblog.com/wp-content/uploads/2015/11/BMW-2-Series-Gran-Coupe-Rendering.jpg" width="400" id="carimage"/>
+    <hr/>
 
     <h2>Exercise 4</h2>
 
+    <p class="surprise">You can do neat things by editing CSS-rules via  JavaScript. See the examples in lecture slides. Then try these:</p>
+    <ol>
+      <li><button onclick="changePosition()">Move!</button>Select the div with an id &quot;carimage&quot; and move it 200px left and 500px down</li>
+      <li><button onclick="setInterval(function(){doMove();},1000); ">Animate</button> Write a  funtion doMove() which  will move the image across the screen, or even better: back and forth on  the screen. The Interval required has already been added to the onclick -event of the list item.</li>
+      <li><button onclick="setInterval(function(){fadeOut();},250);">Fade out!</button> Wite  a function fadeOut() which will slowly decrease the opacity of the image from 1.0 to  0 making it fade out. The Interval required has already been added to the onclick -event of the list item</li>
+      <li><button onclick="remove()">Disappear! </button>Finally, write JavaScript which will remove the image from the page</li>
+    </ol>
+
+    <hr/>
 
     <h2>Exercise 5</h2>
 
+    <table id="data" class="display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Ashton Cox</td>
+            <td>Junior Technical Author</td>
+            <td>$86,000</td>
+          </tr>
+          <tr>
+            <td>Cedric Kelly</td>
+            <td>Senior Javascript Developer</td>
+            <td>$433,060</td>
+          </tr>
+          <tr>
+            <td>Airi Satou</td>
+            <td>Accountant</td>
+            <td>$162,700</td>
+          </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+    <p>
+        Name
+        <label for="textfield">:</label>
+        <input type="text" name="textfield" id="textfield">
+        <br>
+        Position:
+        <input type="text" name="textfield2" id="textfield2">
+        <br>
+        Salary: 
+        <input type="text" name="textfield3" id="textfield3">
+        <br>
+        <input type="button" onclick="insertRows()" name="Insert" id="Insert" value="Insert">
+    </p>
+    <hr/>
 
     <h2>Bonus exercise</h2>
 
-
+    <ul>
+        <li dir="ltr">
+            <p dir="ltr">Write a loop, which goes through all the LI tags in the page and replaces them with a &lt;strong&gt; tagged, red text saying &quot;Replaced&quot;.</p>
+        </li>
+        <li dir="ltr">How would you replace the contents only on the ones with the word &lsquo;Select&rsquo; in them?</li>
+    </ul>
 
 </body>
 </html>
