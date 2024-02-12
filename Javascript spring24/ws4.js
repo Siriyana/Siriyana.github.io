@@ -87,3 +87,56 @@ function ilmanReunaa() {
     var kuva = document.getElementById("carimage");
     kuva.style.border = "none";
 }
+
+function changePosition() {
+    var div = document.getElementById("carimage");
+    var currentPosition = parseInt(div.style.top) || 0;
+    div.style.top = currentPosition + 500 + "px";
+    div.style.left = currentPosition + 200 + "px";
+    
+/*    div.style.position = "relative";
+    div.style.left = "200px";
+    div.style.top = "500px"; 
+    Tämä toimii myös */ 
+}
+
+var suunta = 1;
+var kulkuleveys = 600;
+var intervalId;
+
+function liikkuu() {
+    var div = document.getElementById("carimage");
+    var leftVal = parseInt(div.style.left);
+
+    if (leftVal + 1 * suunta > kulkuleveys || leftVal + 1 * suunta < 0) {
+        suunta *= -1;
+    }
+
+    div.style.left = (leftVal + 1 * suunta) + "px";
+}
+
+function doMove() {
+    intervalId = setInterval(liikkuu, 150);
+}
+
+
+var opacityValue = 1;  // Alkuperäinen opacity
+var intervalId;
+
+function fadeOut() {
+    var kuva = document.getElementById("carimage");
+    intervalId = setInterval(function () {
+        if (opacityValue > 0) {
+            opacityValue -= 0.01;  // Voit säätää tätä arvoa haluamasi nopeuteen
+            kuva.style.opacity = opacityValue.toFixed(2);
+        } else {
+            clearInterval(intervalId);  // Pysäytä animaatio, kun opacity on nolla
+        }
+    }, 100);  // Päivitä opacity-arvoa joka 10 millisekunti
+}
+
+function remove() {
+    var poistettavaKuva = document.getElementById("carimage");
+    poistettavaKuva.parentNode.removeChild(poistettavaKuva);
+
+}
