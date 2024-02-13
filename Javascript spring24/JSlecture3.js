@@ -1,3 +1,6 @@
+var fieldset = document.getElementById("myFieldset")
+fieldset.style.display = "none";
+
 function myFirstFunction(number){
     for(var i=0; i < number; i++){
         console.log(i);
@@ -17,4 +20,20 @@ function showXY(e) {
 
     var coords = "X coords: " + x + ", <br> Y coords: " + y;
     document.getElementById("coordinates").innerHTML=coords;
+}
+
+function validateForm(){
+    var fname = document.forms["myForm"]["fname"].value;
+    var lname = document.forms.myForm.lname.value;
+    
+    if(fname==null || fname=="" || fname.length < 3){
+        document.forms.myForm.fname.style.borderColor = "red";
+        document.getElementById("feedback").innerHTML = "<b>*Fill in properly</b>"
+        return false;
+    }
+}
+
+function showExtraFields(){
+    var y = document.getElementById("myFieldset");
+    y.style.display="block";
 }

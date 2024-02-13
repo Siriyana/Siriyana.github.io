@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Forms</title>
+</head>
+<body>
+    <h1>Please fill in your data</h1>
+    <form name="myForm" action="#" onsubmit="return validateForm()">
+        <label for="fname">Firstname:</label>
+        <input type="text" id="fname"><span id="feedback"></span><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname"><br>
+
+        <input type="submit" value="Send it!">
+    </form>
+
+    <p>
+        <input type="checkbox" name="comments" id="comments" onclick="showExtraFields()"> I want to leave comments
+    </p>
+
+    <p>
+        <fieldset id="myFieldset">
+            <legend>Additional information</legend>
+            <textarea name="message" id="message" cols="30" rows="10">Write your feedback here</textarea>
+        </fieldset>
+    </p>
+
+    <form id="dForms" action="" method="post">
+        <select name="myMenu" id="myMenu" size="1">
+            <option value="FIN">FIN</option>
+            <option value="UK">UK</option>
+            <option value="US">US</option>
+        </select>
+    </form>
+    
+    <script src="JSlecture3.js"></script>
+</body>
+</html>
