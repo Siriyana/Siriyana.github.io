@@ -18,3 +18,56 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.intro-text {
+    width: 30%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+
+.intro-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.carousel-container{
+    position: relative;
+    width: 45%;
+    margin: auto;
+    border: 5px solid black;
+    overflow: hidden;
+}
+
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+#prevButton{
+    position: absolute;
+    top: 450%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+#nextButton{
+    position: absolute;
+    top: 450%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
