@@ -34,13 +34,13 @@
     <hr/>
     <h2>Exercise 2: Membership Calculator</h2>
 
-        <form action="#" method="post" id="theForm">
+        <form action="#" method="post" id="theForm" onsubmit="laskeHinta(); return false;">
             <fieldset>
                 <legend>Create Your Membership</legend>
-                <p>Complete this form to calculate your membership. There's a 20% discount if you enroll for more than one year!</p>
+                <p>Complete this form to calculate your membership. There's a 20% discount if you enroll for more than two year!</p>
                 <div>
                     <label for="type">Type</label> 
-                    <select name="type" id="type" size="4" required>
+                    <select name="type" id="type" size="1" required>
                         <option value="basic">Basic - $10.00</option>
                         <option value="premium">Premium - $15.00</option>
                         <option value="gold">Gold - $20.00</option>
@@ -84,6 +84,10 @@
                 <input type="text" name="discount" id="discount" value="0.00" required>
             </div>
             <div>
+                <label for="shipping">Shipping fee</label>
+                <input type="text" name="shipping" id="shipping" value="0.00">
+            </div>
+            <div>
                 <label for="total">Total</label>
                 <input type="text" name="total" id="total" value="0.00">
             </div>
@@ -97,6 +101,41 @@
     <hr/>
     <h2>Exercise 4: Hidden Extra fields</h2>
 
+    <form onsubmit="alert('Lähetetty')">
+        <div class="no-border">
+        <label>Preferred way of contact: <br></label>
+        <select id="valikko" name="valikko" size="1" onchange="showFields()">
+            <option value="empty">-</option>
+            <option value="email2">Sähköposti</option>
+            <option value="phnro">Puhelin</option>
+            <option value="sms">Tekstiviesti</option>
+        </select>
+    </div>
+
+        <div id="email2">
+            <label>Email address:<br>
+                <input type="text" name="email2" id="email2Input">
+            </label>
+        </div>
+        <div id="phnro">
+            <label>Phone number::<br>
+                <input type="text" name="phnro" id="phnroInput">
+            </label>
+        </div>
+        <div id="sms">
+            <label>Text message:<br>
+                <input type="text" name="sms" id="smsInput">
+            </label>
+        </div>
+        <div class="no-border">
+            <label>
+                Comment:<br>
+            </label>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="Send">
+    </form>
 
     <script src="js/shopping.js"></script>
     

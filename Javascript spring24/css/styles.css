@@ -29,7 +29,7 @@ hr {
 .no-border {
     border: 0;
     height: auto;
-    padding: 0;
+    padding: 10px 0px;
     margin: 0;
 }
 .red, .error, .error textarea, .error input {
@@ -142,4 +142,27 @@ table.display {
     background-color: aqua;
     height: 250px;  
     width: 300px;
+}
+
+
+#valikko {
+    padding: 2px;
+    font-size: 15px;
+    margin: 3px 0px;
+}
+
+fieldset div {
+    padding: 5px 10px;
+}
+
+fieldset label {
+    display: inline-flex;
+    width: 100px;
+}
+
+.contact {
+    border: 0;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
