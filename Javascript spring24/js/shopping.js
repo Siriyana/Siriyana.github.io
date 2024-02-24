@@ -1,22 +1,23 @@
 function checkFields(){
-    var email = document.forms[0].email.value;
-    var comment = document.forms[0].comment.value;
+    var email = document.myForm.email.value;
+    var comment = document.myForm.comment.value;
     
     if(email==null || email=="" || email.length < 6 || email.length > 15 || email.indexOf("@") === -1){
         document.getElementById("email").style.borderColor = "red";
-        document.getElementById("email").innerHTML = "<b>*Fill in properly</b>"
-        alert('Pieleen meni. Sähköpostissa pitää olla 7-14 merkkiä ja @-merkki');
+        document.getElementById("feedback").style.color = "red";
+        document.getElementById("feedback").innerHTML = "Sähköpostissa pitää olla 7-14 merkkiä ja @-merkki";
         return false;
     } 
-    if(comment==null || comment=="" || comment.length > 50){
+    if(comment==null || comment==""){
         document.getElementById("comment").style.borderColor = "red";
-        document.getElementById("comment").innerHTML = "<b>*Fill in properly</b>"
-        alert('Pieleen meni... Kommenttikenttä on pakollinen. Maksimi 50 merkkiä.')
+        document.getElementById("feedback2").style.color = "red";
+        document.getElementById("feedback2").innerHTML = "Kommenttikenttä on pakollinen. Maksimi 50 merkkiä.";
         return false;
-    } 
+    } else {
+        var comments = comment.substring(0, 50);
+    }
 
-    alert('Email address: ' + email);
-    alert('Comments: ' + comment)
+    alert('Email address:\n' + email + '\n\nComments: ' + comments);
     return true
 }
 
@@ -44,11 +45,11 @@ function laskeHinta(){
     }else if(vuodet > 2 && vuodet < 5){
         maara = maara * 0.8;
         tulos = maara * vuodet;
-        alert("You get a 20% discount, because you have chosen membership for more than two year!");
+        document.getElementById("alennus").innerHTML = "Saat 20% alennusta!";
     }else if (vuodet >= 5){
         maara = maara * 0.8;
         tulos = maara * vuodet - 5;
-        alert("You get a 20% discount + $5 discount, because you have chosen membership for five year or more! :)");
+        document.getElementById("alennus").innerHTML = "Saat 20% alennusta + lisäalennuksen $5!";
       
     }
 
@@ -82,7 +83,7 @@ function calculate(){
         var discount = discount * 2;
     }
 
-    var tulos = (quantity * price - discount + shipping) * (1 -(tax/100));
+    var tulos = quantity * price * (1 +(tax/100)) - discount + shipping;
 
     if(tulos < 0){
         alert('Discount is incorrect!')
@@ -120,26 +121,4 @@ function showFields(){
         phnroDiv.style.display = "none";
         smsDiv.style.display = "block";
     }
-}
-
-function checkFields2(){
-    var email = document.forms[0].email2.value;
-    var comment = document.forms[0].comment.value;
-    
-    if(email==null || email=="" || email.length < 6 || email.length > 15 || email.indexOf("@") === -1){
-        document.getElementById("email").style.borderColor = "red";
-        document.getElementById("email").innerHTML = "<b>*Fill in properly</b>"
-        alert('Pieleen meni. Sähköpostissa pitää olla 7-14 merkkiä ja @-merkki');
-        return false;
-    } 
-    if(comment==null || comment=="" || comment.length > 50){
-        document.getElementById("comment").style.borderColor = "red";
-        document.getElementById("comment").innerHTML = "<b>*Fill in properly</b>"
-        alert('Pieleen meni... Kommenttikenttä on pakollinen. Maksimi 50 merkkiä.')
-        return false;
-    } 
-
-    alert('Email address: ' + email);
-    alert('Comments: ' + comment)
-    return true
 }

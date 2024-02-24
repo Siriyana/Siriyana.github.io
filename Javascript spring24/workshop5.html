@@ -13,17 +13,19 @@
     <hr/>
     <h2>Exercise 1: Contact Form</h2>
 
-        <form onsubmit="return checkFields()">
+        <form name="myForm" action= "#" onsubmit="return checkFields()">
             <div class="no-border">
                 <label>Email address:<br>
                     <input type="text" name="email" id="email">
                 </label>
+                <span id="feedback"></span>
             </div>
             <div class="no-border">
                 <label>
                     Comment:<br>
                 </label>
                 <textarea name="comment" id="comment"></textarea>
+                <span id="feedback2"></span>
             </div>
             <br>
             <input type="submit" value="Send">
@@ -50,6 +52,7 @@
                 <div>
                     <label for="years">Years</label>
                     <input type="number" name="years" id="years" min="1" required>
+                    <span id="alennus"></span>
                 </div>
                 <div>
                     <label for="cost">Cost</label>
