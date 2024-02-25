@@ -94,11 +94,17 @@ function calculate(){
 }
 
 function validateForm() {
-    var fname = document.forms[testForm]["fname"].value;
-    var lname = document.forms[testForm]["lname"].value;
-    var email2 = document.forms[testForm]["email2Input"].value;
-    var puhnro = document.forms[testForm]["puhnroInput"].value;
-    var sms = document.forms[testForm]["smsInput"].value;
+    var fname = document.testForm.fname.value;
+    var lname = document.testForm.lname.value;
+    var email2 = document.testForm.email2.value;
+    var phnro = document.testForm.phnro.value;
+    var sms = document.testForm.sms.value;
+    var tarkistanumerot = /^\d+$/; 
+
+    var valinta = document.getElementById('valikko').value;
+    if (valinta === "empty") {
+        return true;
+    }
 
     if(fname == null || fname == "" || fname.length < 3) {
         document.getElementById("fname").style.borderColor = "red";
@@ -112,52 +118,55 @@ function validateForm() {
         document.getElementById("palaute2").innerHTML = "Name must be filled out";
         return false;
     }
-    if(email2==null || email2=="" || email2.length < 6 || email2.length > 25 || email2.indexOf("@") === -1){
-        document.getElementById("email2Input").style.borderColor = "red";
+    if(email2.length > 0 && (email2.length < 6 || email2.length > 25 || email2.indexOf("@") === -1)){
+        document.getElementById("email2").style.borderColor = "red";
         document.getElementById("palaute3").style.color = "red";
         document.getElementById("palaute3").innerHTML = "Sähköpostissa pitää olla 7-25 merkkiä ja @-merkki";
         return false;
     } 
-    if(puhnro==null || puhnro==""){
-        document.getElementById("puhnroInput").style.borderColor = "red";
+    if(phnro.length > 0 && !tarkistanumerot.test(phnro)){
+        document.getElementById("phnro").style.borderColor = "red";
         document.getElementById("palaute4").style.color = "red";
-        document.getElementById("palaute4").innerHTML = "Must be filled and number cannot contain letters";
+        document.getElementById("palaute4").innerHTML = "Cannot contain letters";
         return false;
     } 
-    if(sms==null || sms==""){
-        document.getElementById("smsInput").style.borderColor = "red";
+    if(sms.length > 0 && !tarkistanumerot.test(sms)){
+        document.getElementById("sms").style.borderColor = "red";
         document.getElementById("palaute5").style.color = "red";
-        document.getElementById("palaute5").innerHTML = "Must be filled and number cannot contain letters";
+        document.getElementById("palaute5").innerHTML = "Cannot contain letters";
         return false;
     } 
 
     return true;
 }
 
-document.getElementById('email2').style.display = "none";
-document.getElementById('phnro').style.display = "none";
-document.getElementById('sms').style.display = "none";
+document.getElementById('prefEmail').style.display = "none";
+document.getElementById('prefPhnro').style.display = "none";
+document.getElementById('prefSms').style.display = "none";
 
 function showFields(){
     
     var valinta = document.getElementById('valikko').value;
-    var emailDiv = document.getElementById("email2");
-    var phnroDiv = document.getElementById("phnro");
-    var smsDiv = document.getElementById("sms");
+    var emailDiv = document.getElementById("prefEmail");
+    var phnroDiv = document.getElementById("prefPhnro");
+    var smsDiv = document.getElementById("prefSms");
 
     if(valinta === "empty"){
         emailDiv.style.display = "none";
         phnroDiv.style.display = "none";
         smsDiv.style.display = "none";
-    }else if(valinta === "email2"){
+        return;
+    }
+    
+    if(valinta === "prefEmail"){
         emailDiv.style.display = "block";
         phnroDiv.style.display = "none";
         smsDiv.style.display = "none";
-    }else if(valinta === "phnro"){
+    }else if(valinta === "prefPhnro"){
         emailDiv.style.display = "none";
         phnroDiv.style.display = "block";
         smsDiv.style.display = "none";
-    }else if(valinta === "sms"){
+    }else if(valinta === "prefSms"){
         emailDiv.style.display = "none";
         phnroDiv.style.display = "none";
         smsDiv.style.display = "block";

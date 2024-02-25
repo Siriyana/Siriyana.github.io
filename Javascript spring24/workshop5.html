@@ -104,36 +104,36 @@
     <hr/>
     <h2>Exercise 4: Hidden Extra fields</h2>
 
-    <form name="testForm" onsubmit="return validateForm()">
+    <form name="testForm" action= "#" onsubmit="return validateForm()">
         <div class="no-border">
             <label>
-                Etunimi: <input type="text" name="fname" id="fname"><br/> <span id="palaute"></span>
-                Sukunimi: <input type="text" name="lname" id="lname"><br/>  <span id="palaute2"></span>          
+                Etunimi: <input type="text" name="fname" id="fname"><span id="palaute"></span><br/>
+                Sukunimi: <input type="text" name="lname" id="lname"><span id="palaute2"></span><br/>          
             </label>
         </div>
         <div class="no-border">
         <label>Preferred way of contact:</label>
         <select id="valikko" name="valikko" size="1" onchange="showFields()">
             <option value="empty">-</option>
-            <option value="email2">Sähköposti</option>
-            <option value="phnro">Puhelin</option>
-            <option value="sms">Tekstiviesti</option>
+            <option value="prefEmail">Sähköposti</option>
+            <option value="prefPhnro">Puhelin</option>
+            <option value="prefSms">Tekstiviesti</option>
         </select>
     </div>
 
-        <div id="email2">
+        <div id="prefEmail">
             <label>Email address:<br>
-                <input type="text" name="email2" id="email2Input"><span id="palaute3"></span>   
+                <input type="text" name="email2" id="email2"><span id="palaute3"></span>   
             </label>
         </div>
-        <div id="phnro">
+        <div id="prefPhnro">
             <label>Phone number::<br>
-                <input type="text" name="phnro" id="phnroInput"><span id="palaute4"></span>   
+                <input type="text" name="phnro" id="phnro"><span id="palaute4"></span>   
             </label>
         </div>
-        <div id="sms">
+        <div id="prefSms">
             <label>Text message:<br>
-                <input type="text" name="sms" id="smsInput"><span id="palaute5"></span>   
+                <input type="text" name="sms" id="sms"><span id="palaute5"></span>   
             </label>
         </div>
         </div>
