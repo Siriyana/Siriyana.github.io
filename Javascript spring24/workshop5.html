@@ -104,9 +104,15 @@
     <hr/>
     <h2>Exercise 4: Hidden Extra fields</h2>
 
-    <form onsubmit="alert('Lähetetty')">
+    <form name="testForm" onsubmit="return validateForm()">
         <div class="no-border">
-        <label>Preferred way of contact: <br></label>
+            <label>
+                Etunimi: <input type="text" name="fname" id="fname"><br/> <span id="palaute"></span>
+                Sukunimi: <input type="text" name="lname" id="lname"><br/>  <span id="palaute2"></span>          
+            </label>
+        </div>
+        <div class="no-border">
+        <label>Preferred way of contact:</label>
         <select id="valikko" name="valikko" size="1" onchange="showFields()">
             <option value="empty">-</option>
             <option value="email2">Sähköposti</option>
@@ -117,24 +123,19 @@
 
         <div id="email2">
             <label>Email address:<br>
-                <input type="text" name="email2" id="email2Input">
+                <input type="text" name="email2" id="email2Input"><span id="palaute3"></span>   
             </label>
         </div>
         <div id="phnro">
             <label>Phone number::<br>
-                <input type="text" name="phnro" id="phnroInput">
+                <input type="text" name="phnro" id="phnroInput"><span id="palaute4"></span>   
             </label>
         </div>
         <div id="sms">
             <label>Text message:<br>
-                <input type="text" name="sms" id="smsInput">
+                <input type="text" name="sms" id="smsInput"><span id="palaute5"></span>   
             </label>
         </div>
-        <div class="no-border">
-            <label>
-                Comment:<br>
-            </label>
-            <textarea name="comment" id="comment"></textarea>
         </div>
         <br>
         <input type="submit" value="Send">

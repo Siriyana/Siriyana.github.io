@@ -93,6 +93,47 @@ function calculate(){
     document.getElementById("total").value = tulos;
 }
 
+function validateForm() {
+    var fname = document.forms[testForm]["fname"].value;
+    var lname = document.forms[testForm]["lname"].value;
+    var email2 = document.forms[testForm]["email2Input"].value;
+    var puhnro = document.forms[testForm]["puhnroInput"].value;
+    var sms = document.forms[testForm]["smsInput"].value;
+
+    if(fname == null || fname == "" || fname.length < 3) {
+        document.getElementById("fname").style.borderColor = "red";
+        document.getElementById("palaute").style.color = "red";
+        document.getElementById("palaute").innerHTML = "Name must be filled out";
+        return false;
+    }
+    if(lname == null || lname == "" || lname.length < 3) {
+        document.getElementById("lname").style.borderColor = "red";
+        document.getElementById("palaute2").style.color = "red";
+        document.getElementById("palaute2").innerHTML = "Name must be filled out";
+        return false;
+    }
+    if(email2==null || email2=="" || email2.length < 6 || email2.length > 25 || email2.indexOf("@") === -1){
+        document.getElementById("email2Input").style.borderColor = "red";
+        document.getElementById("palaute3").style.color = "red";
+        document.getElementById("palaute3").innerHTML = "Sähköpostissa pitää olla 7-25 merkkiä ja @-merkki";
+        return false;
+    } 
+    if(puhnro==null || puhnro==""){
+        document.getElementById("puhnroInput").style.borderColor = "red";
+        document.getElementById("palaute4").style.color = "red";
+        document.getElementById("palaute4").innerHTML = "Must be filled and number cannot contain letters";
+        return false;
+    } 
+    if(sms==null || sms==""){
+        document.getElementById("smsInput").style.borderColor = "red";
+        document.getElementById("palaute5").style.color = "red";
+        document.getElementById("palaute5").innerHTML = "Must be filled and number cannot contain letters";
+        return false;
+    } 
+
+    return true;
+}
+
 document.getElementById('email2').style.display = "none";
 document.getElementById('phnro').style.display = "none";
 document.getElementById('sms').style.display = "none";
@@ -122,3 +163,4 @@ function showFields(){
         smsDiv.style.display = "block";
     }
 }
+
