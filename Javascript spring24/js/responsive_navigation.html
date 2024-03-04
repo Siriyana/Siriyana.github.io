@@ -23,6 +23,37 @@
             <div class="line3"></div>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="tab tab-1">
+            <table id="table" border="1">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>30</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab tab-2">
+            First Name: <input type="text" name="fname" id="fname">
+            Last Name: <input type="text" name="lname" id="lname">
+            Age: <input type="number" name="age" id="age">
+            <button onclick="addHtmlTableRow()">Add</button>
+            <button onclick="editHtmlTableSelectedRow()">Edit</button>
+            <button onclick="removeSelectedRow()">Remove</button>
+        </div>
+    </div>
+
     <script src="responsive.js"></script>
 </body>
 </html>

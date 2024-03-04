@@ -31,6 +31,67 @@
     <img src="img/Valkoinen-kissa.png">
 </div>
 
+
+<div class="mainTable">
+
+    <h1>Data</h1>
+    <table id="table" border="1">
+
+        <tr>
+            <th>Nro</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Country</th>
+            <th>Mobile number</th>
+        </tr>
+
+        <tr>
+            <td>01</td>
+            <td>Michael</td>
+            <td>Davidson</td>
+            <td>United States</td>
+            <td>123456789</td>
+        </tr>
+
+        <tr>
+            <td>02</td>
+            <td>Michelle</td>
+            <td>Vito</td>
+            <td>Thailand</td>
+            <td>234567891</td>
+        </tr>
+
+        <tr>
+            <td>03</td>
+            <td>Lena</td>
+            <td>Denman</td>
+            <td>Germany</td>
+            <td>345678912</td>
+        </tr>
+
+        <tr>
+            <td>04</td>
+            <td>Melissa</td>
+            <td>Lajour</td>
+            <td>France</td>
+            <td>456789123</td>
+        </tr>
+
+    </table>
+    </div>
+
+    <div class="updateBtn">
+        <button onclick="editTableDisplay()">Update data</button>
+    </div>
+
+    <div class="editTable">
+        <div class="left">First Name: </div><div><input type="text" name="fname" id="fname"></div><br>
+        <div class="left">Last Name: </div><div><input type="text" name="lname" id="lname"></div><br>
+        <div class="left">Country: </div><div><input type="text" name="country" id="country"></div><br>
+        <div class="left">Mobile Number:  </div><div><input type="text" name="mNumber" id="mNumber"></div><br>
+        <button onclick="editRow()" class="editRowBtn">Update</button><br>
+    </div>
+
     <script src="basic_harjoitus.js"></script>
 </body>
 </html>
