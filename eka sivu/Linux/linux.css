@@ -1,0 +1,35 @@
+header {
+    font-size: 50px;
+    color: blue;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+}
+
+h1 {
+    font-style: italic;
+    color: rgb(95, 177, 204);
+    text-shadow: 1px 1px 1px black;
+    font-size: 30px;
+    position: relative;
+    left: 20%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+}
