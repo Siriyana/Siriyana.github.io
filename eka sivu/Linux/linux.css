@@ -1,8 +1,19 @@
+html {
+    border-image-source: url(pingviini.png);
+    border-image-width: 50px;
+    border-image-repeat: 20 round;
+    background: linear-gradient(black, darkblue, rgba(11, 11, 175, 0.842));
+    color: white;
+}
+
+
 header {
     font-size: 50px;
+    font-weight: bolder;
     color: blue;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 2px black;
     text-align: center;
+    padding: 50px 0px 15px 100px;
 }
 
 header img {
@@ -11,11 +22,15 @@ header img {
 
 h1 {
     font-style: italic;
-    color: rgb(95, 177, 204);
+    color: rgb(34, 137, 255);
     text-shadow: 1px 1px 1px black;
     font-size: 30px;
-    position: relative;
-    left: 20%;
+    text-align: center;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
 }
 
 main {
@@ -28,7 +43,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     width: 65%;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 20px;
     padding: 5px;
     margin: 10px;
