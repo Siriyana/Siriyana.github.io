@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Local storage</title>
     <link rel="stylesheet" href="l3.css">
+    <script src="storage.js"></script>
 </head>
 <body>
-    
+    <h1>Let's use local storage</h1>
+
+    <label for="fname">First name: </label><br>
+    <input type="text" id="fname"><br>
+    <label for="lname">Last name: </label><br>
+    <input type="text" id="lname"><br>
+
+    <div id="storage_place"></div>
+
+    <p>
+        <button type="button" onclick="saveData()">Save</button>
+    </p>
+
+    <p>
+        <button type="button" onclick="showData()">Show</button>
+    </p>
+
+    <p>
+        <button type="button" onclick="deleteData()">Delete</button>
+    </p>
+
+    <label for="delNumber">Give a number</label>
+    <input type="number" id="delNumber">
+
 </body>
 </html>
