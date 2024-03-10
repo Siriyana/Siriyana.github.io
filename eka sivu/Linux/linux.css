@@ -49,21 +49,36 @@ article {
     width: 70%;
     border: 2px solid white;
     border-radius: 20px;
-    padding: 5px;
+    padding: 15px;
     margin: 10px;
+    text-align: justify;
 }
 
+h4 {
+    text-align: justify;
+}
 
+p {
+    text-align: justify;
+}
 
-figure img {
-    width: 90%;
-    padding: 0px 5%;
+article figure {
+    margin: 0 auto; /* Keskittää elementin vaakasuunnassa */
+    max-width: 80%; 
+}
+
+article figure img {
+    width: 100%; /* Täyttää figure-elementin leveyden */
+    height: auto; /* Säilyttää kuvan alkuperäisen suhteen */
 }
 
 li{
     margin: 10px;
 }
 
-li p {
+.selite{
     margin: 0px;
+    width: 100%;
+    font-style: italic;
+    text-align: justify;
 }
