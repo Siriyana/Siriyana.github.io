@@ -54,6 +54,11 @@ article {
     text-align: justify;
 }
 
+article div {
+    margin: 10px 20px;
+    width: 100%;
+}
+
 h4 {
     text-align: justify;
 }
