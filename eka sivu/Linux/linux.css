@@ -46,6 +46,7 @@ main {
 article {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 70%;
     border: 2px solid white;
     border-radius: 20px;
