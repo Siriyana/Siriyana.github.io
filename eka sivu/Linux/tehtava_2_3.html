@@ -13,6 +13,10 @@
     <main>
         <article>
             <h2> A) Linuxin käyttö pilvipalvelun kautta</h2>
+            <h4>Yleiskokemus käyttöjärjestelmän käyttämisestä pilvipalveluiden kautta</h4>
+            <p>Tykkään enemmän virtuaalikoneista. Onworksin-pilven kautta käyttäminen ei ollut kovin onnistunut kokemus, varsinkaan ilmainen versio, jossa mainokset ärsyttivät jo heti alkuun. Pilvipalveluiden kautta käyttöjärjestelmän kautta tuntui myös hitaammalta kuin esim. virtuaalikoneella. Toki syynä voi olla ongelma nettiyhteydessä.</p>
+            <p>Myös se ärsytti tässä ilmaisessa, kokeiluversiossa, että jos oli vähänkään pidempää aikaa käyttämättä, niin onworks-sivusto heitti ulos esim. Ubuntu MATEsta ja jouduin taas katselemaan mainoksia.</p>
+            <br>
             <p>Kokeilin pilvipalveluiden kautta https://www.onworks.net/os-distributions/ubuntu-based Ubuntu Mate -distroa ja Fedora-distroa.</p>
  
             <h4>Ubuntu MATE (onworks.net)</h4>
@@ -25,11 +29,6 @@
             <p>Fedoran kokeileminen tuntui kaikkien eri järjestelmien jälkeen aika helpolta ja samalta. (luonnollisestikaan, mitään surffailua, värien säätämistä ja muutaman ohjelman lataamista monimutkaisempaa en tehnyt... xD)</p>
             <p>Software-kaupasta silmiin osui sukupuu-ohjelma erilaisia ohjelmia selaillessa ja sillä ehkä voisi leikkiä jossain vaiheessa</p>
             <figure><img src="onworks fedora ja sukupuuohjelma.png"></figure>
-
-            <h4>Yleiskokemus käyttöjärjestelmän käyttämisestä pilvipalveluiden kautta</h4>
-            <p>Tykkään enemmän virtuaalikoneista. Onworksin-pilven kautta käyttäminen ei ollut kovin onnistunut kokemus, varsinkaan ilmainen versio, jossa mainokset ärsyttivät jo heti alkuun. Pilvipalveluiden kautta käyttöjärjestelmän kautta tuntui myös hitaammalta kuin esim. virtuaalikoneella. Toki syynä voi olla ongelma nettiyhteydessä.</p>
-            <p>Myös se ärsytti tässä ilmaisessa, kokeiluversiossa, että jos oli vähänkään pidempää aikaa käyttämättä, niin onworks-sivusto heitti ulos esim. Ubuntu MATEsta ja jouduin taas katselemaan mainoksia.</p>
-
 
         </article>
 
@@ -49,11 +48,30 @@
 
         <article>
             <h2> C) Linux USB-tikulle</h2>
+            <p>Päätin kokeilla Kali Linux -jakelun lataamista USB-tikulle. Tällä hetkellä tietoturvaosaaminen vaikuttaisi todella kiinnostavalta ja olen toiveikas, että jollain tulevalla kurssilla voisi päästä harjoittelemaan ja testaamaan, niin Kalista voisi silloin olla hyötyä.</p>
+            <p>USB-tallentamisen kanssa minulla oli kyllä haasteita, sillä olen aavistuksen uuno näiden kanssa. Latailin ensin Yumin exFat-version ja Kali Linuxin levykuvan. Asennukset itsessään eivät olleet vaikeita.</p>
+            <figure><img src="USB download Kali 2.png"></figure>
+            <p>Mutta kun yritin läppärillä vaihtaa käynnistyksessä ladattavan käyttöjärjestelmän, niin kone ilmoitti, että blokattu.</p>
+            <p>Luin jostain ohjeen, että pitää erikseen vielä ladata GPG (GNU Privacy Guard) -tietoturvatyökalun, jonka avulla voi varmentaa, hallita avaimia ja salata.</p>
+            <figure><img src="Kalin varmenteita usb.png"></figure>
+            <p>Tällä ei luonnollisesti ollut mitään vaikutsuta, mutta tulipahan varmennettua, että ladattu Kali oli aito. Aitouden varmistamisella ei ollut vaikutusta, vaan edelleen läppäri ilmoitti biosin vaihtamisen yhteydessä, että blokattu. Niinpä pohdin, että ehkä olen ladannut väärän ohjelmat ja kokeilin ladata Yumin UEFI-version, joka oli Yumin sivuilla arkistoituna. Mutta luonnollisestikaan myöskään tämän kanssa ei onnistunut, vaan edelleen läppäri ilmoitti, että ei. Tässä vaiheessa aloin jo miettimään, että ehkä kyse voisi olla jostain muusta kuin siitä, että itse olen tehnyt jotain väärin tai ladannut jonkun väärän version. Googlailun jälkeen näytti siltä, että läppärissä voinee olla joku suojaus, joka estää käytön ja joka pitäisi laittaa pois päältä. Suojaustyökalut voivat ehkä pitää USB-tikulla olevaa Kalia haittaohjelmana, koska siellä on monia työvälineita haittaohjelmiin liittyen...</p>
+            <p>En halunnut lähteä muokkailemaan näin amatöörinä oman läppärin suojauksia, joten päätin kokeilla pöytäkoneella, joka on vanha ja raihnainen, ja vain perussuojaus.</p>
+            <p>Ja nyt vihdoin pääsin käynnistämään Kali Linuxin UBS-tikulta. Ainoa ongelma oli se, että en päässyt kirjautumaan omaan sähköpostiin (minulla on käytössä vahva tunnistautuminen ja tunnistautumiskoodin tulemisessa kännyykkään kesti niin kauan...) ja lähettämään kalissa otettu näyttökuvia. Tässä muutama puhelimella otettu huonolaatuinen kuva USBin kautta käynnistetystä Kali Linuxista.</p>
+            <figure><img src="valikko live Kalin kaynnistys.jpg"></figure>
+            <figure><img src="kalikaynnissa usb.jpg"></figure>
+            <p>En tiedä, näyttääkö tiedostojärjestelmä pöytäkoneella olevat tiedostot tuossa toisessa ikkunassa. Toisessa ikkunassa ehkä Kalin tiedostot.</p>
+            <figure><img src="kaynnissa oleva kali usb2.jpg"></figure>
+            <br>
+            <p>Eli summa summarum, USB-tikun luominen oli helppoa, mutta muu säätäminen ehkä vaatisi syvempää osaamista kaikesta. Nyt tein ilmeisesti monta turhaa steppia, kuten GPG:n lataaminen, tiedoston tarkistaminen, Yumin-ohjelman vaihto vanhempaan versioon... Ja vieläkään en tiedä, mitä pitäisi tehdä, että saisin läppärissä käynnistettyä Kali Linuxin USB-tikun kautta ja miten saisin tuon eston pois. </p>
+            <p>Tässä vielä UBS-tikun tiedot: Kingston Techonology 128 GB USB 3.2.</p>
+            <figure><img src="USB_tikku_tiedot.png"></figure>
+            <figure><img src="USB-tikku.jpg"></figure>
+            
         </article>
 
         <article>
             <h2>D) Linuxin asentaminen Windowsin rinnalle</h2>
-            <p>En aio edes yrittää, sillä jo muiden asennusten kanssa on tullut pieniä jumeja. Jos yrittäisin asentaa Linuxin Windowsin rinnalle, niin ole 99% varma, että koko kone heittäisi henkensä. Eikä minulle ole muutakaan konetta, jonka voisin kokeilulle uhrata. Mieli tekisi testata, mutta osaaminen ei todennäköisten ongelmien ratkaisemiseksi.</p>
+            <p>En aio edes yrittää, sillä jo muiden asennusten kanssa on tullut pieniä jumeja. Jos yrittäisin asentaa Linuxin Windowsin rinnalle, niin ole 99% varma, että saisin heittää koneelle hyvästit. Eikä minulle ole mitään ylimääräistä uhrattavaa konetta. Mieli tekisi testata, mutta oma osaaminen ei riittäisi ratkomaan niitä kaikkia ongelmia, joita Linuxin asentaminen Windowsin rinnalle todennäköisesti aiheuttaisi.</p>
         </article>
         
     </main>
