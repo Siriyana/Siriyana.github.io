@@ -8,6 +8,17 @@
 	<body class="ws7">
 		<h1>Workshop 7: Using AJAX and parsing XML</h1>
 		<hr />
+		<p><br>
+			AJAX stands for Active JavaScript with XML and basically means a way to request a script to  fetch data from a file or an API and return it back to the script. Then we can utilize the data  either by injecting it into the page as such or by first parsing the data (using loops) and then  format the data the way we like.
+			Chrome Developer Tools offer nice way of tracking AJAX calls as well. Press F12 to open the  tools and click Network-tab. Here you are able to see the requests and responses in action.<br>
+		</p>
+		<p>NOTE: Ajax calls will cause security issues in many cases. If you encounter those, I recommend to sign up for a free account in Codeanywehere.com and do these exercises there. Copy this exercise-file there and start doing the exercises.</p>
+        <p>If you get "Blocked loading mixed active content" error, please check whether you're using http or https for your http requests. More info on this in <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content</a></p>
+		<hr/>
+		<h2>Exercise 1: Parsing XML data </h2>
+		<p>This page has XML data embedded into it. See page source, line 78. The browser cannot display it properly, but it's there. Below you can also see the structure data.</p>
+		<p>Write a function called parseData(), which will output the quote and author tags from XML when button is clicked.
+		Hint: Use document.getElementsByTagName() function. See PowerPoint for reference.</p>
 
 		<input type="button" name="Fetch" id="Fetch" value="Button" onclick="parseData()">
 		<pre>
@@ -38,7 +49,10 @@
 		<!-- THIS IS THE END  OF XML DATA -->
 		<hr/>
 		<h2>Exercise 2: AJAX call to an XML file </h2>
+		<p>Create an AJAX script, which will load the famous-quotes.xml file from the server: <a href="http://iceberg-cycle.codio.io/5: Asynchronous JavaScript (AJAX)/famous-quotes.xml" target="_blank">http://iceberg-cycle.codio.io/5: Asynchronous JavaScript (AJAX)/famous-quotes.xml</a> and inject the raw contents of the file to a div below (id="quotes"). Here's another alternative: <a href="http://quotes.rest/qod.xml" target="_blank">http://quotes.rest/qod.xml</a>. </p>
+		<p>NOTE: The raw XML data looks weird on the browser. You can use developer tools to study the contents by inspecting the DIV.</p>
 
+		<p>The sample function shown in PowerPoint slides is pasted below.</p>
 		<pre>
 			// Load AJAX content into web page
 
