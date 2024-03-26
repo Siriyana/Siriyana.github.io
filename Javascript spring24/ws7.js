@@ -18,17 +18,43 @@ function parseData() {
 
 
 function loadXMLFile() {
-    // Create AJAX object
     var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "https://www.w3schools.com/xml/simple.xml", true);
+    xmlhttp.send();
 
-    // Specify the data / url to be fetched
-    xmlhttp.onreadystatechange = function() {
-        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            // find myDiv and insert results there
-            document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+    xmlhttp.onreadystatechange = function(){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //find foods
+            document.getElementById("foods").innerHTML = xmlhttp.responseText;
+
         }
-    };
+    }
+}
 
-    xmlhttp.open("GET", "http://iceberg-cycle.codio.io/5: Asynchronous JavaScript (AJAX)/famous-quotes.xml", true);
+
+
+
+function loadAndParseXML() {
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var xmlDoc = xmlhttp.responseXML;
+            var table = "<table border='1'>";
+            table += "<tr><th>Name</th><th>Price</th></tr>";
+
+            var x = xmlDoc.getElementsByTagName("food");
+
+            for(var i=0; i < x.length; i++){
+                table += "<tr><td>" + x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue 
+                + "</td><td>" + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue 
+                + "</td></tr>";
+            }
+            table += "</table>";
+            document.getElementById("tabledata").innerHTML = table;
+        }
+    }
+
+    xmlhttp.open("GET", "https://www.w3schools.com/xml/simple.xml", true);
     xmlhttp.send();
 }
