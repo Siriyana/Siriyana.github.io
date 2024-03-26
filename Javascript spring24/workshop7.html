@@ -10,31 +10,23 @@
 		<hr />
 
 		<input type="button" name="Fetch" id="Fetch" value="Button" onclick="parseData()">
-		<pre>
-			<!-- THIS IS HERE ONLY FOR DISPLAYing THE STRUCTURE OF THE XML DATA IN THE BROWSER -->
-			&lt;quotes&gt;
-				&lt;quote&gt;I&#39;m not concerned about all hell breaking loose, but that a PART of hell will break loose... it&#39;ll be much harder to detect.&lt;/quote&gt;
-				&lt;length&gt;124&lt;/length&gt;
-				&lt;author&gt;George Carlin&lt;/author&gt;
-				&lt;/quotes&gt;
-				&lt;quotes&gt;
-				&lt;quote&gt;The biggest problem with every art is by the use of appearance to create a loftier reality. &lt;/quote&gt;
-				&lt;author&gt;Johann Wolfgang von Goethe&lt;/author&gt;
-			&lt;/quotes&gt;
-
-			<!-- END -->
+       
+        <div id="dataHere"></div>
+        
+        <pre>
 
 			<!-- THIS IS THE START OF XML DATA -->
 		</pre>
 		<quotes>
 			<quote>I'm not concerned about all hell breaking loose, but that a PART of hell will break loose... it'll be much harder to detect.</quote>
 			<length>124</length>
-			<author>George Carlin</author>
+            <author>George Carlin</author>
 		</quotes>
 		<quotes>
 			<quote>The biggest problem with every art is by the use of appearance to create a loftier reality. </quote>
-			<author>Johann Wolfgang von Goethe</author>
+            <author>Johann Wolfgang von Goethe</author>
 		</quotes>
+
 		<!-- THIS IS THE END  OF XML DATA -->
 		<hr/>
 		<h2>Exercise 2: AJAX call to an XML file </h2>
@@ -42,21 +34,7 @@
 		<pre>
 			// Load AJAX content into web page
 
-			function loadXMLDoc() {
-					// Create AJAX object
-					var xmlhttp = new XMLHttpRequest();
 
-					// Specify the data / url to be fetched
-					xmlhttp.open("GET", "INSERT URL/FILENAME HERE", true);
-					xmlhttp.send();
-
-					xmlhttp.onreadystatechange = function() {
-							if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-				 // find myDiv and insert results there
-									document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-							}
-					}
-			}
 		</pre>
 		<br>
 		<p>
@@ -103,5 +81,6 @@
 		<input type="button" name="Fetch3" id="Fetch3c" value="Load Iltalehti Newsfeed" onclick="loadAndParseNews('http://www.iltalehti.fi/rss/uutiset.xml')">
 		<div id="newsfeed">
 		</div>
+        <script src="ws7.js"></script>
 	</body>
 </html>

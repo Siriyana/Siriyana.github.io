@@ -60,3 +60,100 @@ function loadXMLcd(){
     xmlhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
     xmlhttp.send();
 }
+
+
+
+
+
+
+document.getElementById("hae").addEventListener('click', function () {
+    fetch('https://api.github.com/users/JariKovis/repos')
+    .then((response) => {
+        return response.text();
+    })
+    .then((myContent) => {
+        document.querySelector('.par').innerHTML = myContent;
+        document.querySelector('.par').classList.add('box');
+    });
+});
+
+document.getElementById("haeDemo").addEventListener('click', function () {
+    var demo = new XMLHttpRequest();
+    demo.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+
+    demo.open("GET", "books.xml", true);
+    demo.send();
+});
+
+
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    document.getElementById("demo").innerHTML =
+    xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+}
+
+
+
+document.getElementById('myButton').addEventListener('click', function () {
+    console.log('Button clicked');
+    getUserData(1, handleUserData);
+});
+
+const divi = document.getElementById('munDiv')
+
+function getUserData(userId, callback) {
+    setTimeout(() => {
+        const userData = {
+            id: userId,
+            username: `user${userId}`,
+            email: `user${userId}@example.com`
+        };
+
+        callback(null, userData);
+    }, 1000);
+}
+
+function handleUserData(error, data) {
+    if (error) {
+        console.log('Error fetching user data: ', error);
+    } else {
+        console.log('Fetched user data: ', data);
+        divi.innerHTML = data.id + ' ' + data.username + ' ' + data.email
+    }
+}
+
+
+document.getElementById('myButton2').addEventListener('click', function () {
+    console.log('Button2 clicked');
+    myFunction2()
+});
+
+const divi2 = document.getElementById('munDiv2')
+
+const myPromise = new Promise((resolve, reject) => {
+    const isSuccess = true;
+
+    setTimeout(() => {
+        if (isSuccess) {
+            resolve('Promise resolved successfully');
+        } else {
+            reject('Promise rejected with an error');
+        }
+    }, 1000);
+
+});
+
+const myFunction2 = () => {
+    myPromise
+        .then((result) => {
+            console.log('Success:', result);
+            divi2.innerHTML = result
+        })
+        .catch((error) => {
+            divi2.innerHTML = error
+        });
+}
