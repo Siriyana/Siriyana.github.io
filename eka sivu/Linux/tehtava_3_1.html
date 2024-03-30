@@ -12,16 +12,73 @@
 
     <main>
         <article>
-            <h2>Komentorivin perusteet, osa 1</h2>
-
+            <h2>Komentorivin perusteet tehtävä a)</h2>
+            <ol>
+                <li>
+                    <p>Komento <i>cat /var/log/syslog | wc -l</i> tulostaa tiedon, kuinka monta riviä var/log/syslog -tiedostossa on, eli tässä tapauksessa tiedostossa on 1574 riviä. </p>
+                    <figure><img src="3_1_tehtava1a.png"></figure>
+                </li>
+                <li>
+                    <p>Komento <i>ls -l | sort -r | more</i> tulostaa hakemistossa olevat tiedostot (ls -l) käänteisessä hakujärjestyksessä (sort reverse), eli omassa kokeilussa tulostui ensin vanhin luotu tiedosto ja sen jälkeen aikajärjestyksessä loput (luontipäivät eivät pidä paikkaansa, koska niiden kohdalla harjoitustehtäviä tehdessä kokeiltu päivien muuttamista...). More-komento lopussa vaikuttaisi siihen, että tulostuksessa näkyisi yksi sivu kerrallaan, mutta omassa kokeilussa tiedostoja oli sen verran, ettei ollut tarvetta useammalle sivulle.</p>
+                    <figure><img src="3_1_tehtava_1b.png"></figure>
+                </li>
+                <li>
+                    <p>Komento <i>ls | head -3 | tail -1 > tiedosto.txt</i> tulostaa hakemistossa olevista tiedostoista kolmannen ja tallentaisi sen tiedostoon tiedosto.txt. Head -3 komennolla valitaan hakemistosta kolme ensimmäistä riviä ja sen jälkeen tail -1 komennolla rajataan tämä vielä vain kolmen rivin viimeisimpään, eli omassa kokeilussa ekatiedosto.txt -riviin, joka tallennettiin tiedosto.txt</p>
+                    <figure><img src="3_1_tehtava_1c.png"></figure>
+                </li>
+            </ol>
         </article>
 
         <article>
-            <h2>Komentorivin perusteet, osa 2</h2>
+            <h2>Komentorivin perusteet tehtävä b)</h2>
+            <ol>
+                <li>
+                    <p>Etsin mp3 -päätteisiä tiedostoja komennolla locate *.mp3, joka haki kaikkien tiedostojen, jotka päättyivät .mp3, sijainnit.</p>
+                    <figure><img src="3_1_tehtava_2a.png"></figure>
+                </li>
+                <li>
+                    <p>Ensin kokeilin hakea vain komennolla <i>find . -mtime 0</i> joka haki nykyisestä kantiosta (Tekstitiedostot-kansiosta) olevista tiedostoista tiedostot, jotka oli muokattu viimeisen 24 tunnin sisällä (-mtime 0).</p>
+                    <figure><img src="3_1_tehtava2b.png"></figure>
+                    <p>Kokeilin myös toista löytämääni hakukomentoa <i>find / -type f -mtime 0</i>, joka hakee kaikista hakemistoista (/ = root directory) tiedostot (type file), joita oli muokattu viimeisen 24 tunnin sisällä.  </p>
+                    <figure><img src="3_1_tehtava2b_vaihtoehto.png"></figure>
+                </li>
+                <li>
+                    <p>Ensin testattu hakea tietyn kokoisia (4k-10M) tiedostoja nykyisestä kansiosta (Tekstitiedostot-kansion) sisällä. Sen jälkeen kokeilin hakea koko järjestelmästä tiedostoja, jotka olivat suurempua kuin 10 megatavua.</p>
+                    <figure><img src="3_1_tehtava2c.png"></figure>
+                </li>
+            </ol>
         </article>
 
         <article>
-            <h2>Komentoriviharjoituksia</h2>
+            <h2>Komentorivin perusteet tehtävä c)</h2>
+            <li>
+                <p>Komennolla <i>tar -czf kotihakemusto.tar.gz /home</i> pyrin pakkaamaan kotihakemiston kaikkine tiedostoineen tar.gz-paketiksi. Joihinkin hakemistoihin ja tiedostoiin ei ollut oikeuksia, joten nämä eivät tulleet pakettiin mukaan. Mutta muuten näytti siltä, että onnistui ja paketin kooksi tuli 984M.</p>
+                <figure><img src="3_1_tehtava3a.png"></figure>
+            </li>
+            <li>
+                <p>Komennolla <i>tar -cJvf kotihakemisto2.tar.xz --exclude=kotihakemusto.tar.gz /home</i> pyrin pakkaamaan kotihakemiston kaikkine tiedostoineen, lukuunottamatta aiemmin luotua pakettia kotihakemisto.tar.gz. -cJvf komennossa J tarkoittaa, että tiedosto pakataan käyttämällä xz-tapaa ja tuon v:n avulla voi seurata prosessin etenemistä, mikä näkyy tulostuksena. </p>
+                <figure><img src="3_1_tehtava3b.png"></figure>
+            </li>
+            <li>
+                <p>Gz- ja xz- pakkausten koot ovat erilaisia: gz-paketti on huomattavasti suurempi kuin xz-paketti.</p>
+                <figure><img src="3_1_tehtava3c.png"></figure>
+            </li>
+        </article>
+
+        <article>
+            <h2>Komentorivin perusteet tehtävä d)</h2>
+            <li>
+                <p>Lisätty kaikille käyttäjille oikeudet lukea ja kirjoittaa tiedosto.txt -tiedostoa.</p>
+                <figure><img src="3_1_tehtava4a.png"></figure>
+            </li>
+            <li>
+                <p>Poistettu kaikilta käyttäjiltä kirjoitusoikeudet tiedostoihin tiedosto.txt (kirjainmuotoisella komennolla) ja tokatiedosto.txt (numeromuotoisella komennolla).</p>
+                <figure><img src="3_1_tehtava4b.png"></figure>
+            </li>
+            <li>
+                <p>Luotu hakemisto ja määritelty kirjainmuotoisilla komennoilla sille oikeudet niin että omistajalla on oikeudet lukea, kirjoittaa ja suorittaa tiedosto ja muilla on vain luku oikeus. Tehty hakemisto2, jolle määritelty samallalailla oikeudet, mutta numeromuotoisella komennolla.</p>
+                <figure><img src="3_1_tehtava4c.png"></figure>
+            </li>
         </article>
         
     </main>
