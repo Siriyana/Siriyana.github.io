@@ -58,3 +58,28 @@ function loadAndParseXML() {
     xmlhttp.open("GET", "https://www.w3schools.com/xml/simple.xml", true);
     xmlhttp.send();
 }
+
+
+
+function loadAndParseNews(url) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var xmlDoc = xmlhttp.responseXML;
+            var list = "<ol>";
+
+            var x = xmlDoc.getElementsByTagName("item");
+
+            for(var i=0; i < x.length; i++){
+                var link = x[i].getElementsByTagName("link")[0].textContent;
+                var title = x[i].getElementsByTagName("title")[0].textContent;
+                list += "<li>" + "<a href='" + link + "'>" + title + "</a></li>";
+            }
+            list += "</ol>";
+            document.getElementById("newsfeed").innerHTML = list;
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+}
