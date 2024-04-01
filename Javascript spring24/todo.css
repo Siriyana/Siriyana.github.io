@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(to right, #f6d365, #fda085);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 800px;
+}
+
+header {
+    font-size: 18px;
+}
+
+header, 
+form {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 4px;
+    font-size: 20px;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #d88771;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 5px;
+    background: white;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn {
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.complete-btn {
+    background: rgb(73, 204, 73);
+}
+
+.todo-item {
+    padding: 0px 4px;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+/* take all the select style off and then create later the style for div aroun it*/
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #ff6f47;
+    width: 80px;
+    cursor: pointer;
+    padding: 8px;
+    margin: 5px;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 4px;
+    margin: 4px;
+    pointer-events: none;
+}
