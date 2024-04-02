@@ -23,23 +23,48 @@
                     </li>
                     <li>
                         <p>b) Sähköpostin etsiminen</p>
-                        <figure><img src="#"></figure>
+                        <p>Alkujaan tämä kuulosti helpolta, sillä materiaali-videossa oli esimerkki sähköpostin etsimisestä.</p>
+                        <p>Ensimmäinen yritys toi liikaa vaihtoehtoja, sillä ilmeisesti *-merkki voi olla myös tyhjä. Toinen yritys oli jo parempi ja sain vain sähköpostiosoitteista, jotka olivat muotoa nimi.nimi@domain.domain.</p>
+                        <figure><img src="3_2_tehtava1b_osa1.png"></figure>
+                        <p>Mutta tarkemmin katseltuani, tajusin, että tämä haku jätti tulostamatta kolme oikeanmuotoista sähköpostiosoitetta kahdelta eri riviltä: <i>harjoiTusmateriaalina onni.opiskleija@sci.fi grepin ja SEDin käytössä.</i> ja <i>matti.meikä@suomi.fi & matti.meikä@finland.fi</i> </p>
+                        <p>Millään omalla yrityksellä on saanut näitä tulostumaan. Päätin ottaa chatGPT:n käyttöön, mutta hänenkään avulla en päässyt kovin paljoa pidemmällä, mutta sain yhden karkulaiset lisää tulostettua, mutta itse en tällaista lausetta olisi osannut muodostaa:</p>
+                        <figure><img src="3_2_tehtävä1b_tarkennusta.png"></figure>
+                        <p>Loppujen osalta ChatGPT:kin luovutti ja yritti ehdottaa pythonilla ohjelmoimista...</p>
+                        <p>Eli jostain syystä mitenkään en saanut tulostettua riviltä <i>matti.meikä@suomi.fi & matti.meikä@finland.fi</i> kumpaakaan sähköpostia, vaikka ovat oikean muotoisia...</p>
+                        <p>En pystynyt antamaan asian olla ja ratkaisua piti yrittää edelleen. Googlen avulla löysin erilaisen version, jota kokeilla, mutta luonnollisesti sekään ei toiminut, vaan toi noita sähköpostiosoitteita, jotka eivät noudattaneet nimi.nimi@domain.domain -muotoa...</p>
+                        <figure><img src="3_2_1b googlattu ei_toimi_edellee.png"></figure>
+                        <p>Puolen tunnin tekoälyn kanssa viilailun jälkeen chatGPT vihdoin sai minulle ratkaisun googlesta löydetyn version pohjalta tähän ongelmaan, mutta ei todellakaan ollut minun aivoilla ratkaistavissa...</p>
+                        <figure><img src="3_2_googlen_ja_chatGPT_avulla_saatu_ratkaisu.png"></figure>
+                        <p>Tämä oli todella haastava...</p>
                     </li>
                     <li>
                         <p>c) Vakiomuotoisen IP-osoitteen etsiminen</p>
-                        <figure><img src="#"></figure>
+                        <p>Hakukomennossa etsitään ensin kolmea numero-sarjaa, joissa voi olla 1-3 numeroa ja joka päättyy . ja viimeinen osassa etsitään numerosarjaa, jossa 1-3 numeroa ja jonka jälkeen ei tule mitään. Haku tulostaa koko rivin.</p>
+                        <figure><img src="3_2_tehtava1c.png"></figure>
+                        <p>Tulostus vielä ilman muita tietoja riviltä</p>
+                        <figure><img src="3_2_tehtava1c vain numerot.png"></figure>
                     </li>
                     <li>
                         <p>d) Tiedoston lataaminen ja "asianajaja", "poliisi" ja "lääkäri" etsiminen tiedostosta.</p>
-                        <figure><img src="#"></figure>
+                        <p>Ensimmäiset hakukomennot epäonnistuivat, kun ensimmäisessä haettiin väärästä tiedostosta ja tokasta jäi jälkimmäinen putkitus pois. Kolmas kerta toden sanoo ja se onnistui.</p>
+                        <figure><img src="3_2_tehtava1d.png"></figure>
                     </li>
                     <li>
                         <p>e) "Tohtori Jekyll" -sanan etsiminen ja löydettyjen sanojen lukumäärän laskeminen</p>
-                        <figure><img src="#"></figure>
+                        <p>Ensin testasin, Tohtori Jekyllin tulostamisen (ja nähdäkseni, kuinka monta kertaa tulostuu :D). Sen jälkeen virheellinen kokeilu Tohtori Jekyllin esiintymisen laskemiseksi, mutta seuraava onnistui. Eli Tohtori Jekyll esiintyy tiedostossa viisi kertaa.</p>
+                        <figure><img src="3_2_tehtava1e.png"></figure>
                     </li>
                     <li>
                         <p>f) Etsi rivit, jotka eivät sisällä "elämä", "ei" ja "kuolema" sekä tulosta rivinumerot riveistä, joilta nämä sanat löytyvät</p>
-                        <figure><img src="#"></figure>
+                        <p>Ensin hain rivin, jotka eivät sisällä "elämä", "ei" tai "kuolema" sanaa ja näitä oli aika paljon.</p>
+                        <figure><img src="3_2_tehtava1f_rivit jotka ei sisalla.png"><img src="3_2_tehtava1f_rivit jotka ei sisalla maata.png"></figure>
+                        <p>Sen jälkeen kokeilin hakea rivit, joilla nämä sanat esiintyy ja sen jälkeen vain rivinumerot näistä riveistä, joissa sanat esiintyvät.</p>
+                        <figure><img src="3_2_tehtava1f_rivit joissa on ja rivinumero.png"> <img src="3_2_tehtava1f_vain_rivinumerot.png"></figure>
+                        <p>Yritin yhdistää hakukomennot niin, että tulostaisi rivit, joissa kyseiset sanat eivät esiinnyt, ja samalla myös rivinumeron niistä riveistä, joissa sanat esiintyvät. Tämä ei minulta onnistunut, vaan kyseinen haku tulosti vain rivinumerot niistä, missä sanat esiintyvät, mutta ei niitä rivejä, joilla sanat eivät esiintyneet.</p>
+                        <figure><img src="3_2_tehtava1f_epaonnistunut yhdistamisyritys.png"></figure>
+                        <p>Omat aivot eivät vain kyenneet ratkaisemaan tätä yhdistämisongelmaa, jossa tulostuisi niin ne rivit, joissa sanat eivät esiinny ja rivinumerot niistä, joissa esiintyy.</p>
+                        <p>Tekoälyn kanssa jumppaamalla tuli tällainen ratkaisu, jota en olisi kyllä itse pystynyt mitenkään keksimään ja en tiedä, toimiiko sekään ihan halutulla tavalla: ensin tulostuu rivit, joilla sanat ei esiinny ja näiden rivien jälkeen tulee vain rivinumerot niistä riveistä, joilla sanat ovat.</p>
+                        <figure><img src="3_2_tehtava1f_tekoalyn ratkaisu.png"><img src="3_2_tehtava1f_tulostuksenVaihto.png"></figure>
                     </li>
                 </ul>
 
@@ -48,16 +73,24 @@
                 <ul>
                     <li>
                         <p>a) Etunimien ja puhelinnumeroiden tulostus AWK-työkalun avulla</p>
-                        <p></p>
-                        <figure><img src="#"></figure>
+                        <p>Hetken aikaa kesti löytää ja ymmärtää, miten nimen saisi pilkottua palasiksi niin, että vain etunimi tulostuisi.</p>
+                        <figure><img src="3_2_tehtava2a.png"></figure>
                     </li>
                     <li>
                         <p>b) Henkilöiden nimi, katuosoite ja asuinmaa erotettuna sarkaimella sekä lista tulostettuna aakkosjärjestyksen mukaan</p>
-                        <figure><img src="#"></figure>
+                        <p>Listasta poistettu ensimmäinen rivi (Nimikerivi: First, Address) komennon osuudella NR != 1. Itseä ärsytti se, kun sarakkeet menivät ihan hassusti, sillä vaikka väleissä oli tabulaattorin verran tyhjää, niin sarakkeiden sisällön vaihtelevien pituuksien takia rivit olivat miten olivat. Myöskään listan järjestäminen maan mukaan ei oikein onnistunut, niin vähän huijasin ja laitoin Maa-sarakkeen ekaksi. :p SE helpotti järjestämistä, mutta ei liene ihan tehtävänannon mukainen. :D</p>
+                        <figure><img src="3_2_tehtava2b_huono yritys.png"></figure>
+                        <p>Seuraavia yrityksiä: ainakin välit sain niin, että miellyttävät omaa silmää enemmän. Mutta järkkääminen on haastavaa, vaikka netistä löytyi, että sort -k valinnalla saisi valittua sen sarakkeen, minkä mukaan järjestetään, niin ilmeisesti se kuitenkin "tunnistaa" sarakkeeksi aina välilyönnin jälkeen. Eli sort -k3, saan järkättyä sukunimen mukaan (kun kaikissa on etunimi ja keskimmäisen nimen kirjain), mutta koska osoitteet ovat hyvin vaihtelevia, niin tämä tapa ei toimi kovin paljoa pidemmälle (Trust me, kokeilin aika pitkälle ja tajusin, ettei vaan loppuvaiheessa missään vaiheessa täsmäisi...)</p>
+                        <figure><img src="3_2_tehtava2b_kun_saisi_vielä_järjestykseen.png"></figure>
+                        <p>En keksinyt mitään keinoa ja tekoälynkään ehdotukset eivät toimineet...Vain laittamalla maan ensiksi saan järjestettyä maan mukaan...</p>
+                        <figure><img src="3_2_tehtava2b_ei_onnistunut.png"></figure>
                     </li>
                     <li>
                         <p>c) Mielipidekyselyn tulosten laskeminen: kuinka monta "kyllä" ja kuinka monta "ei" ääntä, esitettynä lukuina ja prosennteina.</p>
-                        <figure><img src="#"></figure>
+                        <p>Testailujen jälkeen sain jo aika hyvin laskettua ja tulostettua, mutta prosenttien tulostuksen asettelun kanssa haasteita ja miten saada vain muutaman desimaalin tarkkuudella..</p>
+                        <figure><img src="3_2_tehtava2c_ei_ihan.png"></figure>
+                        <p>Googlen ja tekoälyn avulla sain vihdoin myös prosenttiosuuden kauniisti tulostettua yhden desimaalin tarkkuudella, mutta en olisi itse osannut.</p>
+                        <figure><img src="3_2_tehtava2c_tekoalyn avulla.png"></figure>
                     </li>
                     <li>
                         <p>d) Helsingin Yliopiston almanakkasivuilta nimipäiväsankarien tulostus ilman HTML-tägejä.</p>
@@ -116,6 +149,7 @@
 
         <article>
             <h2>Murhamysteerin ratkaiseminen terminaalityökalujen avulla</h2>
+            <p>N/A</p>
         </article>
         
     </main>
