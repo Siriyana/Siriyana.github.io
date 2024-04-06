@@ -78,12 +78,16 @@
                     </li>
                     <li>
                         <p>b) Henkilöiden nimi, katuosoite ja asuinmaa erotettuna sarkaimella sekä lista tulostettuna aakkosjärjestyksen mukaan</p>
-                        <p>Listasta poistettu ensimmäinen rivi (Nimikerivi: First, Address) komennon osuudella NR != 1. Itseä ärsytti se, kun sarakkeet menivät ihan hassusti, sillä vaikka väleissä oli tabulaattorin verran tyhjää, niin sarakkeiden sisällön vaihtelevien pituuksien takia rivit olivat miten olivat. Myöskään listan järjestäminen maan mukaan ei oikein onnistunut, niin vähän huijasin ja laitoin Maa-sarakkeen ekaksi. :p SE helpotti järjestämistä, mutta ei liene ihan tehtävänannon mukainen. :D</p>
+                        <p>Listasta poistettu ensimmäinen rivi (Nimikerivi: First, Address) komennon osuudella NR != 1. Itseä ärsytti se, kun sarakkeet menivät ihan hassusti, sillä vaikka väleissä oli tabulaattorin verran tyhjää, niin sarakkeiden sisällön vaihtelevien pituuksien takia rivit olivat miten olivat. </p>
                         <figure><img src="3_2_tehtava2b_huono yritys.png"></figure>
+                        <p>Kun välit oli määritelty tabillä, niin järjestäminen sort -k3 komennolla onnistui, mutta näin ihmissilmään näyttää aika hirveältä lukea...</p>
+                        <figure><img src="3_2_tehtava2b_tab_maat.png"></figure>
                         <p>Seuraavia yrityksiä: ainakin välit sain niin, että miellyttävät omaa silmää enemmän. Mutta järkkääminen on haastavaa, vaikka netistä löytyi, että sort -k valinnalla saisi valittua sen sarakkeen, minkä mukaan järjestetään, niin ilmeisesti se kuitenkin "tunnistaa" sarakkeeksi aina välilyönnin jälkeen. Eli sort -k3, saan järkättyä sukunimen mukaan (kun kaikissa on etunimi ja keskimmäisen nimen kirjain), mutta koska osoitteet ovat hyvin vaihtelevia, niin tämä tapa ei toimi kovin paljoa pidemmälle (Trust me, kokeilin aika pitkälle ja tajusin, ettei vaan loppuvaiheessa missään vaiheessa täsmäisi...)</p>
                         <figure><img src="3_2_tehtava2b_kun_saisi_vielä_järjestykseen.png"></figure>
                         <p>En keksinyt mitään keinoa ja tekoälynkään ehdotukset eivät toimineet...Vain laittamalla maan ensiksi saan järjestettyä maan mukaan...</p>
                         <figure><img src="3_2_tehtava2b_ei_onnistunut.png"></figure>
+                        <p>Tulostuksen järjestäminen maan mukaan, niin että järjestettiin 70 merkin kohdalla (koska ensimmäisten sarakkaiden leveys on 30 ja 40 merkkiä, niin kolmas, eri maa-sarake alkaa merkistä 70. Ja tämä vihdoin toimi! :)</p>
+                        <figure><img src="3_2_tehtava2b_jarjestyksessa.png"></figure>
                     </li>
                     <li>
                         <p>c) Mielipidekyselyn tulosten laskeminen: kuinka monta "kyllä" ja kuinka monta "ei" ääntä, esitettynä lukuina ja prosennteina.</p>
@@ -96,8 +100,12 @@
                         <p>d) Helsingin Yliopiston almanakkasivuilta nimipäiväsankarien tulostus ilman HTML-tägejä.</p>
                         <p>Kokeilin erilaisia grep-hakuja, jotta pystyisin paikantamaan millaisten elementtien sisällä nimipäiviä voisi löytyä. Ja sitten miettimään, millä ihmeen hakukomennoilla saisi kohdennettua nameday-names-luokkiin ja saisi ne nimet sieltä tulostettua.</p>
                         <figure><img src="3_2_tehtava2d_esihaku.png"><img src="3_2_tehtava2d_miten_saada_ulos_nimet_tästä.png"></figure>
-                        <p>jotain</p>
-                        <figure><img src="3_2_tehtava2d_jotain.png"></figure>
+                        <p>Malliratkaisun pohjalta kokeilua. Loin omasta index.html -tiedostosta ensin myös data.txt tiedoston. Mutta siitä huolimatta omassa tiedostossa on jotain, jonka vuoksi ei toimi.</p>
+                        <figure><img src="3_2_tehtava2d_kokeilua_tuntimallin_lauseella.png"></figure>
+                        <p>Kokeilin muuttaa br-elementin tilalle nameday-names, jolla aikaisemmin olin saanut nimiä näkyville ja se toimi osittain, mutta haki myös paljon enemmän kuin vain nimet.</p>
+                        <figure><img src="3_2_tehtava2d_kokeilua_tuntimallin perusteella.png"></figure>
+                        <p>Ratkaisu, joka vaati ensi ntekoälyn ideointia ja sen jälkeen aika paljon manuaalista kokeilua kaikkien nimien tulostukseen saamiseksi ja mitkä sarakkeet sisälsivät html-elementtejä ja mitkä nimiä. Mutta onnistui lopulta.</p>
+                        <figure><img src="3_2_tehtava2d_manuaalista_kokeilua_kunnes_kaikki.png"></figure>
                     </li>
                 </ul>
 
