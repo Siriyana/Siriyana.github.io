@@ -169,7 +169,33 @@
 
         <article>
             <h2>Murhamysteerin ratkaiseminen terminaalityökalujen avulla</h2>
-            <p>N/A</p>
+            <h>FAILED! NOT SOLVED! :(</h>
+            <figure><img src="3_2_mystery.png"></figure>
+            <p>Aloitettu murhamysteerin selvittäminen, sillä että haetaan poliisin havaitsemat vihjeet tiedostoista. Epäilty on pitkä mies ja rikospaikalta löytyi lompakko, jonka epäillään kuuluneen tappajalle. Lompakosta ei löydy nimeä, mutta löytyy jäsenkortit organisaatioille: AAA, Delta SkyMiles, kirjastoon ja Museoon.</p>
+            <figure><img src="3_3_mystery_clue.png"></figure>
+            <p>Vertailtu eri jäsenyyksiä ja luotu ensin tiedostoja, joissa on on kahden eri yrityksen yhteiset jäsenet ja sitten näistä vielä luotu lista ihmisistä, jotka ovat jäseninä kaikissa neljässä yrityksesä (AAA, Delta SkyMiles, library ja Museum of Bash History). Tallennettu nämä henkilöt tiedostoon epaillyt.</p>
+            <figure><img src="3_3_epaillyt.png"></figure>
+            <p>Rikospaikan vihjeiden mukaan paikallisessa kahvilassa oli nainen, joka lähti vähän ennen ammuskelua. Naisen nimi oli mahdollisesti Annabel, hänellä oli vaalea tukka ja Uusiseelantilainen aksentti. Hän olisi mahdollinen todistaja. People-listalta löytyy neljä eri Annabel-nimistä henkilöä, joista yksi oli mies, joten hänet pystyi jättämään pois listalta.</p>
+            <figure><img src="3_3_mystery_mahdollisia uhreja.png"></figure>
+            <p>Vihjeessä neuvottiin katsomaan head -komennolla osoitteita todistajien haastattelujen löytämiseksi. Ja tämän jälkeen etsin grepin avulla katu-tiedostoja, joissa oli INTERVIEW ja koska minulla oi tiedossa kolmen mahdollisen Annabelin osoite, niin vain näiden kolmen haastattelua lähdin hakemaan.</p>
+            <figure><img src="3_3_mystery_todistajien haastattelut.png"><img src="3_3_mysteri_kolme_mahdollista_todistajaa.png"></figure>
+            <p>Todistajan lausunto</p>
+            <figure><img src="3_3_mystery_todistajan lausunto.png"></figure>
+            <p>Etsitty rekkareita ja rekkareiden omistajien tiedot ja tallennettu ne vecehicle_owners-tiedostoon. Tallennettu tiedostoon epaillyt_omistajat rekkareiden omistajien nimet, jos omistajan pituus oli yli 6.</p>
+            <figure><img src="mystery_rekkareita.png"><img src="mystery_rekkarit_nimet_pituudet.png"></figure>
+            <p>Verrattu epaillyt_omistajat -tiedostoa aikaisemmin luotuun tiedostoon epaillyt (joka koostui niistä henkilöistä, joilla oli kaikkien neljän organisaation jäsenyys). Näillä kahdella listalla oli kolme eri henkilöä ja etsitty heidän osoitetietojen perusteella heidän haastattelut.</p>
+            <figure><img src="mystery_kolme_suspect.png"><img src="mystery_kolmesuspect_info.png"><img src="Mystery_suspect_interviews.png"></figure>
+            <p>Tarkistetaan, löytyykö Brian Boyerilta tai Matt Waiteltä myös toinen auto.</p>
+            <figure><img src="mystery_no_other_car.png"></figure>
+            <p>Ei löytynyt kummaltakaan autoa. Ja tarkistettu vielä solutions-komennolla, eikä kumpikaan ollut tekijä.</p>
+            <p>Palattu alkuun ja tajuttu, että rekisterinumeroiden kohdalla olen tehnyt hakulausekkeessa virheen. Ja etsitty netistä vinkkiä, miten rajata rekisterihakua autoihin, jotka ovat sinisiä hondia ja joiden omistajan pituus on vähintään 6'0".</p> 
+            <p>Mutta tämäkään ei auttanut, sillä tätä kautta tulleet epäillyt eivät myöskään haastattelujen perusteella voineet olla tekijöitä...Tarkistin nämäkin solutions-komennolla varmuuden vuoksi, mutta ei onnannut.</p>
+            <figure><img src="UusiYritys.png"></figure>
+            <br>
+            <p>Luovutan mysteerin kanssa. Minusta ei ole salapoliisiksi...</p>
+        
+        
+        
         </article>
         
     </main>
