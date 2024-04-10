@@ -8,6 +8,54 @@
 </head>
 <body>
     
+    <h2>Exercise 1: JSON Basics</h2>
+    <p></p>
+    <p>
+      <button id="name_json">Display the first and lastname only</button>
+      <button id="all_json">Display all data</button>
+    </p>
+    <ul>
+      <li>The First button will display the first and lastname for each item in the div below.</li>
+      <li>The Second button will display all the data for all items in the div below. If you wish, you can use for-loops here.</li>
+    </ul>
+    <div id="jsondata"></div>
+    <hr/>
+
+
+    <h2>Exercise 2: Parsing JSON from web</h2>
+    <p>
+      <button id="load_raw">Load raw data</button>
+      <button id="load_parse_raw">Load and parse the data</button>
+    </p>
+
+    <ul>
+      <li>The first button should run a JavaScript-function, which will load the given <a href="http://www.omdbapi.com/?s=star+wars&apikey=cbbc6750">JSON file from the web </a>and display the raw contents of it on the DIV-below (id=rawdata). Use Developer tools (F12) to track the AJAX call and study the headers, execution times etc.</li>
+      <li> The second button should run a function, will load the same data, but will parse the data out and display it as a table.
+      <li> After you have managed to get the data out, try to load the pictures to the page as well.    
+    </ul>
+    <div id="rawdata">Raw data goes here.</div>
+
+    <hr/>
+
+    <h2>Exercise 3: Real Life Challenge: OpenWeatherMap API </h2>
+
+    <p>Sample call to the REST API could be like this: <a href="http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=ff64c247a136f706923d1ee0d55d71e2">http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=ff64c247a136f706923d1ee0d55d71e2
+    </a>. Click to see the response.</p>
+
+    <p>Select a city from the list:</p>
+    <select name="mySelect" id="city" onchange="">
+        <option value="Helsinki">Helsinki</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Rome">Rome</option>
+        <option value="New York">New York</option>
+    </select>
+    <p>Or type in a search query: <input id="citysearch" /><button id="search">Search</button></p>
+
+    <button id="weatherLoad">Get data</button>
+
+    <div id="weatherdata">Weatherdata goes here.</div>
+
+
     <script src="ws8.js"></script>
 </body>
 </html>
