@@ -43,7 +43,7 @@
     </a>. Click to see the response.</p>
 
     <p>Select a city from the list:</p>
-    <select name="mySelect" id="city" onchange="">
+    <select name="mySelect" id="city" onchange="locationWeather()">
         <option value="Helsinki">Helsinki</option>
         <option value="Stockholm">Stockholm</option>
         <option value="Rome">Rome</option>
@@ -51,7 +51,7 @@
     </select>
     <p>Or type in a search query: <input id="citysearch" /><button id="search">Search</button></p>
 
-    <button id="weatherLoad">Get data</button>
+    <!-- <button id="weatherLoad">Get data</button>     säätiedot haetaan joko valikon tai search queryn kautta. tämä vain alussa, kun koodia kirjoitettiin ja testattiin-->
 
     <div id="weatherdata">Weatherdata goes here.</div>
 

@@ -3,14 +3,17 @@ const name_json_btn = document.getElementById('name_json');
 const all_json_btn = document.getElementById('all_json');
 const load_raw_btn = document.getElementById('load_raw');
 const load_parse_raw_btn = document.getElementById('load_parse_raw');
-const weatherdata_btn = document.getElementById('weatherLoad');
+//const weatherdata_btn = document.getElementById('weatherLoad');//
+const search_btn = document.getElementById('search');
 
 //Dynamic events for buttons
 name_json_btn.addEventListener('click', jsonNames);
 all_json_btn.addEventListener('click', jsonAllData);
 load_raw_btn.addEventListener('click', loadRawData);
 load_parse_raw_btn.addEventListener('click', parseRawData);
-weatherdata_btn.addEventListener('click', weatherData);
+//weatherdata_btn.addEventListener('click', weatherData);//
+search_btn.addEventListener('click', findLocation);
+
 
 var text = '{ "employees" : [' +
 '{ "firstName":"John" , "lastName":"Doe" },' +
@@ -40,10 +43,10 @@ function jsonAllData() {
     for (var avain in kaikki) {
         if (kaikki.hasOwnProperty(avain)) {
             var arvo = kaikki[avain];
-            document.getElementById("jsondata").innerHTML += "<br>" + avain + ": " + JSON.stringify(arvo) + "<br><br><br>"; //tulostaa kaikki tiedot, mutta myös sulkeet yms
+            document.getElementById("jsondata").innerHTML += "<br>Tulostus sulkeineen kaikkineen: <br>" + avain + ": " + JSON.stringify(arvo) + "<br><br><br>"; //tulostaa kaikki tiedot, mutta myös sulkeet yms
 
             //Jos saisi tulostettua vain tekstit
-            tulostus = "<u><b>" + avain + "</u></b>" + ": <br>"; //alkuun luokan, eli employees tallennus
+            tulostus = "Tulostus ilman sulkeita ja aseteltuna: <br> <u><b>" + avain + "</u></b>" + ": <br>"; //alkuun luokan, eli employees tallennus
 
             for (var i = 0; i < arvo.length; i++) {
                 console.log(arvo[i]);
@@ -51,7 +54,7 @@ function jsonAllData() {
                     var arvo2 = arvo[i][avain2];
                     tulostus += "<b>" + avain2 + "</b>" + ": " + arvo2 + " ";
                 }
-                tulostus += "<br><br>";
+                tulostus += "<br>";
                 
             }
             }
@@ -124,15 +127,12 @@ function parseRawData() {
 }
 
 
-function weatherData() {
+function weatherData(location) {
     var apiKey = "c573ba4b5309b920542bda0bed7d2d21"
 
-    //var locationURL = "http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid=" + apiKey;
-    //var getLocation = new XMLHttpRequest();
-    //getLocation.open("GET", getLocation, true)
-    var helsinki = {lat: 60.192059, lon: 24.945831}
+    var location = location;
 
-    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + helsinki.lat + "&lon=" + helsinki.lon +"&appid=" + apiKey;
+    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + location.lat + "&lon=" + location.lon +"&appid=" + apiKey;
 
     var getweather = new XMLHttpRequest();
     getweather.open("GET", weatherURL, true);
@@ -141,10 +141,73 @@ function weatherData() {
 
     getweather.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var weatherDatas = getweather.responseText;
-            console.log(weatherDatas);
+            var weatherJson = getweather.responseText;
+            console.log(weatherJson);
+            var weatherInfo = JSON.parse(weatherJson);
 
-            document.getElementById("weatherdata").innerHTML = weatherDatas;
+            var saaTiedot = {
+                main: weatherInfo.weather[0].main,
+                temperature: weatherInfo.main.temp,
+                clouds: weatherInfo.clouds.all,
+                humidity: weatherInfo.main.humidity,
+                place: weatherInfo.name
+            };
+
+            var celsius = (saaTiedot.temperature - 273.15).toFixed(1);
+
+            var tulostus = "Location: " + saaTiedot.place + "<br>Weather: " + saaTiedot.main + "<br>Temperature: " + celsius + "°C<br>Cloudy: " + saaTiedot.clouds + "%<br>Humidity: " + saaTiedot.humidity + "%<br>";
+
+            document.getElementById("weatherdata").innerHTML = tulostus;
+
         }
-    };
+    }
+}
+
+function locationWeather() {
+
+    var choice = document.getElementById('city').value;
+    if (choice == "Helsinki") {
+        var location = {lat: 60.192059, lon: 24.945831};
+    } else if (choice == "Stockholm") {
+        var location = {lat: 59.33258, lon: 18.0649};
+    } else if (choice == "Rome") {
+        var location = {lat: 41.9028, lon: 12.4964};
+    } else if (choice == "New York") {
+        var location = {lat: 40.71277530, lon: -74.00597280};
+    }
+
+    weatherData(location);
+}
+
+
+
+function findLocation() {
+
+    var city_name = document.getElementById('citysearch').value;
+
+    var apiKey = "c573ba4b5309b920542bda0bed7d2d21";
+
+    var locationURL = "http://api.openweathermap.org/geo/1.0/direct?q={" + city_name + "}&appid=" + apiKey;
+    var getLocation = new XMLHttpRequest();
+    getLocation.open("GET", locationURL, true);
+
+    getLocation.send();
+
+    getLocation.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var locationJson = getLocation.responseText;
+            var locationData = JSON.parse(locationJson);
+            console.log(locationData);
+
+            var location = {
+                lat: locationData[0].lat,
+                lon: locationData[0].lon
+            };
+
+            console.log(location);
+            weatherData(location);
+        }
+    }
+
+
 }
