@@ -187,7 +187,7 @@ function findLocation() {
 
     var apiKey = "c573ba4b5309b920542bda0bed7d2d21";
 
-    var locationURL = "http://api.openweathermap.org/geo/1.0/direct?q={" + city_name + "}&appid=" + apiKey;
+    var locationURL = "https://api.openweathermap.org/geo/1.0/direct?q={" + city_name + "}&appid=" + apiKey;
     var getLocation = new XMLHttpRequest();
     getLocation.open("GET", locationURL, true);
 
