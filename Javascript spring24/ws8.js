@@ -104,13 +104,13 @@ function parseRawData() {
                 var jsData = JSON.parse(jsonDoc);
     
                 // Display the JSON data in the table
-                var txt = "<table border='1'><tr><th>Movie</th><th>Poster</th></tr>";
+                var txt = "<table border='1'><tr><th>Movie</th><th>Poster</th><th>IMDB nro</th></tr>";
     
                 if (jsData.Search && jsData.Search.length > 0){
     
                     for (var i=0; i < jsData.Search.length; i++){
-                        txt += "<tr><td>" + jsData.Search[i].Title + " (" + jsData.Search[i].Year + ")" + "<br><br> IMDB nro: " + jsData.Search[i].imdbID + "</td><td><img src='" +
-                        jsData.Search[i].Poster + "'</td></tr>";
+                        txt += "<tr><td>" + jsData.Search[i].Title + " (" + jsData.Search[i].Year + ")" + "</td><td><img src='" +
+                        jsData.Search[i].Poster + "'</td><td>&nbsp;&nbsp;" + jsData.Search[i].imdbID + "&nbsp;&nbsp;</tr>";
                     }
                 }else {
                     txt = "<tr><td colspan='2'>No results found.</td></tr>";
