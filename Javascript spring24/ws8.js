@@ -198,16 +198,18 @@ function findLocation() {
             var locationJson = getLocation.responseText;
             var locationData = JSON.parse(locationJson);
             console.log(locationData);
+            if (locationData.length > 0){
+           
+                var location = {
+                    lat: locationData[0].lat,
+                    lon: locationData[0].lon
+                };
 
-            var location = {
-                lat: locationData[0].lat,
-                lon: locationData[0].lon
-            };
-
-            console.log(location);
-            weatherData(location);
+                console.log(location);
+                weatherData(location);     
+            } else {
+                alert("City (" + city_name + ") not found");
+            }
         }
     }
-
-
 }
