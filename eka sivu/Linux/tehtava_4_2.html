@@ -16,26 +16,29 @@
             <ol>
                 <li>
                     <h3>Selvitä prosessien ID-numerot ja mikä prioriteetti</h3>
-                    <figure><img src="#"></figure>
+                    <p>Ensimmäiseksi tarkastelin prosesseja system monitorilla, sitten komentorivillä <i>ps aux</i>-komennolla ja sitten myös htopin kautta. </p>
+                    <figure><img src="4_2_system_monitor_pico_firefox.png"><img src="4_2_ps_aux_pico_firefox.png"><img src="4_2_ps_aux_grep.png"><img src="4_2_htop_view_on_pico_firefox.png"></figure>
                 </li>
                 <li>
                     <h3>Prosessien nice-arvojen muuttaminen</h3>
-                    <figure><img src="#"></figure>
+                    <p>Ensimmäinen yritys muuttaa nice-arvoja epäonnitui. Todennäköisesti, koska yritin muuttaa arvoja -merkkisiksi, joka nostaisi prioriteettia normaalia korkeammalle. Minulla ei ollut tähän oikeuksia, koska ehkä järjestelmä haluaa suojata, etten nosta turhanpäiväistä prosessia liian korkealle, joka haittaisi tärkeimpien prosessien toimintaa. Sen sijaan nice-arvojen muuttaminen positiivisten lukujen kanssa onnistui.</p>
+                    <figure><img src="4_2_nice_failed.png"><img src="4_2_nice_gedit_onnistui.png"><img src="4_2_nice_firefox_onnistui.png"></figure>
                 </li>
                 <li>
                     <h3>Prosessien lopettaminen kill-komento ja erilaiset valitsimet</h3>
-                    <figure><img src="#"></figure>
+                    <figure><img src="4_2_kill_gedit.png"><img src="4_2_kill_more.png"><img src="4_2_kill_hup.png"></figure>
                 </li>
                 <li>
                     <h3>Sovellusten etsiminen grep-komennolla</h3>
-                    <figure><img src="#"></figure>
+                    <figure><img src="4_2_grep_firefox_pico.png"><img src="4_2_grep_kayttajan_prosessit.png"></figure>
                 </li>
                 <li>
                     <h3>Sovellusten lopettaminen yhdellä komennolla</h3>
-                    <figure><img src="#"></figure>
+                    <figure><img src="4_2_kill_with_one_stone.png"></figure>
                 </li>
                 <li>
                     <h3>Ajastusten luominen crontabiin.</h3>
+                    <figure><img src=""></figure>
                 </li>
             </ol>
         </article>
