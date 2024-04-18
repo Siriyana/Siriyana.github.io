@@ -16,29 +16,48 @@
             <ol>
                 <li>
                     <h3>Selvitä prosessien ID-numerot ja mikä prioriteetti</h3>
+                    <p>Avasin komentorivillä firefox- ja pico-sovellukset.</p>
                     <p>Ensimmäiseksi tarkastelin prosesseja system monitorilla, sitten komentorivillä <i>ps aux</i>-komennolla ja sitten myös htopin kautta. </p>
+                    <p>Firefoxin PID oli 42770 (ja firefoxiin olit muitakin prosesseja auki, mutta tuo oli se pääprosessi) ja picon PID-prosesseja oli auki kaksi (koska olin avannut sen kahteen kertaan...) 42598 ja 43040.</p>
+                    <p>Molempien ohjelmien prioriteetti oli normaali.</p>
                     <figure><img src="4_2_system_monitor_pico_firefox.png"><img src="4_2_ps_aux_pico_firefox.png"><img src="4_2_ps_aux_grep.png"><img src="4_2_htop_view_on_pico_firefox.png"></figure>
                 </li>
                 <li>
                     <h3>Prosessien nice-arvojen muuttaminen</h3>
-                    <p>Ensimmäinen yritys muuttaa nice-arvoja epäonnitui. Todennäköisesti, koska yritin muuttaa arvoja -merkkisiksi, joka nostaisi prioriteettia normaalia korkeammalle. Minulla ei ollut tähän oikeuksia, koska ehkä järjestelmä haluaa suojata, etten nosta turhanpäiväistä prosessia liian korkealle, joka haittaisi tärkeimpien prosessien toimintaa. Sen sijaan nice-arvojen muuttaminen positiivisten lukujen kanssa onnistui.</p>
+                    <p>Ensimmäinen yritys muuttaa firefoxin nice-arvoja epäonnitui. Todennäköisesti, koska yritin muuttaa arvoja -merkkisiksi (jolloin prioriteetti olisi normaalia korkeampi), joka nostaisi prioriteettia normaalia korkeammalle. Minulla ei ollut tähän oikeuksia, koska ehkä järjestelmä haluaa suojata, etten nosta turhanpäiväistä prosessia liian korkealle, joka haittaisi tärkeimpien prosessien toimintaa. Sen sijaan nice-arvojen muuttaminen positiivisten lukujen kanssa onnistui.</p>
                     <figure><img src="4_2_nice_failed.png"><img src="4_2_nice_gedit_onnistui.png"><img src="4_2_nice_firefox_onnistui.png"></figure>
                 </li>
                 <li>
-                    <h3>Prosessien lopettaminen kill-komento ja erilaiset valitsimet</h3>
-                    <figure><img src="4_2_kill_gedit.png"><img src="4_2_kill_more.png"><img src="4_2_kill_hup.png"></figure>
+                    <h3>Prosessien lopettaminen kill-komennolla</h3>
+                    <p>Avasin muutamia ohjelmia, jotta voin ne sulkea ja tarkistin jobs-komennolla tietoja. Sen jälkeen lopetin kolmantena olevan ohjelman. Jostain syystä tulostus ohjelman päättymisestä tuli vasta sen jälkeen kun tein uuden komennon (jolla etsin PID-numeron geditille). Gedit-ohjelman lopetin kill komennolla, jossa perässä suljettavan ohjelman PID.</p>
+                    <figure><img src="4_2_kill_gedit.png"></figure>
+                    <p>Tämän jälkeen avasin ohjelmat uudestaan, jotta pystyin kokeilemaan materiaalissa olevat muut lopettamiskomennot. kill -9 pakottaa ohjelman sulkeutumisen (toki tässä ei tarpeen, koska aikaisemminkin sulkeutui ilman järeämpiä keinoja). Toki ensimmäinen ei toiminut, koska PID-numero taisi viitata johonkin muuhun prosessiin, kuin itse wireshark-ohjelmaan. </p>
+                    <figure><img src="4_2_kill_more.png"></figure>
+                    <p>Kokeilin myös kill -HUP -lopettamissignaalia.</p>
+                    <figure><img src="4_2_kill_hup.png"></figure>
                 </li>
                 <li>
                     <h3>Sovellusten etsiminen grep-komennolla</h3>
-                    <figure><img src="4_2_grep_firefox_pico.png"><img src="4_2_grep_kayttajan_prosessit.png"></figure>
+                    <p>Hain pgrep-komennolla firefoxin ja geditin tiedot. Pgrep tulostaa vain PID-numeron. Perus pgrep hakee vain prosessit, joissa vain hakusana ja valitsimella -f saa haettua myös ne prosessit, joissa jossain kohti mainittuna hakusana.</p>
+                    <figure><img src="4_2_grep_firefox_gedit.png"></figure>
+                    <p>Kokeilin myös hakea kaikkia käyttäjän (minun) prosesseja -u valitsimella. </p>
+                    <figure><img src="4_2_grep_kayttajan_prosessit.png"></figure>
                 </li>
                 <li>
                     <h3>Sovellusten lopettaminen yhdellä komennolla</h3>
+                    <p>Käytin pkill komentoa, johon putkitin kaikki sovellukset, jotka halusin sulkea.</p>
                     <figure><img src="4_2_kill_with_one_stone.png"></figure>
                 </li>
                 <li>
                     <h3>Ajastusten luominen crontabiin.</h3>
-                    <figure><img src=""></figure>
+                    <p>Ensimmäinen ajastus firefoxin ja iltalehden avaaminen ainakin onnistui (kokeilin tehdessä senhetkisellä ajalla ja vasta sitten muutin ajettavaksi maanantaisin klo 8.58.</p>
+                    <figure><img src="4_2_crontab ajastukset.png"></figure>
+                    <p>Netistä löytyneen ohjeen mukaan root-käyttäjän ajastukset ajetaan sudo crontab -käskyllä. Joten viimeisin ajastus on eri crontab-tiedostossa, jotta se ajetaan juuritasolla.</p>
+                    <p>varmuuskopioi.sh tiedosto on muokattu versio aiemmin tehdystä yllapito.sh ohjelmasta.</p>
+                    <figure><img src="4_2_crontab_root_mail.png"><img src="4_2_varmuuskopioi_sh.png"></figure>
+                    <p>Testattu vielä tämänhetkisellä ajalla ja katsottu <i>grep CRON /var/log/syslog</i>-komennolla logia ajetuista ohjelmista. Logista näkyy herja, ettei minulla ole asennettuna Mail Transfer Agencya, joten sähköpostia ei lähetetä. varmuuskopioi-juttu ja firefox taitavat toimia, tuosta update-ajastuksesta mietin, että mahtaako toimia, kun yleensä minulta aina halunnut salasanan... </p>
+                    <figure><img src="4_2_syslog.png"></figure>
+                    <p>Vaihdettu update-ajastus sudo crontab -tiedostoon, jos ohjelma onnistuisi root-tasolla. Login perusteella ehkä toimisi (ainakin nyt tämänkin kohdalle tuli tuo herja, ettei ole MTA ja output discarded, mitä ei aikaisemmin tullut.</p>
                 </li>
             </ol>
         </article>
