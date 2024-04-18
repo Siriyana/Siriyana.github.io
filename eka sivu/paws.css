@@ -1,0 +1,58 @@
+.parallax1 {
+    background-image: url(miaowyoga.png);
+    min-height: 100%;
+    padding: 400px 50px;
+}
+
+.parallax2 {
+    background-image: url(flower_cats.png);
+    min-height: 100%;
+    padding: 400px 50px;
+}
+
+.parallax3 {
+    background-image: url(purrfect_piano_cat.png);
+    min-height: 100%;
+    padding: 400px 50px;
+}
+
+.parallax1, .parallax2, .parallax3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titles {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.border {
+    background-color: transparent;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #f7f7f7;
+}
+
+
+div {
+    display: block;
+}
+
+figure img{
+    width: 250px;
+}
+
+article {
+    color: #5d5c5c;
+    text-align: center;
+    background-color: honeydew;
+    padding: 50px 80px;
+}
