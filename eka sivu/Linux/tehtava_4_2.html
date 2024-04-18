@@ -57,7 +57,7 @@
                     <figure><img src="4_2_crontab_root_mail.png"><img src="4_2_varmuuskopioi_sh.png"></figure>
                     <p>Testattu vielä tämänhetkisellä ajalla ja katsottu <i>grep CRON /var/log/syslog</i>-komennolla logia ajetuista ohjelmista. Logista näkyy herja, ettei minulla ole asennettuna Mail Transfer Agencya, joten sähköpostia ei lähetetä. varmuuskopioi-juttu ja firefox taitavat toimia, tuosta update-ajastuksesta mietin, että mahtaako toimia, kun yleensä minulta aina halunnut salasanan... </p>
                     <figure><img src="4_2_syslog.png"></figure>
-                    <p>Vaihdettu update-ajastus sudo crontab -tiedostoon, jos ohjelma onnistuisi root-tasolla. Login perusteella ehkä toimisi (ainakin nyt tämänkin kohdalle tuli tuo herja, ettei ole MTA ja output discarded, mitä ei aikaisemmin tullut.</p>
+                    <p>Vaihdettu update-ajastus sudo crontab -tiedostoon, jos ohjelma onnistuisi root-tasolla. Syslogin perusteella ehkä toimisi (ainakin nyt tämänkin kohdalle tuli tuo herja, ettei ole MTA ja output discarded, mitä ei aikaisemmin tullut.</p>
                     <figure><img src="4_2_update_to_root_crontab.png"></figure>
                 </li>
             </ol>
