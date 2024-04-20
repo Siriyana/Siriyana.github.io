@@ -16,18 +16,25 @@
             <ol>
                 <li>
                     <h3>Palvelun ja sen tietojen hakeminen</h3>
-                    <p>Haettu rsyslogin tietoja grepin avulla.</p>
+                    <p>Rsyslog (<a href="www.rsyslog.com">www.rsyslog.com</a>) on avoimen koodin ohjelma lokiviestin välittämiseen verkossa. Se perustuu syslog-prokollaan ja siinä on laajennettu erilaisilla ominaisuuksilla.(<a href="www.en.wikipedia.org/wiki/Rsyslog">Wikipedia: Rsyslog)</a></p>
+                    <p>Haettu rsyslogin PID-numero: 619.</p>
                     <figure><img src="4_3_rsyslog_haku.png"></figure>
-                    <p>Haettu rsyslogin statustietoja.</p>
+                    <p>Haettu palveluita, jotka enabled ja jotka running. Koska listat olivat pitkiä, niin rajasin vielä grep-komennolla vain rsyslogiin. Rsyslog oli käytössä ja käynnissä.</p>
+                    <figure><img src="4_2_rsyslog running.png"></figure>
+                    <p>Haettu rsyslogin statustietoja, jossa kaikki tiedot helpommin näkyvillä.</p>
                     <figure><img src="4_3_rsyslog_status.png"></figure>
                 </li>
                 <li>
                     <h3>Uudelleenkäynnistä Rsyslog</h3>
-                    <figure><img src="#"></figure>
-                </li>
+                    <p>Suljetaan ja käynnistetään rsyslog. Sekä sama yhdellä komennolla: restart.</p>
+                    <figure><img src="4_2_rsyslog_stop_start.png"><img src="4_2_rsyslog_restart.png"></figure>               </li>
                 <li>
                     <h3>Luo uusi palvelu "testi"</h3>
-                    <figure><img src="#"></figure>
+                    <p>Loin palvelun harjoitusohjeen mukaisesti. Status osoitti, että olin kirjoittanut ohjelmaan virheen...</p>
+                    <figure><img src="4_3_palvelun_luonti.png"></figure>
+                    <p>Korjatty skripti ja käynnistetty palvelu uudestaan.</p> 
+                    <p>Uudellenkäynnistetyn testi-palvelun PID on 54721. Status-haulla saa näkyville palvelun nimen ja kuvauksen (Testipalvelu) ja lataustiedon (mistä ladattu /etc/systemd...). Statustiedoissa näkyy myös se, että palvelu on aktiivinen. Palvelu käyttää muistia 536K ja miten paljon CPU:ta käyttää 3ms. Sen jälkeen näkyy ryhmän tietoja ja tarkemmin prosessin-tiedot ja siihen liittyvät komennot. Lopussa näkyvät palveluun liittyvät tapahtumat, kuten sen, että palvelu alkoi, testi starttasi ja sitten myös viestin Directory /home/ exists, joka tulostetaan 15s välein. </p>
+                    <figure><img src="4_3_palvelun_korjattu.png"></figure>
                 </li>
             </ol>
         </article>
