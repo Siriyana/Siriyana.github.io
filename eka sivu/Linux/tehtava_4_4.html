@@ -16,47 +16,61 @@
             <ol>
                 <li>
                     <h3>Htop-sovellus ja mikä palvelu käyttää eniten suoritinta</h3>
-                    <figure><img src="#"></figure>
+                    <p>Kun palveluita tarkistellaan htopissa ja laitoin järjestyksen CPU% mukaisesti, niin nähdään, että eniten suoritinta tällä hetkellä käytti Cinnamon-työpöytäympäristö, VirtualBoxin-työkalu, Linux Mintin report-tray -ohjelma ja htop-ohjelma.</p>
+                    <figure><img src="4_4_htop.png"></figure>
                 </li>
                 <li>
-                    <h3>Mikä palvelu käyttää eniten muistia</h3>
-                    <figure><img src="#"></figure>
+                    <h3>Mikä palvelu käyttää eniten muistia?</h3>
+                    <p>Eniten muistiä käytti firefox-ohjelma.</p>
+                    <figure><img src="4_4_htop_memory.png"></figure>
                 </li>
                 <li>
                     <h3>Kuinka pitkään tietokone on ollut käynnissä</h3>
-                    <figure><img src="#"></figure>
+                    <p>Tietokone on ollut käynnissä 1p 1h 34min ja 10s. </p>
+                    <figure><img src="4_4_htop_uptime.png"></figure>
                 </li>
                 <li>
                     <h3>Kuinka paljon muistia on käytössä yhteensä ja mikä on kokonaismäärä</h3>
-                    <figure><img src="#"></figure>
+                    <p>Omassa virtuaali Linux Mintissä on kokonaismuistia 1.92G ja käytössä siitä on 872M.</p>
+                    <figure><img src="4_4_htop_kokonaismuisti.png"></figure>
                 </li>
                 <li>
                     <h3>Firefox-prosessi</h3>
-                    <figure><img src="#"></figure>
+                    <p>Hain firefoxia Fn + F3 -näppäinyhdistelmällä, koska pelkkä F3 oli isäntäkoneen käytössä, niin piti lisätä myös Fn-näppäin komentoon. tämän jälkeen hakeminen oli helppoa. Kun olin hakenut ohjelman, niin ohjelman lopettaminen onnistui Fn+F9 näppäinyhdistelmällä.</p>
+                    <figure><img src="4_4_htop_haku_firefox.png"><img src="4_4_htop_kill.png"></figure>
                 </li>
                 <li>
                     <h3>Lostat-sovellus: kuinka paljon levylle kirjoitettu ja kuinka paljon dataa luettu</h3>
-                    <figure><img src="#"></figure>
+                    <p>Sda-levylle on kirjoitettu yhteensä 41524336kB edellisen käynnistyksen jälkeen ja dataa levyltä on luettu 51164231kB verran. Sr0-laitteella ei ole mitään, 1kB luettu jossain vaiheessa. SDA-levystä on mahdollista hakea eri osien tietoja eriteltynä.</p>
+                    <figure><img src="4_4_iostat.png"><img src="4_4_iostat_x.png"></figure>
                 </li>
                 <li>
                     <h3>Koneen keskimääräinen ulospäin menevä liikenne</h3>
-                    <figure><img src="#"></figure>
+                    <p><i>nload</i>-komento hakee verkkoliikenteen keskimääräisen, minimi ja maksimi nopeuden sekä kokonaismäärän niin saapuvan kuin lähtevän liikenteen osalta.</p>
+                    <p>Omalla koneella ulospäin menevän liikenteen keskimääräinen nopeus oli 24 bittisä sekunnissa verkkolaitteella enp0s3 ja verkkolaitteella keskimääräinen nopeus on 0.00 bittiä, koska sitä kautta ei juurikaan ole mitään liikennettä menossa kuvanottohetkellä.</p>
+                    <figure><img src="4_4_nload.png"><img src="4_4_nload_toinen_sivu.png"></figure>
                 </li>
                 <li>
                     <h3>Kuinka paljon kone on ladannut dataa yhteensä</h3>
-                    <figure><img src="#"></figure>
+                    <p>Nload-komennolla haettujen tietojen mukaan kone olisi ladannut dataa yhteensä 638MB + muutama 757kB toisella verkkolaitteella.</p>
+                    <p>Ifconfig-komennolla vaikuttaisi olevan samoissa lukemissa. enp0s3-laitteella on vastaanotettu 496503 pakettia (671MB) ja lo-laitteella 5701-pkaettia (803.3kB)</p>
+                    <figure><img src="4_4_ifconfig.png"></figure>
                 </li>
                 <li>
                     <h3>Koneen lokaali IP-osoite</h3>
-                    <figure><img src="#"></figure>
+                    <p>Ylläolevassa ifconfig-kuvassa IP-osoite näkyy inet kohdassa, eli enp0s3-laitteella ip-osoite on 10.0.2.15</p>
+                    <p>Testattu myös IP-komento ja samoilta näyttää.</p>
+                    <figure><img src="4_4_ip_komentp.png"></figure>
                 </li>
                 <li>
                     <h3>Toimiiko yhteys www.laurea.fi ja mikä IP-osoite vastaa osoitteesta</h3>
-                    <figure><img src="#"></figure>
+                    <p>Yhteys www.laurea.fi-osoitteeseen toimii ja sieltä vastataan IP-osoitteesta 20.76.16.34.</p>
+                    <figure><img src="4_4_ping_laurea.png"></figure>
                 </li>
                 <li>
                     <h3>Kuinka monta reititintä on matkalla koneesta osoitteeseen www.laurea.fi</h3>
-                    <figure><img src="#"></figure>
+                    <p>Traceroute-komennon perusteella matkalla olisi 7 reitintä ja mtr-komennon perusteella huomattavasti enemmän. </p>
+                    <figure><img src="4_4_traceroute.png"><img src="4_4_mtr.png"></figure>
                 </li>
             </ol>
         </article>
