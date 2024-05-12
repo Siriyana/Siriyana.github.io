@@ -15,28 +15,41 @@
             <h2>Palomuurin asennus ja säätö</h2>
             <ol>
                 <li>
-                    <h3>UFW ja GUFW -palomuurisovellukset</h3>
-                    <figure><img src="#"></figure>
+                    <h3>UFW ja GUFW -palomuurisovellukset ja niiden asentaminen</h3>
+                    <p>UFW ja GUFW on asennettu komennolla <i>sudo apt-get install ufw</i> ja <i>sudo apt-get install gufw</i>. </p>
+                    <p>Ufw on otettu käyttöön <i>sudo ufw enable</i>. Graafinen käyttöliittymä myös avattu esille kuvassa.</p>
+                    <figure><img src="5_2_ufw_gufw_asennettu.png"></figure>
                 </li>
                 <li>
                     <h3>Millaisia sääntöjä on oletuksena palomuurissa</h3>
-                    <figure><img src="#"></figure>
+                    <p>Palomuurin statuksen tarkistettu komentorivillä komennolla <i>sudo ufw status</i> ja tarkemmin default-asetukset komennolla <i>sudo ufw status verbose</i> (<a href="https://www.configserverfirewall.com/ufw-ubuntu-firewall/change-default-policy-ubuntu-ufw-firewall/">https://www.configserverfirewall.com/ufw-ubuntu-firewall/change-default-policy-ubuntu-ufw-firewall/</a>)</p>
+                    <p>Samat tiedot ovat helposti nähtävissä graafisessa käyttöliittymässä, missä näkyy suoraan onko Incoming ja Outcoming liikenteet estetty vai sallittu. </p>
+                    <p>Eli Incoming on deny-tilassa, outgoing allow-tilassa ja routed on disabled</p>
+                    <figure><img src="5_2_incoming_outgoing.png"></figure>
+                    <p>Lisätty ufw:llä sääntö, että shh</p>
+                    <figure><img src=""></figure>
                 </li>
                 <li>
                     <h3>Salli kaikki http ja https liikenne</h3>
-                    <figure><img src="#"></figure>
+                    <p>Http-liikenne kulkee yleensä portin 80 kautta ja https-liikenne portin 443 kautta, joten komennoilla <i>sudo ufw allow 80</i> ja <i>sudo ufw allow 80</i> saadaan sallittua kaikki http- ja https-liikenne. Toki portin sijaan olisi voinut käyttää myös suoraan vain protokollan nimeä. (<a href="https://linuxconfig.org/ubuntu-22-04-open-http-port-80-and-https-port-443-with-ufw">https://linuxconfig.org/ubuntu-22-04-open-http-port-80-and-https-port-443-with-ufw</a>)</p>
+                    <figure><img src="5_2_http_https.png"></figure>
                 </li>
                 <li>
                     <h3>Kiellä kaikki saapuva ftp liikenne</h3>
-                    <figure><img src="#"></figure>
+                    <p>Jos haluaa estää vain saapuvan FTP-liikenteen (portit 20 ja 21, ehkä jotain hämmentäviä passiivia portteja myös), niin sen voi määritellä komennoilla <i>sudo ufw deny in 20/tcp</i> ja <i>sudo ufw deny in 20/tcp</i> (<a href="https://ipcisco.com/ftp-and-ftp-ports/">https://ipcisco.com/ftp-and-ftp-ports/</a> ja https://askubuntu.com/questions/1121149/ubuntu-ftp-and-sftp-client-firewall-rules-for-ufw)</p>
+                    <figure><img src="5_2_ftp_deny.png"></figure>
                 </li>
                 <li>
                     <h3>Kiellä kaikki ulospäin lähtevä liikenne porttiin 25</h3>
-                    <figure><img src="#"></figure>
+                    <p>Portti 25 on aikaisemmin ollut SMTP-protokollan (Simple Mail Transfer Protocol) portti, mutta nykyään sen protokollan käyttämä portti pitäisi olla 587. Estetty kaikki ulospäin lähteävä liikenne koneelle porttiin 25. <a href="https://www.cloudflare.com/learning/email-security/smtp-port-25-587/">https://www.cloudflare.com/learning/email-security/smtp-port-25-587/</a></p>
+                    <figure><img src="5_2_port25.png"></figure>
                 </li>
                 <li>
                     <h3>Kiellä kaikki liikenne IP-osoitteesta 15.15.15.51</h3>
-                    <figure><img src="#"></figure>
+                    <p>Ilmeisesti haluan estaa kaiken liikenteen Hewlett-Packardin ip-osoitteeseen, ainakin IP-haun mukaan. Onneksi oma koneeni ei ole HP, niin tuskinpa kaipaan mitään tuosta ip:stä</p>
+                    <figure><img src="5_2_ping_hp.png"><img></figure>
+                    <p>Estetty kaikki liikenne IP-osoitteesta 15.15.15.51 komennolla <i>sudo ufw deny from 15.15.15.51</i></p>
+                    <figure><img src="5_2_deny_ip_address.png"></figure>
                 </li>
 
             </ol>
@@ -44,6 +57,62 @@
 
         <article>
             <h2>Linuxin kovennus</h2>
+            <ol>
+                <li>
+                    <h3>Virustentorjuntaohjelma ClamAvin asennus</h3>
+                    <p>Tehty <a href="https://www.inmotionhosting.com/support/security/install-clamav-on-ubuntu/">https://www.inmotionhosting.com/support/security/install-clamav-on-ubuntu/</a> löydettyjen ohjeiden mukaan.</p>
+                    <p>Asennettu clamAV ja clamAV daemon komennolla <i>sudo apt install clamav clamav-daemon -y</i>, sen jälkeen ensin lopetettu clamav-prosessi <i>sudo systemcl stop clamav-freshclam</i> ja päivitetty virusohjelma komennolla <i>sudo freshclam</i>.</p>
+                    <p>Skannattu kaikki tiedostot komennolla <i>clamscan -r /</i></p>
+                    <p>Onneksi viruksia ei löytynyt! :)</p>
+                    <figure><img src="5_2_virus_scan.png"></figure>
+                </li>
+                <li>
+                    <h3>Päivistykset</h3>
+                    <p>Päivitetty manuaalisesti komennolla <i>sudo apt-get update && sudo apt-get upgrade</i>. Tosin mitään päivitettävää ei ollut...</p>
+                    <figure><img src="5_2_updates.png"></figure>
+                </li>
+                <li>
+                    <h3>Palomuuri</h3>
+                    <p>Tehty edellisessä tehtävässä</p>
+                </li>
+                <li>
+                    <h3>Minimoi asennetut sovellukset</h3>
+                    <p>Tarkistettu komennolla <i>dpkg -l</i>, mitä asennettuja sovelluksia on.</p>
+                    <p>Listaan tuli minulla yli 2500 tuhatta riviä, joten pitäisi varmaan tietää, mitä asennettua sovellusta etsii ja mitä sovelluksia haluaisi poistaa</p>
+                    <p>Jos haluan poistaa asennetun palvelun, niin ettei se automaattisesti käynnisty, niin käyttäisin komentoa <i>systemctl disable</i> ja perään palvelun nimi. Ja jos haluaisin kokonaan poistaa sovelluksen, niin käyttäisin komentoa <i>apt-get remove</i> ja sovelluksen nimi</p>
+                    <figure><img src="5_2_apache.png"></figure>
+                </li>
+                <li>
+                    <h3>Salasanapolitiikan muokkaaminen</h3>
+                    <p>Määritelty salasanan vanhentumiseen liittyviä tietoja. Komennolla <i>sudo nano /etc/login.defs</i> avataan tiedosto, jonne päästään muuttamaan tietoja.</p>
+                    <figure><img src="5_2_min_days.png"></figure>
+                    <p>Asennettu libpam-pwquality paketti erilaisten salasana-linjausten määrittelemiseksi ja lisätty salasana-linjauksia.</p>
+                    <figure><img src="5_2_libpam_asennus.png"></figure>
+                    <figure><img src="5_2_password_policies.png"></figure>
+                </li>
+                <li>
+                    <h3>Turvattomien protokollien käytöstä poistaminen</h3>
+                    <p>Testattu turvattomien protokollien poistoa, mutta ei löytynyt, eikä mitään sitten poistettu.</p>
+                    <figure><img src="5_2_turvattomat_protokollat.png"></figure>
+                </li>
+                <li>
+                    <h3>Lynis</h3>
+                    <p>Asennettu Lynis ja tehty auditointi. On ilmeisesti paljon ohjelmia, mitä voisi ladata ja ottaa käyttöön, esim. encryptfs-salaus on asennettu, mutta kenenkään käyttäjien kohdalla sitä ei ole otettu käyttöön.</p>
+                    <figure><img src="5_2_lynis.png"></figure>
+                    <figure><img src="5_2_lynis2.png"></figure>
+                </li>
+                <li>
+                    <h3>Verkkoliikennettä kuuntelevien palveluiden tarkistus</h3>
+                    <p>Tarkistettu mitkä palvelut kuuntelevat ja mitä porttia. Vaikuttaisi, että ihan validit palvelut ja että kaikki on ok.</p>
+                    <figure><img src="5_2_kuuntelevien_palveluiden tarkistus.png"></figure>
+                </li>
+                <li>
+                    <h3>Tietoturvan lisäpäivityksiä</h3>
+                    <p>https://www.redhat.com/en/topics/linux/what-is-selinux</p>
+                    <p>Asennettu SELinux tämän ohjeiden mukaan: https://www.linode.com/docs/guides/how-to-install-selinux-on-ubuntu-22-04/</p>
+                    <figure><img src="5_2_selinux_asennus.png"></figure>
+                </li>
+            </ol>
         </article>
 
         
