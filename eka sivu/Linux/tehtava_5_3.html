@@ -34,6 +34,12 @@
                     <figure><img src="5_3_johnny_works_neither.png"></figure>
                     <p>Eli takaisin komentorivikäskyihin. Heikko murtuu parissa sekunnissa, mutta muut eivät. Laskeskelin https://www.security.org/how-secure-is-my-password/ sivuston avulla miten kauan pitäisi kestää murtaminen: (heikko 400 nanosekuntia, keski 22 millisekuntia, vahva 800 mikrosekuntia (vahva oli itseasiassa lyhyempi kuin keski, minkä vuoksi nopeampi purkaa erikoismerkistä huolimatta...) ja superin murtamisessa menisi 6kk (eli ei tämän kurssin aikana)</p>
                     <p>Kun laskeskelin, että jos heikon murtamiseen meni mun koneella pari sekuntia, niin keski murtamiseen menee 55000 kertaa kauemmin, eli mun koneella 15-30 tuntia (55000 * 1s = noin 15 tuntia ja 55000 * 2s = noin 30 tuntia)  </p>
+                    <p>Yritin kokeilla myös HashCat-ohjelmalla, mutta siinä tuli samoja ongelmia ja vaikka yritin netistä ja tekoälyn avulla, niin en onnistunut. Ilmeisesti Hashtype-numero olisi 2100 (tekoälyn ehdottama, ei löytynyt manuaalista ja googlesta tulleet ehdotukset, esim. 1800 vain herjasi, että token length exception ja <i>  This error happens if the wrong hash type is specified, if the hashes are
+                        malformed, or if input is otherwise not as expected (for example, if the
+                        --username option is used but no username is present)
+                      
+                      </i> </p>
+                    <figure><img src="5_3_Haschcat_failed.png"></figure>
                 </li>
 
 
