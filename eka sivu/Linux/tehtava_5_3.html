@@ -40,6 +40,8 @@
                       
                       </i> </p>
                     <figure><img src="5_3_Haschcat_failed.png"></figure>
+                    <p>Vaihdettu virtuaali Kalin salasana-asetuksia niin, että salasanat suojataan SHA512 avulla yescryptin sijaan. Salasanat piti vaihtaa, jotta cryptaus tapa muuttui. Tämäm jälkeen salasanojen cryptaus oli SHA512-muodossa.</p>
+                    <figure><img src="5_3_change_crypt_mode.png"><img src="5_3_SHA512.png"></figure>
                 </li>
 
 
@@ -50,18 +52,26 @@
             <h2>Salasanan murtaminen sanakirjojen ja sateenkaaritaulukoiden avulla</h2>
             <ol>
                 <li>
+                    <h3>Suomi-salasanalista</h3>
+                    <p>Aloitin Kali Linuxilla, mutta ilmeisesti virtuaalikoneellani ei vaan ole tarpeeksi suoritintehoja. Siirryin käyttämään windowisin command promptiin asennttua ubuntua, jos sillä onnistuisi ja olisi käytössä enemmän koneen resursseja kuin virtuaalikoneella...</p>
+                    <figure><img src="5_3_not_enough_allocable cpu.png"></figure>
+                    <p>Suomi-salasanalistan avulla onnistui ratkaista 6 salasanaa: kisuli, muumipeikko, timppa, SyncMasteR, 2k2k2k2k ja 2battlefield2. Viimeisin jäi ratkaisematta.</p>
+                    <figure><img src="5_3_suomiSalasanoja_ratkaistu_6.png"></figure>
+                </li>
+                <li>
+                    <h3>Loppujen murtaminen raakaa laskentaa käyttäen</h3>
+                    <p>Aloitettu ja jaksettu pyörittää päivä, mutta luovutettu, kun jo pari päivää rullattu, enkä jaksa viikkoa pitää konetta pyörimässä.. Eli ei ratkaistu.</p>
+                    <figure><img src="5_3_suomi_not_solved1.png"><img src="5_3_suomi_not_solved2.png"></figure>
+                </li>
+                <li>
                     <h3>Sateenkaaritaulut</h3>
-                    <figure><img src="#"></figure>
+                    <p>Kun aloitin murtamisen, niin jostain syystä herjasi: <i>INFO: Removed 4 hashes found as potfile entries or as empty hashes.</i> En tiedä, olinko jotenkin tallentanut tiedostoon väärin...</p>
+                    <figure><img src="5_3_start_crack.png"><img src="5_3_first_crack.png"></figure>
                 </li>
                 <li>
                     <h3>Murtaminen itse SHA-1</h3>
                 </li>
-                <li>
-                    <h3>Suomi-salasanalista</h3>
-                </li>
-                <li>
-                    <h3>Loppujen murtaminen raakaa laskentaa käyttäen</h3>
-                </li>
+
             </ol>
         </article>
 
