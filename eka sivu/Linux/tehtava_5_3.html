@@ -85,11 +85,12 @@
 
         <article>
             <h2>Testattu Hashcatia ja oletusmaskin toimintaa</h2>
+            <p>Luotu netin työkalulla MD5-hasheja (koska pitäisi ehkä olla helpoimpia murtaa ja oman koneen tehot ovat rajalliset). Luotu kolmekirjaimisia sanoja aha, Aha, AHA etc.</p>
             <p>Oletusmaski hashcatissa ilman omia määrittelyjä ei löydä sanaa AHA, vaan hashcat jatkoi eteenpäin viisi-merkkisten salasanojen purkamiseen.</p>
             <figure><img src="5_3_testi_isolla_kaikki.png"></figure>
             <p>Kun hakulausekkeeseen lisättiin perään oma maski ?a?a?a (kun tiesin, että vain kolme merkkiä), niin sitten hashcat onnistui purkamaan sen.</p>
             <figure><img src="5_3_testi_mask.png"></figure>
-            <p>Eli todennäköisesti ylempien tehtävien salasanojen purkaminen raakaa voimaa oletusmaskilla ei välttämättä onnistu, jos salasana ei noudata hashcatin oletusmaskia, vaan silloin pitäisi ehkä itse manuaalisesti käydä läpi omilla maskeilla ?a, ?a?a, ?a?a?a etc</p>
+            <p>Eli todennäköisesti salasanojen purkaminen raakaa voimaa käyttämällä ja hashcatin oletusmaskilla ei välttämättä onnistu, jos salasana ei noudata hashcatin oletusmaskia, vaan silloin pitäisi ehkä itse manuaalisesti käydä läpi omilla maskeilla ?a, ?a?a, ?a?a?a etc</p>
         </article>
 
         
