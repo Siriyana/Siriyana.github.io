@@ -25,25 +25,24 @@
                     <p>Manuaalisesti avasin /etc/shadow ja siellä näkyi kaikkien (heikko, keski, vahva ja super) käyttäjien tiedot ja hashit</p>
                     <figure><img src="5_3_user_hashes_.png"></figure>
                     <p>Googlailu kertoi että kyseinen hash-muoto on yescrypt ($y$) ja esim. että John The Ripper tukee vain epäsuorasti yescryptiä https://security.stackexchange.com/questions/252665/does-john-the-ripper-not-support-yescrypt </p>
-                    <p>Tämän jälkeen onnistui. Heikon salasanan ohjelma mursi heti. Sen jälkeen näytti, että John The Ripper päätti ottaa käyttöön sanalistan (Proceeding with wordlist)...</p>
+                    <p>Jotta yescryptiä voi yrittää purkaa, niin komento piti olla muodossa <i>sudo john /etc/shadow --format=crypt</i>  Heikon salasanan ohjelma mursi heti, mutta muita jäi junnaamaan...</p>
                     <figure><img src="5_3_john_the_ripper.png"></figure>
                     <p>Mutta mun koneeni (tai siis virtuaalikone) ei ole ilmeisesti hakkerointiin soveltuva, sillä se rullaa hyvin hitaasti ja vaikka jätin yöksi päälle, niin se ei saanut siinäkään ajassa ratkottua muita.</p>
                     <p>Jäin miettimään, että voisiko graafinen versio toimia paremmin ja latasin koneelle Johnnyn ja tallensin luomieni käyttäjien tiedot omaan tiedostoon, niin ohjelma ei myös yrittäisi ratkoa omaa salasanaani.</p>
-                    <p>Johnny oli teoriassa helppo käyttää, mutta siinäkin törmäsin ongelmaan: ettei hashiä ole ladattu, vaikak selkeästi Johnnyn password sivulla näkyy se, että on osannut erotella käyttäjät, hashin ja muut...</p>
+                    <p>Johnny oli teoriassa helppo käyttää, mutta siinäkin törmäsin ongelmaan: ettei hashiä ole ladattu, vaikka selkeästi Johnnyn password sivulla näkyy se, että on osannut erotella käyttäjät, hashin ja muut...</p>
                     <figure><img src="5_3_johnny.png"></figure>
                     <figure><img src="5_3_johnny_works_neither.png"></figure>
-                    <p>Eli takaisin komentorivikäskyihin. Heikko murtuu parissa sekunnissa, mutta muut eivät. Laskeskelin https://www.security.org/how-secure-is-my-password/ sivuston avulla miten kauan pitäisi kestää murtaminen: (heikko 400 nanosekuntia, keski 22 millisekuntia, vahva 800 mikrosekuntia (vahva oli itseasiassa lyhyempi kuin keski, minkä vuoksi nopeampi purkaa erikoismerkistä huolimatta...) ja superin murtamisessa menisi 6kk (eli ei tämän kurssin aikana)</p>
-                    <p>Kun laskeskelin, että jos heikon murtamiseen meni mun koneella pari sekuntia, niin keski murtamiseen menee 55000 kertaa kauemmin, eli mun koneella 15-30 tuntia (55000 * 1s = noin 15 tuntia ja 55000 * 2s = noin 30 tuntia)  </p>
-                    <p>Yritin kokeilla myös HashCat-ohjelmalla, mutta siinä tuli samoja ongelmia ja vaikka yritin netistä ja tekoälyn avulla, niin en onnistunut. Ilmeisesti Hashtype-numero olisi 2100 (tekoälyn ehdottama, ei löytynyt manuaalista ja googlesta tulleet ehdotukset, esim. 1800 vain herjasi, että token length exception ja <i>  This error happens if the wrong hash type is specified, if the hashes are
+                    <p>Yritin kokeilla myös HashCat-ohjelmalla, mutta siinä tuli samoja ongelmia ja vaikka yritin netistä ja tekoälyn avulla, niin en onnistunut. Ilmeisesti Hashtype-numero olisi 2100 (tekoälyn ehdottama, ei löytynyt manuaalista ja googlesta tulleet ehdotukset, esim. 1800 vain herjasi, että token length exception ja 
+                        <i>  This error happens if the wrong hash type is specified, if the hashes are
                         malformed, or if input is otherwise not as expected (for example, if the
-                        --username option is used but no username is present)
-                      
-                      </i> </p>
+                        --username option is used but no username is present)</i> </p>
                     <figure><img src="5_3_Haschcat_failed.png"></figure>
+                    <h3>Vaihdettu Kalin salasanojen tallennusmuoto</h3>
                     <p>Vaihdettu virtuaali Kalin salasana-asetuksia niin, että salasanat suojataan SHA512 avulla yescryptin sijaan. Salasanat piti vaihtaa, jotta cryptaus tapa muuttui. Tämäm jälkeen salasanojen cryptaus oli SHA512-muodossa.</p>
                     <figure><img src="5_3_change_crypt_mode.png"><img src="5_3_SHA512.png"></figure>
                     <p>Ainakin graafinen Johnnyt-versio toimii nyt!</p>
                     <figure><img src="5_3_atleast_johnny_works.png"></figure>
+                    <p>Mutta vaikka annoin pyöriä melkein kaksi päivää, niin ei saanut purettua siinä ajassa muita kuin heikon.</p>
                 </li>
 
 
@@ -61,7 +60,7 @@
                     <figure><img src="5_3_suomiSalasanoja_ratkaistu_6.png"></figure>
                 </li>
                 <li>
-                    <h3>Loppujen murtaminen raakaa laskentaa käyttäen</h3>
+                    <h3>Loppujen Suomi-salasanojen murtaminen raakaa laskentaa käyttäen (FAILED)</h3>
                     <p>Aloitettu ja jaksettu pyörittää päivä, mutta luovutettu, kun jo pari päivää rullattu ja tässä vaiheessa 9/15 arvioitu aika oli la 25.5. ja senkin jälkeen vasta siirtynyt taas seuraavaan vaiheeseen 10/15, päätin luovuttaa. En jaksa viikkoa pitää konetta pyörimässä.. Eli luovutettu ja salasana jäi murtamatta. Pitää hankkia kone, jossa on paremmat tehot...</p>
                     <figure><img src="5_3_suomi_not_solved1.png"><img src="5_3_suomi_not_solved2.png"></figure>
                 </li>
@@ -75,14 +74,22 @@
                     <figure><img src="5_3_cracks_solved_4.png"></figure>
                 </li>
                 <li>
-                    <h3>Murtaminen itse SHA-1</h3>
-                    <p>Minulla on huono fiilis, etten tule saamaan ratkaistua kolmea viimeistä hashia raakaa voimaa käyttäen, kun oman koneen tehot ovat heikot... Mutta kokeillaan</p>
+                    <h3>Murtaminen itse SHA-1 (FAILED)</h3>
+                    <p>Minulla on huono fiilis, etten tule saamaan ratkaistua kolmea viimeistä hashia raakaa voimaa käyttäen, kun oman koneen tehot ovat heikot...</p>
                     <figure><img src="5_3_crack_unsolved1.png"></figure>
-                    <figure><img src="#"></figure>
-                    <figure><img src="#"></figure>
+                    <p>Kokeilin kaikkia kolmea ja annoin hetken pyöriä, mutta ei onnistunut.</p>
                 </li>
 
             </ol>
+        </article>
+
+        <article>
+            <h2>Testattu Hashcatia ja oletusmaskin toimintaa</h2>
+            <p>Oletusmaski hashcatissa ilman omia määrittelyjä ei löydä sanaa AHA, vaan hashcat jatkoi eteenpäin viisi-merkkisten salasanojen purkamiseen.</p>
+            <figure><img src="5_3_testi_isolla_kaikki.png"></figure>
+            <p>Kun hakulausekkeeseen lisättiin perään oma maski ?a?a?a (kun tiesin, että vain kolme merkkiä), niin sitten hashcat onnistui purkamaan sen.</p>
+            <figure><img src="5_3_testi_mask.png"></figure>
+            <p>Eli todennäköisesti ylempien tehtävien salasanojen purkaminen raakaa voimaa oletusmaskilla ei välttämättä onnistu, jos salasana ei noudata hashcatin oletusmaskia, vaan silloin pitäisi ehkä itse manuaalisesti käydä läpi omilla maskeilla ?a, ?a?a, ?a?a?a etc</p>
         </article>
 
         
